@@ -19,6 +19,8 @@ Route::get('/products', function () {
     return 'aca se muestra la lista de productos';
 });
 
+
+
 Route::get('/cart', function (){
     return 'aca se muestra el carrito';
 });
@@ -102,7 +104,3 @@ Route::get('/admin/offers', function (){
 Route::post('/admin/offers', function(){
     return 'aca recibo los datos de la oferta para guardarla en la db';
 });
-
-
-
-
