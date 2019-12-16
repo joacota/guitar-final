@@ -1,0 +1,20 @@
+/
+products
+Route::get('/products, function )
+
+
+products/{id}
+cart/{id}
+faq
+terminos
+mis-compras
+products/agregar
+oferta/agregar
+perfil
+contact
+categorias/agregar
+compra-confirmacion
+
+recuperar-pass
+login
+registracion
