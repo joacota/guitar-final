@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Product;
+use App\Cart;
 
-class ProductsController extends Controller
+class CartsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::paginate(8);
+        $carts = Cart::paginate(8);
 
-        return view('customer.products.index', ['products' => $products]);
+        return view('customer.carts.index', ['carts' => $carts]);
     }
 
     /**
@@ -27,9 +27,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create', [
-            'product' => new Product,
-        ]);
+        //
     }
 
     /**
@@ -40,9 +38,7 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        $product = Product::create($request->all());
-
-        return redirect('/products/' . $product->id);
+        //
     }
 
     /**
@@ -53,8 +49,8 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        $product = Product::find($id);
-        return view('customer.products.show', ['product' => $product,]);
+        $cart = Cart::find($id);
+        return view('customer.carts.show', ['cart' => $cart,]);
     }
 
     /**
@@ -65,11 +61,7 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        $product = Product::findOrFail($id);
-
-        return view('admin.products.edit', [
-            'product' => $product,
-        ]);
+        //
     }
 
     /**
@@ -81,11 +73,7 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $product = Product::find($id);
-
-        $product->update($request->all());
-
-        return redirect('/products/' . $product->id);
+        //
     }
 
     /**
@@ -96,6 +84,6 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        
+        //
     }
 }
