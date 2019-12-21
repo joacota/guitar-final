@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
- use App\Product;
+use App\Purchse;
 
-class ProductsControllers extends Controller
+class PurchasesControllers extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class ProductsControllers extends Controller
      */
     public function index()
     {
-    $products = Product::paginate(8);
-    return view ('customer.products.index', ['products'=>$products,]
-  );
+      $purchase = Purchases::paginate(8);
+      return view ('customer.purchases.index', ['purchases'=>$purchases,]
+    );
     }
 
     /**
@@ -48,12 +48,12 @@ class ProductsControllers extends Controller
      */
     public function show($id)
     {
-      $product = Product::find($id);
-      return view ('customer.products.show',
-      ['product'=>$product,]
+      $purchase = Purchases::find($id);
+      return view ('customer.purchases.index', ['purchase'=>$purchase,]
     );
     }
 
+  );
     /**
      * Show the form for editing the specified resource.
      *
