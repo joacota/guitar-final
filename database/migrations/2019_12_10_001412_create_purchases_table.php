@@ -17,8 +17,9 @@ class CreatePurchasesTable extends Migration
             $table->bigIncrements('id');
             $table->float('total_price');
             $table->bigInteger('user_id');
-            $table->unsignedBigInteger('payment_method');
+            $table->unsignedBigInteger('paymentmethod_id');
             $table->timestamps();
+            //$table->foreign('profession_id')->references('id')->on('professions');
         });
     }
 

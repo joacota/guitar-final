@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/products', function () {
-    return 'aca se muestra la lista de productos';
-});
-
+// Route::get('/products', 'ProductsController@index' {
+//     return view ();
+// });
+Route::get('/products', 'ProductsController@index');
 
 
 Route::get('/cart', function (){
