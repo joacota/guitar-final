@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Product;
 use App\Category;
 
-class ProductsController extends Controller
+class GhController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,15 +15,15 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::paginate(4);
-        $categories = Category::all();
-        // $categories = Category::with('subcategories')->get();
+      $products = Product::paginate(4);
+      $categories = Category::all();
+      // $categories = Category::with('subcategories')->get();
 
-        return view('customer.products.index', [
-          'title'=>'listado de Productos',
-          'products' => $products,
-          'categories' => $categories,
-        ]);
+      return view('customer.products.index', [
+        'title'=>'listado de Productos',
+        'products' => $products,
+        'categories' => $categories,
+      ]);
     }
 
     /**
@@ -34,12 +33,7 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create', [
-          'product'=>new Product,
-        ]
-
-      );
-
+        //
     }
 
     /**
@@ -50,11 +44,10 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        $product=Product::create($request->all);
-        return redirect('/products/' . $product->id);
+        //
     }
 
-    /**admin
+    /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -62,8 +55,15 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        $product = Product::find($id);
-        return view('customer.products.show', ['product' => $product,]);
+      $products = Product::where('category_id', "=", $id)->paginate(8);
+      $categories = Category::all();
+      // $categories = Category::with('subcategories')->get();
+
+      return view('customer.products.index', [
+        'title'=>'listado de Ofertas',
+        'products' => $products,
+        'categories' => $categories,
+      ]);
     }
 
     /**

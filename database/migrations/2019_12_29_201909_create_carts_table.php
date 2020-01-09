@@ -16,9 +16,12 @@ class CreateCartsTable extends Migration
         Schema::create('carts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->timestamp('abandoned_at')->useCurrent();
-            $table->unsignedBigInteger('purchases_id');
+            $table->timestamp('closed_at')->useCurrent();
+            // $table->unsignedBigInteger('purchases_id')-nullable();
+            // $table->foreign('purchase_id')->references('id')->on('purchases');
             $table->unsignedBigInteger('user_id');
+            // $table->foreign('user_id')->references('id')->on('users');
+            $table->softDeletes();
         });
     }
 

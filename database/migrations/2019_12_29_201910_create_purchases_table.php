@@ -16,9 +16,13 @@ class CreatePurchasesTable extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->float('total_price');
-            $table->bigInteger('user_id');
-            $table->unsignedBigInteger('paymentmethod_id');
+            $table->unsignedBigInteger('paymentmethod_id')->nullable();
+            // $table->foreign('paymentmethod_id')->references('id')->on('paymentmethods');
+            $table->unsignedBigInteger('user_id');
+            // $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
+            $table->softDeletes();
+
             //$table->foreign('profession_id')->references('id')->on('professions');
         });
     }

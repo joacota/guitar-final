@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePaymentmethodsTable extends Migration
+class CreateRecommendedTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreatePaymentmethodsTable extends Migration
      */
     public function up()
     {
-        Schema::create('paymentmethods', function (Blueprint $table) {
+        Schema::create('recommended', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->char('name', 45);
+            $table->unsignedBigInteger('product_id');
+            // $table->foreign('product_id')->references('id')->on('products');
+            $table->softdeletes();
         });
     }
 
@@ -27,6 +29,6 @@ class CreatePaymentmethodsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paymentmethods');
+        Schema::dropIfExists('recommended');
     }
 }

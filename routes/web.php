@@ -18,16 +18,28 @@ Route::get('/', function () {
 // Route::get('/products', 'ProductsController@index' {
 //     return view ();
 // });
-Route::get('/products', 'ProductsController@index');
+Route::get('/gh', 'GhController@index');
+Route::get('/gh/{id}', 'GhController@show');
 
+Route::get('/products', 'ProductsController@index');
+Route::get('/admin/products/add', 'ProductsController@create'); //creara el producto
+Route::get('/products/{id}', 'ProductsController@show'); //muestra los datos del producto
+Route::post('/admin/products', 'ProductsController@store'); // almacena el nuevo producto
+Route::get('/products/{id}/edit', 'ProductsController@edit'); //toma los datos del producto para mostrarlo
+Route::patch('/products/{id}', 'ProductsController@update'); //los actualiza
+Route::delete('/products/{id}', 'ProductsController@destroy'); //borra los datos
 
 Route::get('/cart', function (){
     return 'aca se muestra el carrito';
 });
 
-Route::post('cart', function (){
+Route::post('/cart', function (){
     return 'recibo el productoque voy a agregar al carrito';
 });
+
+
+
+
 
 Route::get('/faq', function (){
     return 'aca se muestran las preguntas frecuentes';
@@ -82,12 +94,12 @@ Route::post('/perfil', function(){
 
 //rutas propias del administrador
 
-Route::get('/admin/products/add', function(){
-    return 'aca se muestra el campo para agregar productos ';
-});
-Route::post('admin/products/add', function(){
-    return 'aca recibo los dats del producto agregado para guardarlos en la db';
-});
+// Route::get('/admin/products/add', function(){
+//     return 'aca se muestra el campo para agregar productos ';
+// });
+// Route::post('admin/products/add', function(){
+//     return 'aca recibo los dats del producto agregado para guardarlos en la db';
+// });
 
 Route::get('/admin/categories/add', function(){
     return 'aca se muestra el campo para agregar categorias ';
