@@ -116,3 +116,7 @@ Route::get('/admin/offers', function (){
 Route::post('/admin/offers', function(){
     return 'aca recibo los datos de la oferta para guardarla en la db';
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
