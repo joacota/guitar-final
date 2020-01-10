@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/products', 'ProductsController@index' {
 //     return view ();
 // });
-Route::get('/gh', 'GhController@index');
+Route::get('/', 'GhController@index');
 Route::get('/gh/{id}', 'GhController@show');
 
 Route::get('/products', 'ProductsController@index');

@@ -33,9 +33,9 @@ $cartelError2="";
 
 
 
-<form action="registro.php" method="post">
+{{-- <form action="registro.php" method="post"> --}}
 
-  <div class="container">
+  {{-- <div class="container"> --}}
     <h1>Registro</h1>
     <p>Completá el formulario para registrarte!</p>
     <hr>
@@ -44,13 +44,13 @@ $cartelError2="";
 
 
 
-    <div class="row">
+    {{-- <div class="row">
 
 
 
 
-    <label for="email"><b>Email     </b><span style="color: red">    <?=$cartelError1 ?></span></label>
-    <input type="text" placeholder="ejemplo: nombre@dominio.com" name="email" value="<?=$email?>" required>
+    <label for="email"><b>Email     </b><span style="color: red">   /span></label>
+    <input type="text" placeholder="ejemplo: nombre@dominio.com" name="email" value=" required>
     <div class="check10">
 
       <input class="check1" type="checkbox" id="ch1" aria-label="Checkbox for following text input" name="remember">
@@ -59,10 +59,10 @@ $cartelError2="";
 
 
 
-    <label for="psw"><b>Password</b><span style="color: red">    <?=$cartelError2 ?></span></label>
+    <label for="psw"><b>Password</b><span style="color: red">   </span></label>
     <input type="password" placeholder="Ingresá tu password" name="password" value="" required>
 
-    <label for="psw-repeat"><b>Repetir Password</b><span style="color: red">    <?=$cartelError2 ?></span></label>
+    <label for="psw-repeat"><b>Repetir Password</b><span style="color: red">    /span></label>
     <input type="password" placeholder="Repetí tu password" name="password_confirmation" value="" required>
 
 
@@ -82,16 +82,17 @@ $cartelError2="";
 
     <div class="container signin">
       <p><a href="../index.php">Volver al Home!</a></p>
-    </div>
+    </div> --}}
 
 
 
-  </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  {{-- </div>
+
+
+</form> --}}
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-
-</form>
 
 </body>
