@@ -55,3 +55,16 @@ width: 15rem;
 
   padding-top:50px;
 }
+
+.card-product {
+  margin-bottom: 10px;
+}
+.subcategoria {
+  margin-left: 10px;
+}
+
+.descuento{
+  color: red;
+  font-weight: bold;
+
+}

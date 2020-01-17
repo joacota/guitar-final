@@ -18,9 +18,9 @@ class Product extends Model
           return $this->belongsTo('App\Category');
         }
 
-    public function productphotos()
+    public function productpicture()
             {
-              return $this->hasMany('App\Product_Photo');
+              return $this->hasMany('App\Productpicture','product_id');
             }
 
     public function recommended()
@@ -28,9 +28,9 @@ class Product extends Model
             return $this->hasOne('App\Recommended');
          }
 
-    public function offer_product()
+    public function offer()
           {
-             return $this->belogsToMany('App\Offer_Product');
+             return $this->belongsTo('App\Offer','offer_id');
           }
 
     public function cart_product()

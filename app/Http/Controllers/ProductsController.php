@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Product;
 use App\Category;
+use App\Productpicture;
+
 
 class ProductsController extends Controller
 {
@@ -16,14 +18,17 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        $products = Product::paginate(4);
-        $categories = Category::all();
+        $products = Product::all(); //paginate(8);
+        $subcategories = Category::all();
+        $categories = Category::whereNull('category_id');
         // $categories = Category::with('subcategories')->get();
+
 
         return view('customer.products.index', [
           'title'=>'listado de Productos',
           'products' => $products,
           'categories' => $categories,
+          'subcategories' => $subcategories,
         ]);
     }
 
@@ -50,7 +55,19 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        $product=Product::create($request->all);
+      $this->validate($request, [
+        'name'=>'required',
+        'description'=>'required',
+        'specification'=>'required',
+        'price'=>'required',
+        'stock'=>'required',
+        'category_id'=>'required',
+        'brand_id'=>'required',
+      ]);
+
+      // dd($request->all());
+
+        $product=Product::create($request->all());
         return redirect('/products/' . $product->id);
     }
 
@@ -63,7 +80,19 @@ class ProductsController extends Controller
     public function show($id)
     {
         $product = Product::find($id);
-        return view('customer.products.show', ['product' => $product,]);
+        $subcategories = Category::all();
+        $categories = Category::whereNull('category_id')->get();
+        $cat = Category::find($id);
+ // dd($product->Productpicture);
+
+
+        return view('customer.products.show', [
+          'product' => $product,
+          'cat'=>$cat,
+          'categories' => $categories,
+          'subcategories' => $subcategories,
+
+        ]);
     }
 
     /**

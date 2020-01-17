@@ -9,13 +9,13 @@
   </head>
   <body>
 
-    <section id="wrapper">
+    {{-- <section id="wrapper"> --}}
 
             <div class="container">
 
       <div id="content-wrapper">
 
-      <section id="main">
+      {{-- <section id="main"> --}}
 
             <header class="page-header">
               <h3> Carga de Producto </h3>
@@ -24,14 +24,14 @@
 
       <section id="content" class="page-content">
 
-        <form action="{{ url($url) }}"  method="post" enctype="multipart/form-data">
+        <form action="{{ url($url) }}"  method="post">
           @csrf
 
           @method($method)
 
       <section>
 
-        <input type="hidden" name="id_customer" value="14">
+        {{-- <input type="hidden" name="id_customer" value="14">
 
       <div class="form-group row ">
 
@@ -54,7 +54,7 @@
                   <input type="file" name="avatar">
                   <!-- <input type="submit" value="Upload Image" name="submit"> -->
 
-            </div>
+            </div> --}}
         <!-- </form> -->
 
         <!-- <div class="col-md-3 form-control-comment">
@@ -62,6 +62,8 @@
 
         </div> -->
       </div>
+
+
 
       <div class="form-group row ">
         <label class="col-md-2 form-control-label required">
@@ -71,7 +73,7 @@
 
               <input
                 class="form-control"
-                name="nombre"
+                name="name"
                 type="text"
                 value="{{ old('nombre', $product->name)}}"
                         >
@@ -89,8 +91,8 @@
                 Descripcion
               </label>
         <div class="col-md-4">
-          <textarea class="Description" rows="4" cols="46">
-
+          <textarea class="description" rows="4" cols="46" name="description">
+            {{$product->description}}
         </textarea>
 
 
@@ -110,7 +112,7 @@
         <div class="col-md-4">
 
           <textarea class="Specifications form-control" name="specification" rows="4" cols="46">
-
+            {{$product->specification}}
         </textarea>
 
         </div>
@@ -134,7 +136,7 @@
                 class="form-control"
                 name="price"
                 type="number"
-                value=""
+                value="{{ old('nombre', $product->price)}}"
                 placeholder="xxxxxx.xx"   >
 
 
@@ -159,8 +161,8 @@
               <input
                 class="form-control"
                 name="stock"
-                type="text"
-                value=""
+                type="number"
+                value="{{ old('nombre', $product->stock)}}"
                 placeholder="xxxxxx.xx"   >
 
 
@@ -176,15 +178,65 @@
 
       </div>
 
+      <div class="form-group row ">
+        <label class="col-md-2 form-control-label">
+                  Category (un)
+              </label>
+        <div class="col-md-2">
 
+              <input
+                class="form-control"
+                name="category_id"
+                type="number"
+                value="{{ old('nombre', $product->category_id)}}"
+                placeholder="x"   >
+
+
+
+        </div>
+
+        <div class="col-md-3 form-control-comment">
+
+                    {{-- <label class="opcional "for="">(Ej:: 31/05/1970)</label> --}}
+
+        </div>
+
+
+      </div>
+
+      <div class="form-group row ">
+        <label class="col-md-2 form-control-label">
+                  Brands (un)
+              </label>
+        <div class="col-md-2">
+
+              <input
+                class="form-control"
+                name="brand_id"
+                type="number"
+                value="{{ old('nombre', $product->brand_id)}}"
+                placeholder="x"   >
+
+
+
+        </div>
+
+        <div class="col-md-3 form-control-comment">
+
+                    {{-- <label class="opcional "for="">(Ej:: 31/05/1970)</label> --}}
+
+        </div>
+
+
+      </div>
 
 <!-- Botones para grabar o editar -->
       <div class="form-group row ">
 
         {{-- {{ $disabled ?? '' }} --}}
           <div class="col-md-3 form-control-label boton_editar">
-            <input type="hidden" name="grabar" value="1">
-            <button type="submit" class="btn btn-dark">Grabar</button>
+            
+            <button  class="btn btn-dark">Grabar</button>
 
 
           </div>
@@ -198,10 +250,17 @@
 
       </div>
 
-</section>
+
+
 
 </section>
 </form>
+</section>
+
+  </div>
+    </div>
+
+
 
                       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
                       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

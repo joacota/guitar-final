@@ -17,9 +17,9 @@ class CreateOfferProductTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->unsignedBigInteger('product_id');
-            // $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('product_id')->references('id')->on('products');
             $table->unsignedBigInteger('offer_id');
-            // $table->foreign('offer_id')->references('id')->on('offers');
+            $table->foreign('offer_id')->references('id')->on('offers');
             $table->softdeletes();
         });
     }

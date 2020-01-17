@@ -38,7 +38,8 @@ Route::post('/cart', function (){
 });
 
 
-
+// Route::get('category-tree-view','CategoriesController@manageCategory')->name('category-tree-view');
+// Route::post('add-category','CategoriesController@addCategory')->name('add.category');
 
 
 Route::get('/faq', function (){
