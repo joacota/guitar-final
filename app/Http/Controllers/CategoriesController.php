@@ -3,39 +3,92 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Category;
 
 class CategoriesController extends Controller
 {
-  public function manageCategory()
-      {
-          $categories = Category::whereNull('category_id')->get();
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //    $products = Product::all(); //paginate(8);
+            $subcategories = Category::all();
+            $categories = Category::whereNull('category_id')->get();
+            // $categories = Category::with('subcategories')->get();
 
-          $allCategories = Category::all();
+            return view('admin.categories.index', [
+              'title'=>'listado de Categorias',
+              'categories' => $categories,
+              'subcategories' => $subcategories,
+            ]);
+    }
 
-          return view('category.categoryTreeview',compact('categories','allCategories'));
-      }
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
 
-      /**
-       * Show the application dashboard.
-       *
-       * @return \Illuminate\Http\Response
-       */
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
 
-      public function addCategory(Request $request)
-      {
-          $this->validate($request, [
-              'title' => 'required',
-          ]);
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
 
-          $input = $request->all();
-          $input['parent_id'] = empty($input['parent_id']) ? 0 : $input['parent_id'];
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
 
-          Category::create($input);
-          return back()->with('success', 'New Category added successfully.');
-
-      }
-
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
 }

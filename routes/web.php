@@ -18,16 +18,33 @@
 // Route::get('/products', 'ProductsController@index' {
 //     return view ();
 // });
+
+
 Route::get('/', 'GhController@index');
 Route::get('/gh/{id}', 'GhController@show');
 
 Route::get('/products', 'ProductsController@index');
-Route::get('/admin/products/add', 'ProductsController@create'); //creara el producto
 Route::get('/products/{id}', 'ProductsController@show'); //muestra los datos del producto
+
+
+
+Route::get('/admin/products/add', 'ProductsController@create'); //creara el producto
 Route::post('/admin/products', 'ProductsController@store'); // almacena el nuevo producto
-Route::get('/products/{id}/edit', 'ProductsController@edit'); //toma los datos del producto para mostrarlo
-Route::patch('/products/{id}', 'ProductsController@update'); //los actualiza
-Route::delete('/products/{id}', 'ProductsController@destroy'); //borra los datos
+Route::get('/admin/products/{id}/edit', 'ProductsController@edit'); //toma los datos del producto para mostrarlo
+Route::patch('/admin/products/{id}', 'ProductsController@update'); //los actualiza
+Route::delete('/admin/products/{id}', 'ProductsController@destroy'); //borra los datos
+
+Route::get('admin/control1', function (){
+    return view('admin/control');
+});
+Route::get('/admin/categories', 'CategoriesController@index');
+Route::get('/admin/categories/add/{id}', 'CategoriesController@create'); //creara el producto
+Route::post('/admin/categories', 'CategoriesController@store'); // almacena el nuevo producto
+Route::get('/admin/categories/{id}/edit', 'CategoriesController@edit'); //toma los datos del producto para mostrarlo
+Route::patch('/admin/categories/{id}', 'CategoriesController@update'); //los actualiza
+Route::delete('/admin/categories/{id}', 'CategoriesController@destroy'); //borra los datos
+
+
 
 Route::get('/cart', function (){
     return 'aca se muestra el carrito';
@@ -36,10 +53,6 @@ Route::get('/cart', function (){
 Route::post('/cart', function (){
     return 'recibo el productoque voy a agregar al carrito';
 });
-
-
-// Route::get('category-tree-view','CategoriesController@manageCategory')->name('category-tree-view');
-// Route::post('add-category','CategoriesController@addCategory')->name('add.category');
 
 
 Route::get('/faq', function (){

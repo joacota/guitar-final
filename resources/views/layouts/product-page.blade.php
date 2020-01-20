@@ -29,7 +29,7 @@
 								<!-- esto es el header -->
 								<nav class="navbar navbar-expand-lg navbar-light bg-light">
 							{{-- <a class="navbar-brand" href="index.php"><img  width= "110px"src="public/photosBrands/logo.png" alt=""></a> --}}
-							<a class="navbar-brand" href="index.php"><img  width= "110px" src={{asset("imagesWebsite/logo.png")}} alt=""></a>
+							<a class="navbar-brand" href="/"><img  width= "110px" src={{asset("imagesWebsite/logo.png")}} alt=""></a>
 
 
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -104,20 +104,19 @@
       <h6>
         <ul>
           <li>
-            <a href="section.html">{{$cat->name}} |</a>
+            <a href="#">{{$categories[($cat->category_id)-1]->name}} |</a>
           </li>
           <li>
-            <a href="section.html">{{$categories[($cat->category_id)-1]->name}} </a>
+            <a href="/gh/{{$cat->id}}">{{$cat->name}} </a>
           </li>
 
         </ul>
       </h6>
     </div>
   </section>
+
   <section class="row">
-
-
-        <!-- <div class="Product-details"> -->
+    <!-- <div class="Product-details"> -->
 
           <div class="col-12 col-md-6">
             <section class="row">
@@ -128,7 +127,13 @@
                   <section class="product-photo">
 
                     <a href="#">
-                      <img  src="/imagesProducts/{{$product->productpicture[0]->src}}" alt="">
+											{{-- validar que tenga fotos --}}
+										@if(count($product->productpicture)>0)
+                      <img  src="{{url( 'storage/' . $product->productpicture[0]->src)}}" alt="">
+											{{-- <p>{{'storage/' . substr($product->productpicture[0]->src,7)}} {{asset('storage/' . $product->productpicture[0]->src)}}</p> --}}
+										@else
+											<img  src="/imagesProducts/logo.jpg" alt="">
+										@endif
                     </a>
                   </section>
                 </section>
@@ -143,7 +148,7 @@
 													<li>
 
 														<a href="#">
-															<img  src="/imagesProducts/{{$picture->src}}" alt="">
+															<img  src="{{url( 'storage/' . $picture->src)}}" alt="">
 
 
 														</a>
@@ -177,6 +182,13 @@
                     {{$product->name}}
                   </p>
                 </h1>
+              </div>
+
+							<div class="product-id">
+                  <p>
+                    ID:{{$product->id}}
+                  </p>
+
               </div>
 
               <div class="product-stock">
@@ -257,8 +269,7 @@
         </div>
         <div class="col">
           <h3 class="especficaciones">Especificaciones</h3>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+          {{$product->specifications}}
         </div>
   </section>
 

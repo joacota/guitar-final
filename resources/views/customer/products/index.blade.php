@@ -34,7 +34,7 @@
       @foreach ($products as $product)
   <article class="col-12 col-md-6 col-xl-3">
       <div class="card text-center card-product" >
-          <a href="product-page1.php">
+          <a href="/products/{{$product->id}}">
             <img src="imagesProducts/guitarra.jpg" class="card-img-top" alt="...">
           </a>
           <div class="card-body">
@@ -43,7 +43,7 @@
           <p class="card-text desc">{{(strlen($product->description) > 70) ? substr($product->description,0,67).'...' : str_pad($product->description, 70, "_", STR_PAD_RIGHT)}}</p>
           @if($product->offer)
             <p class="card-text descuento">{{'$'}} {{ $product->offer->name}}</p>
-                      
+
           @endif
           <p class="card-text">{{'$'}} {{ $product->price}}</p>
 

@@ -8,7 +8,8 @@ class Productpicture extends Model
 {
   protected $fillable = [
  'title',
- 'src', //the path you uploaded the image
+ 'src',
+ 'product_id' //the path you uploaded the image
  ];
 
 

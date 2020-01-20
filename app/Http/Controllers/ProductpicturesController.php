@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Product;
-use App\Category;
 
-class GhController extends Controller
+class ProductpicturesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,19 +13,7 @@ class GhController extends Controller
      */
     public function index()
     {
-      $products = Product::whereNotnull('offer_id')->paginate(4);
-      $subcategories = Category::all();
-      $categories = Category::whereNull('category_id')->get();
-      // $categories = Category::with('subcategories')->get();
-
-
-      return view('customer.products.index', [
-        'title'=>'listado de Ofertas',
-        'vista'=>"1",
-        'products' => $products,
-        'categories' => $categories,
-        'subcategories' => $subcategories,
-      ]);
+        //
     }
 
     /**
@@ -59,19 +45,7 @@ class GhController extends Controller
      */
     public function show($id)
     {
-      $products = Product::where('category_id', "=", $id)->paginate(16);
-      $subcategories = Category::all();
-      $categories = Category::whereNull('category_id')->get();
-      $cat = Category::find($id);
-
-      return view('customer.products.products', [
-        'title'=>'listado de Productos',
-        'vista'=>"0",
-        'cat'=>$cat,
-        'products' => $products,
-        'categories' => $categories,
-        'subcategories' => $subcategories,
-      ]);
+        //
     }
 
     /**
@@ -107,12 +81,4 @@ class GhController extends Controller
     {
         //
     }
-
-
-    public function control(){
-      
-    }
-
-
-
 }

@@ -159,6 +159,11 @@ text-align: center;
 
 }
 
+.product-id p{
+  font-size: 2;
+  text-align: center;
+}
+
 .product-info .product-short-description .product-stock{
   display: flex;
 }
