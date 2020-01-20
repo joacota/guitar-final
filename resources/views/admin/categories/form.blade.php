@@ -4,7 +4,7 @@
 
       <section class="row">
 
-          <h3> Carga de Producto </h3>
+          <h3> Carga de Categorias </h3>
           <br>
           <br>
       </section>
@@ -31,7 +31,7 @@
                 class="form-control"
                 name="name"
                 type="text"
-                value="{{ old('name', $product->name)}}">
+                value="{{ old('name', '')}}">
               </div>
               <p class="text-danger">{{ $errors->first('name')}}</p>
               {{-- <div class="col-md-6 form-control-comment">
@@ -39,42 +39,31 @@
               </div> --}}
             </div>
 
-            <div class="form-group row ">
-              <label class="col-md-2 form-control-label required">
-                Descripcion
-              </label>
 
-              <div class="col-md-6">
-                <textarea class="description form-control" rows="5" cols="46" name="description">{{ old('descrption', $product->description)}}</textarea>
-              </div>
-              <p class="text-danger">{{ $errors->first('description')}}</p>
-              {{-- <div class="col-md-6 form-control-comment">
-
-              </div> --}}
-            </div>
 
             <div class="form-group row ">
               <label class="col-md-2 form-control-label required">
-                Especificaciones
+                Categorias
               </label>
 
               <div class="col-md-6">
 
-                <textarea class="Specifications form-control" name="specifications" rows="5" cols="46">{{ old('specifications', $product->specifications)}}</textarea>
+                <select name="category_id" class="form-control">
+                    @foreach ($categories as $category)
+                      <option>{{$category->id . " " . $category->name }}  </option>
 
+                    @endforeach
+
+                </select>
               </div>
-              <p class="text-danger">{{ $errors->first('specifications')}}</p>
-              {{-- <div class="col-md-6 form-control-comment">
 
-              </div> --}}
             </div>
 
-
-
+            
 
             <div class="form-group row" style="margin-top:70px;">
 
-              <div class="col-md-9 form-control-label boton_editar">
+              <div class="col-md-6 form-control-label boton_editar">
                 <button  class="btn btn-dark">Grabar</button>
               </div>
 

@@ -143,7 +143,7 @@
                 <label class="form-control-label">
                   Category (un)
                 </label>
-                <p class="text-danger">{{ $errors->first('category')}}</p>
+                <p class="text-danger">{{ $errors->first('category_id')}}</p>
                 </div>
 
                 <div class="col-md-2">
@@ -165,13 +165,6 @@
                 </div>
 
                 <div class="col-md-2">
-
-                   {{-- <input
-                  class="form-control"
-                  name="brand_id"
-                  type="number"
-                  value="{{ old('brand_id', $product->brand_id)}}"
-                  placeholder="x"   >  --}}
 
                   <select name="brand_id" class="form-control">
                       @foreach ($brands as $brand)
