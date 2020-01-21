@@ -23,8 +23,10 @@ Route::get('/gh/{id}', 'GhController@show');
 
 Route::get('/products', 'ProductsController@index');
 Route::get('/admin/products/add', 'ProductsController@create'); //creara el producto
+Route::get('/admin/brands/add', 'BrandsController@create'); //creara el producto
 Route::get('/products/{id}', 'ProductsController@show'); //muestra los datos del producto
-Route::post('/admin/products', 'ProductsController@store'); // almacena el nuevo producto
+Route::post('/admin/products', 'ProductsController@store');// almacena el nuevo producto
+Route::post('/admin/brands', 'BrandsController@store'); // almacena la nueva marca
 Route::get('/products/{id}/edit', 'ProductsController@edit'); //toma los datos del producto para mostrarlo
 Route::patch('/products/{id}', 'ProductsController@update'); //los actualiza
 Route::delete('/products/{id}', 'ProductsController@destroy'); //borra los datos
