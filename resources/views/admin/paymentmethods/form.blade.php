@@ -2,7 +2,7 @@
 
       <section class="row">
 
-          <h3> Carga de Categorias </h3>
+          <h3> {{$title}} </h3>
           <br>
           <br>
       </section>
@@ -27,33 +27,12 @@
                 class="form-control"
                 name="name"
                 type="text"
-                value="{{ old('name', $category->name)}}">
+                value="{{ old('name', $paymentmethod->name)}}">
               </div>
               <p class="text-danger">{{ $errors->first('name')}}</p>
               {{-- <div class="col-md-6 form-control-comment">
 
               </div> --}}
-            </div>
-
-
-
-            <div class="form-group row ">
-              <label class="col-md-2 form-control-label required">
-                Dependencia
-              </label>
-
-              <div class="col-md-6">
-
-                <select name="category_id" class="form-control">
-                    @foreach ($categories as $category1)
-                      {{ $category->id==$category1->id ? 'selected' : '' }}
-                      <option>{{$category1->id . " " . $category1->name }} {{ $category->id==$category1->id ? 'selected' : '' }} </option>
-
-                    @endforeach
-
-                </select>
-              </div>
-
             </div>
 
 

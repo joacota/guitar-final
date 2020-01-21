@@ -57,4 +57,23 @@
   <a href="#">Buscar de Marca (editar/Borrar)</a></h3>
 </div>
 
+
+<div class="row">
+  <h3>----------------</h3>
+</div>
+<div class="row">
+<h3>Metodos de pago</h3>
+</div>
+<div class="row">
+<h4>
+  <a href="/admin/paymentmethods">lista de Metodos</a></h3>
+</div>
+<div class="row">
+<h4>
+  <a href="admin/paymentmethods/add">Nuevo de Metodo/a></h3>
+</div>
+<div class="row">
+<h4>
+  <a href="#">Buscar de metodo (editar/Borrar)</a></h3>
+</div>
 @stop

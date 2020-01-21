@@ -70,7 +70,7 @@ $path=[];
         'brand_id'=>'required',
       ]);
 
-
+// dd($request);
       $dato=substr($request['brand_id'],0,2);
       $request['brand_id']=$dato;
 
@@ -82,6 +82,7 @@ $path=[];
           {
             $path[] = $request->file('picture' . $i)->store('public/imagesProducts');
 
+
             $picture=Productpicture::create([
               // 'title'=>$request->picture1->
             'src'=>substr($path[$i-1],7),
@@ -91,6 +92,7 @@ $path=[];
           }
 
       }
+    
       //  dd($path,$request->file('picture1'));
 
       // dd($request->all());

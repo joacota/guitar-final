@@ -24,15 +24,15 @@
   <tbody>
 
       @foreach ($categories as $category)
-
+{{-- //admin/categories/{id}/edit --}}
 
 <tr class="categoria">
   <th scope="row">{{$category->id}}</th>
   <td> <b> {{$category->name}}</b> </td>
   <td>{{$category->category_id}}</td>
-  <td> <a class="cart_quantity_up" href="categories/add/{{$category->id}}"> <b> + </b></a> </td>
-  <td> <a class="cart_quantity_up" href="categories/add"> <b> Ed </b></a> </td>
-  <td> <a class="cart_quantity_up" href="categories/add"> <b> - </b></a> </td>
+  <td> <a class="agregar" href="categories/add/{{$category->id}}"> <b> + </b></a> </td>
+  <td> <a class="editar" href="categories/add/{{$category->id}}/edit"> <b> Ed </b></a> </td>
+  <td> <a class="borrar" href="categories/add"> <b> - </b></a> </td>
 </tr>
 
   @foreach ($subcategories as $subcategory)
@@ -41,9 +41,9 @@
       <th scope="row">{{$subcategory->id}}</th>
       <td> {{$subcategory->name}} </td>
       <td>{{$subcategory->category_id}}</td>
-      <td> <a class="cart_quantity_up" href="admin/categories/add"></a> </td>
-      <td> <a class="cart_quantity_up" href="admin/categories/add">  <b> Ed </b> </a></td>
-      <td> <a class="cart_quantity_up" href="admin/categories/add"> <b> - </b></a> </td>
+      <td> <a class="agregar" href="/categories/add"></a> </td>
+      <td> <a class="editar" href="categories/{{$subcategory->id}}/edit">  <b> Ed </b> </a></td>
+      <td> <a class="borrar" href="/categories"> <b> - </b></a> </td>
 
     </tr>
   @endif

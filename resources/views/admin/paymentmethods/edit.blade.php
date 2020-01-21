@@ -7,9 +7,9 @@
     <div class="row">
       <div class="col"> --}}
         {{-- <h1>Crear Producto</h1> --}}
-        @include('admin.categories.form',[
+        @include('admin.paymentmethods.form',[
           'method'=>'patch',
-          'url'=> '/admin/categories/' . $category->id,
+          'url'=> '/admin/paymentmethods/' . $paymentmethod->id,
         ])
       {{-- </div>
 

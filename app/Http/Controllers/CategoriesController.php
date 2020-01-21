@@ -39,6 +39,7 @@ class CategoriesController extends Controller
 
         return view('admin.categories.create', [
           'title'=>'carga de Categorias',
+          'category'=>new Category,
           'categories' => $categories,
           'subcategories' => $subcategories,
         ]);
@@ -86,7 +87,18 @@ class CategoriesController extends Controller
      */
     public function edit($id)
     {
-        //
+      $category=Category::find($id);
+      $subcategories = Category::all();
+      $categories = Category::whereNull('category_id')->get();
+      // $cat = Category::find($product->category_id);
+    // dd($product->Productpicture);
+
+
+      return view('admin.categories.edit', [
+        'category'=>$category,
+        'categories' => $categories,
+        'subcategories' => $subcategories,
+      ]);
     }
 
     /**
@@ -98,7 +110,20 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->validate($request, [
+        'name'=>'required',
+        'category_id'=>'required',
+      ]);
+
+
+      $dato=substr($request['category_id'],0,2);
+      $request['category_id']=$dato;
+
+
+      $category=Category::find($id);
+      $category->update($request->all());
+
+      return redirect('admin/categories/');
     }
 
     /**

@@ -44,7 +44,12 @@ Route::get('/admin/categories/{id}/edit', 'CategoriesController@edit'); //toma l
 Route::patch('/admin/categories/{id}', 'CategoriesController@update'); //los actualiza
 Route::delete('/admin/categories/{id}', 'CategoriesController@destroy'); //borra los datos
 
-
+Route::get('/admin/paymentmethods', 'PaymentmethodsController@index');
+Route::get('/admin/paymentmethods/add', 'PaymentmethodsController@create'); //creara el producto
+Route::post('/admin/paymentmethods', 'PaymentmethodsController@store'); // almacena el nuevo producto
+Route::get('/admin/paymentmethods/{id}/edit', 'PaymentmethodsController@edit'); //toma los datos del producto para mostrarlo
+Route::patch('/admin/paymentmethods/{id}', 'PaymentmethodsController@update'); //los actualiza
+Route::delete('/admin/paymentmethods/{id}', 'PaymentmethodsController@destroy'); //borra los datos
 
 Route::get('/cart', function (){
     return 'aca se muestra el carrito';
@@ -115,12 +120,7 @@ Route::post('/perfil', function(){
 //     return 'aca recibo los dats del producto agregado para guardarlos en la db';
 // });
 
-Route::get('/admin/categories/add', function(){
-    return 'aca se muestra el campo para agregar categorias ';
-});
-Route::post('admin/categories/add', function(){
-    return 'aca recibo los dats de la categoria agregado para guardarlos en la db';
-});
+
 
 
 Route::get('/admin/offers', function (){

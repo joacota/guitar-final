@@ -66,8 +66,9 @@
 
 
 								<?php if($usuarioNombre == "perfil"):?>
-											<a href="Formularios/registro.php" class="btn btn-outline-secondary btn-sm mr-2"> registrate</a>
-											<a href="Formularios/login.php" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
+											<a href="{{asset('admin/control1')}}" class="btn btn-outline-secondary btn-sm mr-2"> admin</a>
+											<a href="{{asset('register')}}" class="btn btn-outline-secondary btn-sm mr-2"> registrate</a>
+											<a href="{{asset('login')}}" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
 									<?php else: ?>
 										<a href="<?= $formPerfil ?>" class="btn btn-outline-secondary btn-sm mr-2"> <?= $usuarioNombre ?></a>
 										<a href="index.php?log=0" class="btn btn-outline-secondary btn-sm mr-2"> log out</a>
