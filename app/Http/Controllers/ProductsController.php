@@ -58,9 +58,6 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-        $product=Product::create($request->all());
-=======
 $path=[];
 
       $this->validate($request, [
@@ -95,12 +92,11 @@ $path=[];
           }
 
       }
-    
+
       //  dd($path,$request->file('picture1'));
 
       // dd($request->all());
 
->>>>>>> f049941a029ca995ed88c9a49c2c9c37178853f2
         return redirect('/products/' . $product->id);
     }
 
