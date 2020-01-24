@@ -1,0 +1,40 @@
+/ Crear un middleware
+// Se va a guardar en app/Http/Middleware/CartMiddleware
+php artisan make:middleware CartMiddleware
+// Registrar el middleware
+// Agregar en el archivo app/Http/Kernel.php
+// Dentro del array $routeMiddleware
+'cart' => \App\Http\Middleware\CartMiddleware::class,
+// Utilizar en las rutas que corresponda
+Route::group(['middleware' => 'auth|cart'], function () {
+    Route::get('/products/{id}', 'ProductsController@show');
+});
+------------------------------------------------------------------------
+Dentro del middleware en el metodo handle
+if (!session('cart')) {
+    session('cart', new Cart);
+}
+return $next($request);
+------------------------------------------------------------------------
+Dentro del controller en cada uno de los metodos
+public function add(Request $request) 
+{
+    $cart = session('cart');
+    $cart->products()->attach(
+        $request->get('product_id'), ['qty' => $request->get('qty')]
+    );
+    session()->put('cart', $cart);
+}
+public function update(Request $request) 
+{
+    $cart = session('cart');
+    $cart->products()->sync([
+        $request->get('product_id') => ['qty' => $request->get('qty')]
+    ]);
+    session()->put('cart', $cart);
+}
+public function destroy(Request $request) 
+{
+    $cart = session('cart');
+    $cart->products()->detach($request->get('product_id'));
+    session()->put('cart', $cart);
