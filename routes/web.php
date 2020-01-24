@@ -19,6 +19,9 @@
 //     return view ();
 // });
 
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
 
 Route::get('/', 'GhController@index');
 Route::get('/gh/{id}', 'GhController@show');
@@ -26,30 +29,46 @@ Route::get('/gh/{id}', 'GhController@show');
 Route::get('/products', 'ProductsController@index');
 Route::get('/products/{id}', 'ProductsController@show'); //muestra los datos del producto
 
+// Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
+// {
+//     Route::get('dashboard', function() {} );
+// });
+//
+// Route::prefix('admin')->group(function () {
+// Route::group(['prefix' => 'admin',  'middleware' => 'auth', 'middleware' => 'role'], function(){
+// Route::group(['middlewaregroups' => ['auth']], function(){
+//   Route::group(['prefix' => 'admin', 'middleware' => 'role'], function(){
 
+Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function(){
 
-Route::get('/admin/products/add', 'ProductsController@create'); //creara el producto
-Route::post('/admin/products', 'ProductsController@store'); // almacena el nuevo producto
-Route::get('/admin/products/{id}/edit', 'ProductsController@edit'); //toma los datos del producto para mostrarlo
-Route::patch('/admin/products/{id}', 'ProductsController@update'); //los actualiza
-Route::delete('/admin/products/{id}', 'ProductsController@destroy'); //borra los datos
+  Route::group(['middleware'=>'role'],function(){
 
-Route::get('admin/control1', function (){
-    return view('admin/control');
+    Route::get('/products/add', 'ProductsController@create');
+    Route::post('/products', 'ProductsController@store');
+    Route::get('/products/{id}/edit', 'ProductsController@edit');
+    Route::patch('/products/{id}', 'ProductsController@update');
+    Route::delete('/products/{id}', 'ProductsController@destroy');
+
+    Route::get('/control1', function (){return view('admin/control');}); //->middleware('role');; //->middleware('auth');
+
+    Route::get('/categories', 'CategoriesController@index'); //->middleware('role');
+    Route::get('/categories/add/{id}', 'CategoriesController@create');
+    Route::post('/categories', 'CategoriesController@store');
+    Route::get('/categories/{id}/edit', 'CategoriesController@edit');
+    Route::patch('/categories/{id}', 'CategoriesController@update');
+    Route::delete('/categories/{id}', 'CategoriesController@destroy');
+
+    Route::get('/paymentmethods', 'PaymentmethodsController@index');
+    Route::get('/paymentmethods/add', 'PaymentmethodsController@create');
+    Route::post('/paymentmethods', 'PaymentmethodsController@store');
+    Route::get('/paymentmethods/{id}/edit', 'PaymentmethodsController@edit');
+    Route::patch('/paymentmethods/{id}', 'PaymentmethodsController@update');
+    Route::delete('/paymentmethods/{id}', 'PaymentmethodsController@destroy');
+
+ });
 });
-Route::get('/admin/categories', 'CategoriesController@index');
-Route::get('/admin/categories/add/{id}', 'CategoriesController@create'); //creara el producto
-Route::post('/admin/categories', 'CategoriesController@store'); // almacena el nuevo producto
-Route::get('/admin/categories/{id}/edit', 'CategoriesController@edit'); //toma los datos del producto para mostrarlo
-Route::patch('/admin/categories/{id}', 'CategoriesController@update'); //los actualiza
-Route::delete('/admin/categories/{id}', 'CategoriesController@destroy'); //borra los datos
 
-Route::get('/admin/paymentmethods', 'PaymentmethodsController@index');
-Route::get('/admin/paymentmethods/add', 'PaymentmethodsController@create'); //creara el producto
-Route::post('/admin/paymentmethods', 'PaymentmethodsController@store'); // almacena el nuevo producto
-Route::get('/admin/paymentmethods/{id}/edit', 'PaymentmethodsController@edit'); //toma los datos del producto para mostrarlo
-Route::patch('/admin/paymentmethods/{id}', 'PaymentmethodsController@update'); //los actualiza
-Route::delete('/admin/paymentmethods/{id}', 'PaymentmethodsController@destroy'); //borra los datos
+
 
 Route::get('/cart', function (){
     return 'aca se muestra el carrito';
@@ -109,16 +128,6 @@ Route::post('/perfil', function(){
 });
 
 
-
-
-//rutas propias del administrador
-
-// Route::get('/admin/products/add', function(){
-//     return 'aca se muestra el campo para agregar productos ';
-// });
-// Route::post('admin/products/add', function(){
-//     return 'aca recibo los dats del producto agregado para guardarlos en la db';
-// });
 
 
 

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
@@ -15,10 +15,19 @@ class GhController extends Controller
      */
     public function index()
     {
+      $user="perfil";
+      if (Auth::check()) {
+    // The user is logged in...
+      $user = Auth::user()->name;
+      }
+      
       $products = Product::whereNotnull('offer_id')->paginate(4);
       $subcategories = Category::all();
       $categories = Category::whereNull('category_id')->get();
       // $categories = Category::with('subcategories')->get();
+
+
+// Get the currently authenticated user...
 
 
       return view('customer.products.index', [
@@ -27,6 +36,7 @@ class GhController extends Controller
         'products' => $products,
         'categories' => $categories,
         'subcategories' => $subcategories,
+        'user'=>$user,
       ]);
     }
 
@@ -110,7 +120,7 @@ class GhController extends Controller
 
 
     public function control(){
-      
+
     }
 
 

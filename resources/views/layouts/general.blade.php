@@ -1,7 +1,8 @@
 
 @php
-	$usuarioNombre="perfil";
+	$usuarioNombre=$user ?? '';
 	$formCarrito="";
+	$formPerfil="";
 @endphp
 
 					<!DOCTYPE html>
@@ -71,7 +72,7 @@
 											<a href="{{asset('login')}}" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
 									<?php else: ?>
 										<a href="<?= $formPerfil ?>" class="btn btn-outline-secondary btn-sm mr-2"> <?= $usuarioNombre ?></a>
-										<a href="index.php?log=0" class="btn btn-outline-secondary btn-sm mr-2"> log out</a>
+										<a href="{{asset('logout')}}" class="btn btn-outline-secondary btn-sm mr-2"> log out Not working</a>
 								<?php  endif; ?>
 
 								<a class="btn btn-outline-secondary btn-sm "href="<?= $formCarrito ?>"><img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"></a>
