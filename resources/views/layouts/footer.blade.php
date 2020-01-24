@@ -1,8 +1,5 @@
 
-@extends('products.index')
 
-@section('footer')
- @parent
 <section class="container-fluid">
 <div class="row footer-l1">
     <div class="col-12 col-md-4">
@@ -46,5 +43,3 @@
 </div>
 
 </section>
-
-@stop

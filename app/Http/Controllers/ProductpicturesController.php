@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
- use App\Product;
 
-class ProductsControllers extends Controller
+class ProductpicturesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class ProductsControllers extends Controller
      */
     public function index()
     {
-    $products = Product::paginate(8);
-    return view ('customer.products.index', ['products'=>$products,]
-  );
+        //
     }
 
     /**
@@ -48,10 +45,7 @@ class ProductsControllers extends Controller
      */
     public function show($id)
     {
-      $product = Product::find($id);
-      return view ('customer.products.show',
-      ['product'=>$product,]
-    );
+        //
     }
 
     /**

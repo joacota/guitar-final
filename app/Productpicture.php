@@ -4,18 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product_Photo extends Model
+class Productpicture extends Model
 {
   protected $fillable = [
  'title',
- 'src', //the path you uploaded the image
- 'mime_type'
+ 'src',
+ 'product_id' //the path you uploaded the image
  ];
 
 
 
  public function product()
      {
-       return $this->belongsTo('App\Product');
+       return $this->belongsTo('App\Product','product_id');
      }
 }
