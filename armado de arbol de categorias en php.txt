@@ -1,0 +1,47 @@
+
+
+<?php
+  function arboldeCategorias($parent = 0, $spacing = '', $user_tree_array = '')
+  {
+    include 'conexion.php';
+    if (!is_array($user_tree_array))
+    $user_tree_array = array();
+
+    $sql = "SELECT `id_categoria`, `nombre`, `id_padre` FROM `categorias` WHERE 1 AND `id_padre` = $parent ORDER BY id_categoria ASC";
+    $query = $connection->prepare($sql);
+    $query->execute();
+    $total = $query->rowCount();
+
+    if ($total > 0)
+    {
+      while ($row = $query->fetch(PDO::FETCH_OBJ))
+      {
+        $user_tree_array[] = array("id" => $row->id_categoria, "name" => $spacing . $row->nombre);
+        $user_tree_array = arboldeCategorias($row->id_categoria, $spacing . '&nbsp;&nbsp;', $user_tree_array);
+      }
+    }
+    return $user_tree_array;
+  }
+  ?>
+
+
+  <?php
+
+  $categories = App\Category::all();
+
+  foreach ($flights as $flight) {
+      echo $flight->name;
+  }
+
+
+
+
+  <?php
+    $categoryList = arboldeCategorias();
+  ?>
+{{-- https://www.vidadelprogramador.com/crear-arbol-categoria-php-pdo-mysql/ --}}
+  <select>
+    <?php foreach($categoryList as $cl) { ?>
+      <option value="<?php echo $cl["id"] ?>"><?php echo $cl["name"]; ?></option>
+    <?php } ?>
+  </select>
