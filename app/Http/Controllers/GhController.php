@@ -36,7 +36,7 @@ class GhController extends Controller
       //crear un nuevo carro si no existe.
       $totalCart=0;
 
-      $products = Product::whereNotnull('offer_id')->paginate(4);
+      $products = Product::whereNotnull('offer_id')->paginate(8);
       $subcategories = Category::all();
       $categories = Category::whereNull('category_id')->get();
       // $categories = Category::with('subcategories')->get();
@@ -93,7 +93,7 @@ class GhController extends Controller
     // The user is logged in...
       $user = Auth::user()->name;
       }
-      
+
       if(!session('cartId')){
         $cart= Cart::create([]);
         session(['cartId' => $cart->id]);

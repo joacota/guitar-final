@@ -30,6 +30,9 @@ Route::get('/products', 'ProductsController@index');
 Route::get('/products/{id}', 'ProductsController@show'); //muestra los datos del producto
 Route::get('/cart', 'CartsController@index');
 Route::get('/cart/{id}', 'CartsController@store');
+Route::get('/cartp/{id}', 'CartsController@updateplus');
+Route::get('/cartm/{id}', 'CartsController@updateminus');
+Route::get('/cartt/{id}', 'CartsController@updatetrash');
 
 // Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
 // {

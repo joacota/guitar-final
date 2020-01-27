@@ -153,8 +153,6 @@ $path=[];
         'brands'=>$brands,
       ]);
 
-
-
     }
 
     /**

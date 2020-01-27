@@ -81,126 +81,14 @@
 						</div>
 					</nav>
 
-
-
 						<!-- final del header -->
 
 					</div>
 					</header>
 
 
-			@if($vista=="1")
-
-				<section class="big">
-
-							<div class="carousel">
-							  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-								<ol class="carousel-indicators">
-								  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-								  <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-								  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-								</ol>
-								<div class="carousel-inner">
-								  <div class="carousel-item active">
-									<a href="section.php"><img src="/imagesWebsite/musico-g.jpg" class="d-block w-100 img-fluid" alt="... " ></a>
-									<div class="carousel-caption d-none d-md-block">
-									  <h5>First slide label</h5>
-									  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-									</div>
-								  </div>
-								  <div class="carousel-item">
-									<a href="section.php"><img src="/imagesWebsite/canciones-tocar-guitarra.jpg" class="d-block w-100 img-fluid" alt="..."></a>
-									<div class="carousel-caption d-none d-md-block">
-									  <h5>Second slide label</h5>
-									  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-									</div>
-								  </div>
-								  <div class="carousel-item">
-									<a href="section.php"><img src="/imagesWebsite/tocar-guitarra.jpg" class="d-block w-100 img-fluid" alt="..."></a>
-									<div class="carousel-caption d-none d-md-block">
-									  <h5>Third slide label</h5>
-									  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-									</div>
-								  </div>
-								</div>
-								<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-								  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-								  <span class="sr-only">Previous</span>
-								</a>
-								<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-								  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-								  <span class="sr-only">Next</span>
-								</a>
-							  </div>
-							</div>
-
-				</section>
-
-			@endif
-
-						<section class="articulos">
-
-					<div class="row col-12">
-						<div class="col-2">
-
-							<!-- esto es el ASAID -->
-							<section>
-
-								<nav class="nav flex-column d-none d-sm-block " style="padding-top: 50px;">
-
-							      {{-- <h5 class="ml-2">{{$categories[1]-> name}}{{$categories-> count()}}</h5> --}}
-							<h4 class="ml-2">Categorias</h4>
-							      @foreach ($categories as $category)
-
-							      <div class="categoria">
-							      <h5>  <a class="nav-link active" href="/gh/{{$category->id}}">{{$category->name}}{{$category->category_id}}</a>
-							      </h5>
-							      </div>
-
-
-							        @foreach ($subcategories as $subcategory)
-							          @if($subcategory->category_id == $category->id)
-							            <div class="subcategoria">
-							              <a class="nav-link active" href="/gh/{{$subcategory->id}}">{{$subcategory->name}}{{$subcategory->category_id}}</a>
-							            </div>
-							          @else
-
-							          @endif
-
-
-
-
-							        @endforeach
-
-							      @endforeach
-
-
-
-							  </nav>
-
-							</section>
-							<!-- esto es el ASAID -->
-
-						</div>
-
-
-
-						<div class="col-10" style="margin-right=0px;">
 
 							@yield('content')
-
-						</div>
-
-					</div>
-
-
-					</section>
-
-					<div class="row">
-						@yield('content1')
-					</div>
-
-
 
 
 
