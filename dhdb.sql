@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-01-2020 a las 00:27:40
+-- Tiempo de generación: 25-01-2020 a las 18:12:15
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.10
 
@@ -95,7 +95,7 @@ CREATE TABLE `carts` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `closed_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `purchase_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -197,7 +197,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (13, '2019_12_29_201910_create_carts_table', 1),
 (14, '2019_12_29_201911_create_cart_product_table', 1),
 (15, '2020_01_16_200114_create_productpictures_table', 2),
-(16, '2020_01_21_141504_alter_users_table', 3);
+(16, '2020_01_21_141504_alter_users_table', 3),
+(17, '2020_01_25_131206_alter_carts_table', 4);
 
 -- --------------------------------------------------------
 
@@ -854,7 +855,7 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT de la tabla `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `cart_product`
@@ -878,7 +879,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `offers`

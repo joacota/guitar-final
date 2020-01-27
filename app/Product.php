@@ -33,9 +33,9 @@ class Product extends Model
              return $this->belongsTo('App\Offer','offer_id');
           }
 
-    public function cart_product()
+    public function cart()
           {
-             return $this->belogsToMany('App\Cart_Product');
+             return $this->belogsToMany('App\Cart');
           }
 
 }

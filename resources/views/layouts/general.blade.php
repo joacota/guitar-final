@@ -75,7 +75,7 @@
 										<a href="{{asset('logout')}}" class="btn btn-outline-secondary btn-sm mr-2"> log out Not working</a>
 								<?php  endif; ?>
 
-								<a class="btn btn-outline-secondary btn-sm "href="<?= $formCarrito ?>"><img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"></a>
+								<a class="btn btn-outline-secondary btn-sm "href="<?= $formCarrito ?>"><img src="https://img.icons8.com/windows/26/000000/shopping-cart.png">{{$cart->products->count()}}{{$cart->user_id}}{{$totalCart}}</a>
 
 							</div>
 						</div>

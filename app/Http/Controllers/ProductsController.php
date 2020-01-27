@@ -19,6 +19,11 @@ class ProductsController extends Controller
      */
     public function index()
     {
+      $user="perfil";
+      if (Auth::check()) {
+    // The user is logged in...
+      $user = Auth::user()->name;
+      }
         $products = Product::all(); //paginate(8);
         $subcategories = Category::all();
         $categories = Category::whereNull('category_id')->get();
@@ -30,6 +35,7 @@ class ProductsController extends Controller
           'products' => $products,
           'categories' => $categories,
           'subcategories' => $subcategories,
+          'user'=>$user,
         ]);
     }
 
@@ -92,7 +98,7 @@ $path=[];
           }
 
       }
-    
+
       //  dd($path,$request->file('picture1'));
 
       // dd($request->all());
@@ -131,6 +137,7 @@ $path=[];
      */
     public function edit($id)
     {
+      $brands=Brand::all();
       $product = Product::find($id);
       $subcategories = Category::all();
       $categories = Category::whereNull('category_id')->get();
@@ -143,7 +150,7 @@ $path=[];
         'cat'=>$cat,
         'categories' => $categories,
         'subcategories' => $subcategories,
-
+        'brands'=>$brands,
       ]);
 
 
@@ -172,6 +179,9 @@ $path=[];
               'brand_id'=>'required',
             ]);
 
+            $dato=substr($request['brand_id'],0,2);
+            $request['brand_id']=$dato;
+
             $product=Product::find($id);
             $product->update($request->all());
             $pictures=$product->productpicture;
@@ -192,6 +202,7 @@ $path=[];
 
 
               }
+              dd($product);
               return redirect('/products/' . $product->id);
     }
 

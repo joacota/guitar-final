@@ -32,7 +32,7 @@
           @endif
           <p class="card-text">{{'$'}} {{ $product->price}}</p>
 
-          <a href="#" class="btn btn-dark">Comprar!</a>
+          <a href="/cart/{{$product->id}}" class="btn btn-dark">Agregar al Carrito</a>
           </div>
       </div>
 
