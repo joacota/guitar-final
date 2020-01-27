@@ -16,9 +16,9 @@
       <div class="card text-center card-product" >
           <a href="/products/{{$product->id}}">
             @if(count($product->productpicture)>0)
-              <img src="{{url( 'storage/' . $product->productpicture[0]->src)}}" class="card-img-top" alt="...">
+              <img src="{{url( 'storage/' . $product->productpicture[0]->src)}}" class="card-img-top" alt="..." maxwidth="80px" height="150px">
             @else
-              <img src="{{url( 'storage/imagesProducts/musicgeneric.jpg')}}" class="card-img-top" alt="...">
+              <img src="{{url( 'storage/imagesProducts/musicgeneric.jpg')}}" class="card-img-top" alt="..." maxwidth="80px" height="150px">
             @endif
           </a>
           <div class="card-body">
@@ -32,7 +32,7 @@
           @endif
           <p class="card-text">{{'$'}} {{ $product->price}}</p>
 
-          <a href="#" class="btn btn-dark">Comprar!</a>
+          <a href="/cart/{{$product->id}}" class="btn btn-dark">Agregar al Carrito</a>
           </div>
       </div>
 

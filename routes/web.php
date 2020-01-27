@@ -28,6 +28,11 @@ Route::get('/gh/{id}', 'GhController@show');
 
 Route::get('/products', 'ProductsController@index');
 Route::get('/products/{id}', 'ProductsController@show'); //muestra los datos del producto
+Route::get('/cart', 'CartsController@index');
+Route::get('/cart/{id}', 'CartsController@store');
+Route::get('/cartp/{id}', 'CartsController@updateplus');
+Route::get('/cartm/{id}', 'CartsController@updateminus');
+Route::get('/cartt/{id}', 'CartsController@updatetrash');
 
 // Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
 // {
@@ -70,9 +75,9 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function(){
 
 
 
-Route::get('/cart', function (){
-    return 'aca se muestra el carrito';
-});
+// Route::get('/cart', function (){
+//     return 'aca se muestra el carrito';
+// });
 
 Route::post('/cart', function (){
     return 'recibo el productoque voy a agregar al carrito';

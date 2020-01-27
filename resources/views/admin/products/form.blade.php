@@ -157,11 +157,11 @@
 
                 </div>
 
-                <div class="col-md-2 ">
-                <label class="form-control-label">
-                  Brands (un)
-                </label>
-                <p class="text-danger">{{ $errors->first('brand_id')}}</p>
+                <div class="col-md-2">
+                  <label class="form-control-label">
+                    Brands (un)
+                  </label>
+                  <p class="text-danger">{{ $errors->first('brand_id')}}</p>
                 </div>
 
                 <div class="col-md-2">
