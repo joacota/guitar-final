@@ -8,7 +8,7 @@
   <form action="#"  method="post" enctype="multipart/form-data">
 {{-- //<form action="{{ url($url) }}"  method="post" enctype="multipart/form-data"> --}}
 
-{{-- 
+{{--
     @csrf
 
     @method($method) --}}

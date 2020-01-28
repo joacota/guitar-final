@@ -17,10 +17,12 @@
           <a href="/products/{{$product->id}}">
             @if(count($product->productpicture)>0)
               <img src="{{url( 'storage/' . $product->productpicture[0]->src)}}" class="card-img-top" alt="..." maxwidth="80px" height="150px">
+
             @else
-              <img src="{{url( 'storage/imagesProducts/musicgeneric.jpg')}}" class="card-img-top" alt="..." maxwidth="80px" height="150px">
+              <img src="{{url( '/imagesProducts/musicgeneric.jpg')}}" class="card-img-top" alt="..." maxwidth="80px" height="150px">
             @endif
           </a>
+
           <div class="card-body">
           <h5 class="card-title">{{ $product->name}}</h5>
           {{-- <p class="card-text desc">{{ $products[$i]->description}}</p> --}}
