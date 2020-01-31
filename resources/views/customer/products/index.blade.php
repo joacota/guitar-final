@@ -1,27 +1,6 @@
 
   @extends('layouts.general')
 
-@section('content1')
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1>{{ $title }}</h1>
-      @foreach ($products as $product)
-      <div class="">
-        <a href="/products/{{$product->id}}">{{ $product->name}}</a>
-      </div>
-
-
-      @endforeach
-      <bn>
-      {{ $products->links() }}
-    </div>
-
-  </div>
-</div>
-@stop
-
 @section('content')
 
 <section class="ofertas">

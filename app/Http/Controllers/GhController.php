@@ -48,7 +48,7 @@ class GhController extends Controller
 
 
       return view('customer.products.index', [
-        'title'=>'listado de Ofertas',
+        'title'=>'Ofertas',
         'vista'=>"1",
         'products' => $products,
         'categories' => $categories,

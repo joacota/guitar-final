@@ -36,9 +36,9 @@ $cartelError2="";
 {{-- <form action="registro.php" method="post"> --}}
 
   {{-- <div class="container"> --}}
-    <h1>Registro</h1>
-    <p>Completá el formulario para registrarte!</p>
-    <hr>
+    <h1 style="text-align: center">Registro</h1>
+    <p style="text-align: center">Completá el formulario para registrarte!</p>
+
 
 @yield('content')
 
