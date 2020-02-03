@@ -1,8 +1,9 @@
 
 @php
-	$usuarioNombre=$user ?? '';
-	$formCarrito="/cart";
-	$formPerfil="";
+$usuarioNombre= $user->name;
+
+$formCarrito="/cart";
+$formPerfil="";
 @endphp
 
 					<!DOCTYPE html>
@@ -11,7 +12,7 @@
 						<meta charset="UTF-8">
 						<meta name="viewport" content="width=device-width, initial-scale=1.0">
 						<meta http-equiv="X-UA-Compatible" content="ie=edge">
-						<title>Home</title>
+						<title>Guitar-Hero</title>
 						<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	                        <link rel="stylesheet" href={{asset("css/header-footer.css")}}>
                         <link rel="stylesheet" href={{asset("css/index1.css")}}>
@@ -81,68 +82,60 @@
 
 						<section class="articulos">
 
-					<div class="row col-12">
-						<div class="col-2">
+								<div class="row col-12">
 
-							<!-- esto es el ASAID -->
-							<section>
+									<div class="col-2">
+										<!-- esto es el ASAID -->
+										<section>
 
-								<nav class="nav flex-column d-none d-sm-block " style="padding-top: 50px;">
+											<nav class="nav flex-column d-none d-sm-block " style="padding-top: 50px;">
 
-							      {{-- <h5 class="ml-2">{{$categories[1]-> name}}{{$categories-> count()}}</h5> --}}
-							<h4 class="ml-2">Categorias</h4>
-							      @foreach ($categories as $category)
+										      {{-- <h5 class="ml-2">{{$categories[1]-> name}}{{$categories-> count()}}</h5> --}}
+													<h4 class="ml-2">Categorias</h4>
+										      @foreach ($categories as $category)
 
-							      <div class="categoria">
-							      <h5>  <a class="nav-link active" href="/gh/{{$category->id}}">{{$category->name}}{{$category->category_id}}</a>
-							      </h5>
-							      </div>
+											      <div class="categoria ">
+												      <h5>  <a class="nav-link active" href="/gh/{{$category->id}}">{{$category->name}}</a> </h5>
+											      </div>
 
 
-							        @foreach ($subcategories as $subcategory)
-							          @if($subcategory->category_id == $category->id)
-							            <div class="subcategoria">
-							              <a class="nav-link active" href="/gh/{{$subcategory->id}}">{{$subcategory->name}}{{$subcategory->category_id}}</a>
-							            </div>
-							          @else
+										        @foreach ($subcategories as $subcategory)
+										          @if($subcategory->category_id == $category->id)
+										            <div class="subcategoria">
+										              <a class="nav-link active" href="/gh/{{$subcategory->id}}">{{$subcategory->name}}</a>
+										            </div>
+										          @else
 
-							          @endif
-
+										          @endif
 
 
 
-							        @endforeach
 
-							      @endforeach
+										        @endforeach
 
-
-
-							  </nav>
-
-							</section>
-							<!-- esto es el ASAID -->
-
-						</div>
+										      @endforeach
 
 
 
-						<div class="col-10" style="margin-right=0px;">
+										  </nav>
 
-							@yield('content')
+										</section>
+										<!-- esto es el ASAID -->
 
-						</div>
+									</div>
 
-					</div>
+
+
+									<div class="col-10" style="margin-right=0px;">
+
+										@yield('content')
+
+									</div>
+
+								</div>
 
 
 					</section>
-
-					<div class="row">
-						@yield('content1')
-					</div>
-
-
-
 
 
 					<!-- COMIENZO FOOTER -->

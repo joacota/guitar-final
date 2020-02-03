@@ -47,16 +47,19 @@
 							<div class="menu-derecha navbar-nav mr-1">
 
 
-								@if($usuarioNombre == "perfil")
-											{{-- <a href="{{asset('admin/control1')}}" class="btn btn-outline-secondary btn-sm mr-2"> admin</a> --}}
+								@if($usuarioNombre == "")
+
 											<a href="{{asset('register')}}" class="btn btn-outline-secondary btn-sm mr-2"> registrate</a>
 											<a href="{{asset('login')}}" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
 									@else
+										@if($user->role==1)
+											<a href="{{'/admin/control1'}}" class="btn btn-outline-secondary btn-sm mr-2"> admin</a>
+										@endif
 										<a href="{{$formPerfil}}" class="btn btn-outline-secondary btn-sm mr-2"> {{$usuarioNombre}}</a>
 										<a href="{{asset('logout')}}" class="btn btn-outline-secondary btn-sm mr-2"> log out</a>
 								@endif
 
-								<a class="btn btn-outline-secondary btn-sm "href="{{ $formCarrito }}">{{ $cart->products->count()}} pc<img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"> $ {{ $totalCart }}</a>
+								<a class="btn btn-outline-secondary btn-sm "href="{{ $formCarrito }}">{{ $cart->products->count()}} pc<img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"> $ {{ number_format($totalCart,2) }}</a>
 
 							</div>
 						</div>

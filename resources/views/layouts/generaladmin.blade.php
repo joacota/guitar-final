@@ -1,7 +1,8 @@
 
 @php
-	$usuarioNombre="perfil";
-	$formCarrito="";
+$usuarioNombre=$user->name;
+$formCarrito="/cart";
+$formPerfil="";
 @endphp
 
 					<!DOCTYPE html>
@@ -15,10 +16,8 @@
 	                        <link rel="stylesheet" href={{asset("css/header-footer.css")}}>
                         <link rel="stylesheet" href={{asset("css/index1.css")}}>
 					</head>
-
-
 					<body>
-					
+
 
 					<header>
 
@@ -30,6 +29,8 @@
 
 					</header>
 
+<div class="container-fluid">
+
 
 					<div class="">
 
@@ -38,7 +39,7 @@
 					</div>
 
 
-
+</div>
 
 
 					<!-- COMIENZO FOOTER -->

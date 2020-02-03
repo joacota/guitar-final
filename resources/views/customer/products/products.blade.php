@@ -32,7 +32,7 @@
           @else
               <p class="card-text">_____________</p>
           @endif
-          <p class="card-text">{{'$'}} {{ $product->price}}</p>
+          <p class="card-text">{{'$'}} {{number_format($product->price,2)}}</p>
 
           <a href="/cart/{{$product->id}}" class="btn btn-dark">Agregar al Carrito</a>
           </div>
@@ -44,7 +44,7 @@
   @endforeach
 
 </div>
-<div class="row">
+  <div class="row">
   <bn>
   {{ $products->links() }}
   </div>

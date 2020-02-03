@@ -23,10 +23,10 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 
-Route::get('/', 'GhController@index');
-Route::get('/gh/{id}', 'GhController@show');
+Route::get('/', 'GhController@index')->middleware('checkuser', 'checkcart');
+Route::get('/gh/{id}', 'GhController@show')->middleware('checkuser', 'checkcart');
 
-Route::get('/products', 'ProductsController@index');
+
 Route::get('/products/{id}', 'ProductsController@show'); //muestra los datos del producto
 Route::get('/cart', 'CartsController@index');
 Route::get('/cart/{id}', 'CartsController@store');
@@ -46,15 +46,18 @@ Route::get('/cartt/{id}', 'CartsController@updatetrash');
 
 Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function(){
 
-  Route::group(['middleware'=>'role'],function(){
+  Route::group(['middleware'=>'role', 'checkuser', 'checkcart'],function(){
 
+    Route::get('/products', 'ProductsController@index');
     Route::get('/products/add', 'ProductsController@create');
     Route::post('/products', 'ProductsController@store');
     Route::get('/products/{id}/edit', 'ProductsController@edit');
     Route::patch('/products/{id}', 'ProductsController@update');
-    Route::delete('/products/{id}', 'ProductsController@destroy');
+    Route::get('/products/{id}/delete', 'ProductsController@delete');
+    Route::delete('/products/{id}', 'ProductsController@softtDelete');
 
-    Route::get('/control1', function (){return view('admin/control');}); //->middleware('role');; //->middleware('auth');
+    // Route::get('/control1', function (){return view('admin/control');}); //->middleware('role');; //->middleware('auth');
+    Route::get('/control1', 'GhController@control')->middleware('checkuser');
 
     Route::get('/categories', 'CategoriesController@index'); //->middleware('role');
     Route::get('/categories/add/{id}', 'CategoriesController@create');
