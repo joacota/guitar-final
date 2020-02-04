@@ -25,7 +25,7 @@
 
 
 
-					<section class="big">
+					<section class="big" style="margin-top: -20px;">
 
 							<div class="carousel">
 							  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -90,7 +90,10 @@
 
 							<section class="ofertas">
 								<div class="row">
-								<h1>Ofertas</h1>
+									<div class="col-md-12">
+										<h1>Ofertas</h1>
+									</div>
+
 								</div>
 								<div class="row">
 

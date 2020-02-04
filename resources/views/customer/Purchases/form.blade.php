@@ -1,45 +1,57 @@
-<div class="container-fluid">
+<div class="container-fluid formulario-compra">
     <h2>{{$title}}</h2>
   <form action="{{ url($url) }}"  method="post" enctype="multipart/form-data">
     @csrf
 
     @method($method)
 
-    <div class="row">
+    <div class="row detalle-compra-row">
 
 
-      <div class="col-sm-6 datos_columnas">
+      <div class="col-sm-5 detalle-compra">
         <div class="row">
-          <h3>Metodos de Pago</h3>
+          <div class="col-sm-12">
+            <h3>Seleccione el metodos de Pago</h3>
+          </div>
         </div>
 
         <div class="row">
-          <select name="paymentmethod" class="form-control" class="opciones">
-              @foreach ($paymentmethods as $brandpaymentmethod)
-                <option>{{$brandpaymentmethod->id . " " . $brandpaymentmethod->name }}  </option>
+          <div class="col-sm-6">
 
-              @endforeach
+            <select name="paymentmethod" class="form-control" class="opciones">
+                @foreach ($paymentmethods as $brandpaymentmethod)
+                  <option>{{$brandpaymentmethod->id . " " . $brandpaymentmethod->name }}  </option>
 
-          </select>
+                @endforeach
+
+            </select>
+          </div>
         </div>
 
       </div>
 
-      <div class="col-sm-6">
+      <div class="col-sm-5 detalle-compra offset-sm-2">
 
         <div class="row">
-          <h2>Datos de la compra</h2>
+          <div class="col-sm-12">
+            <h3>Datos de la compra</h3>
+          </div>
         </div>
         <div class="row">
-          <h3>Total de la compra: $ {{number_format($totalCart,2)}}</h3>
+          <div class="col-sm-12">
+            <h4>Total de la compra: $ {{number_format($totalCart,2)}}</h4>
+          </div>
         </div>
         <div class="row">
-          <h3>IVA 21% : $ {{number_format($totalCart*0.21,2)}}</h3>
+          <div class="col-sm-12">
+            <h4>IVA 21% : $ {{number_format($totalCart*0.21,2)}}</h4>
+          </div>
         </div>
         <div class="row">
-          <h3>Total a pagar : $ {{number_format($totalCart*1.21,2)}}</h3>
+          <div class="col-sm-12">
+            <h4 class="total">Total a pagar : $ {{number_format($totalCart*1.21,2)}}</h4>
+          </div>
         </div>
-
       </div>
 
     </div>
@@ -52,8 +64,8 @@
 
       </div>
 
-      <div class="col-md-3 " >
-        <p><a href="/cart">Cancelar</a></p>
+      <div class="col-md-3 offset-md-6" style="text-align:right;" >
+        <p><a class="btn btn-danger cancelar" href="/cart">Cancelar</a></p>
       </div>
 
     </div>

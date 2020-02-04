@@ -33,7 +33,7 @@ $formPerfil="";
 
 			@if($vista=="1")
 
-				<section class="big">
+				<section class="big" style="margin-top: -20px;">
 
 							<div class="carousel">
 							  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -80,11 +80,11 @@ $formPerfil="";
 
 			@endif
 
-						<section class="articulos">
+						<section class="articulos" style="padding-left: 20px;">
 
-								<div class="row col-12">
+								<div class="row">
 
-									<div class="col-2">
+									<div class="col-md-2 col-sm-0">
 										<!-- esto es el ASAID -->
 										<section>
 
@@ -126,7 +126,7 @@ $formPerfil="";
 
 
 
-									<div class="col-10" style="margin-right=0px;">
+									<div class="col-md-10 col-sm-12" style="margin-right=0px;">
 
 										@yield('content')
 
