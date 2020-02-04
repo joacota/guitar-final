@@ -34,6 +34,11 @@ Route::get('/cartp/{id}', 'CartsController@updateplus');
 Route::get('/cartm/{id}', 'CartsController@updateminus');
 Route::get('/cartt/{id}', 'CartsController@updatetrash');
 
+
+Route::get('/purchases', 'purchasesController@create');
+Route::post('/purchases', 'purchasesController@store');
+Route::get('/purchases/show', 'purchasesController@show')->middleware('checkcart');
+
 // Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
 // {
 //     Route::get('dashboard', function() {} );

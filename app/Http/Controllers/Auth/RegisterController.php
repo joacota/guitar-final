@@ -7,6 +7,8 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use App\cart;
 
 class RegisterController extends Controller
 {
@@ -70,6 +72,22 @@ class RegisterController extends Controller
         ]);
     }
 
-    
+    public function registered(Request $request, $user)
+    {
+      $cartUser= Cart::where('user_id', $user->id)->latest()->first();
+
+      if($cartUser){
+        session(['cartId' => $cartUser->id]);
+
+      }else {
+        $cart=Cart::find(session('cartId'));
+
+        //le tengo que asignar el user id al carro existente
+
+        $cart->user_id= $user->id;
+        $cart->save();
+      }
+    }
+
 
 }
