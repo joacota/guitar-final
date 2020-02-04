@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Purchase extends Model
 {
-  protected $fillable = ['user_id', 'totalPrice', 'payment_method', 'cart_id', ];
+  protected $fillable = ['user_id', 'total_price', 'paymentmethod_id', 'cart_id', ];
 
 
   public function user()
@@ -14,12 +14,13 @@ class Purchase extends Model
         return $this->belongsTo('App\User');
       }
 
-      public function cart()
+  public function cart()
           {
             return $this->bolongsTo('App\Cart');
           }
-          public function paymentmethod()
+
+  public function paymentmethod()
               {
-                return $this->bolongsTo('App\PaymentMethod');
+                return $this->bolongsTo('App\Paymentmethod');
               }
 }

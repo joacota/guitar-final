@@ -1,17 +1,14 @@
-@extends('layouts.generalCarro')
 
-
-@section('content')
 
 <section>
 <div class="container-fluid">
-  <form action="#"  method="post" enctype="multipart/form-data">
+  <form action="{{ url($url) }}"  method="get" enctype="multipart/form-data">
 {{-- //<form action="{{ url($url) }}"  method="post" enctype="multipart/form-data"> --}}
 
-{{--
+
     @csrf
 
-    @method($method) --}}
+    @method($method)
 
 <div class="row">
   <h3>{{$title}}</h3>
@@ -103,6 +100,7 @@
 <div class="row">
   <div class="col-2">
     <button type="submit" name="button" class="btn btn-primary">Comprar</button>
+
   </div>
   <div class="col-9">
     {{-- <button type="button" name="button" class="btn btn-primary">Comprar</button> --}}
@@ -120,9 +118,3 @@
 
 
 </section>
-
-
-
-
-
-@stop

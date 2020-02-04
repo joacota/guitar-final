@@ -85,7 +85,7 @@ class CartsController extends Controller
               $subcategories = Category::all();
               $categories = Category::whereNull('category_id')->get();
 
-              return view('customer.cart.index', [
+              return view('customer.cart.create', [
                 'title'=>'Carrito con productos',
                 'cartProducts' => $cartProducts,
                 'totalCart'=>$totalCart,
@@ -126,7 +126,7 @@ class CartsController extends Controller
         }else{
           $cart->products()->syncWithoutDetaching($id); //$cart->products()->attach($id);
         }
-        
+
       //si esta logueado meto tambien el user id al Carrito si no lo tiene
       session(['cartId' => $cart->id]);
        return redirect()->back();
@@ -195,4 +195,18 @@ class CartsController extends Controller
 
       return redirect('/cart');
     }
+
+    public function softDelete($id)
+       {
+
+           $cart = Cart::find($id)->delete();
+           if ($cart) {
+                  return redirect()->back;
+           } else {
+               return response('no se encontro el producto', 200)
+                  ->header('Content-Type', 'text/plain');
+           }
+
+
+       }
 }

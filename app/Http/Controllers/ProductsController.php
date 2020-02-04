@@ -331,17 +331,10 @@ $path=[];
       $categories = Category::whereNull('category_id')->get();
       $cat = Category::find($product->category_id);
       $photo=$product->productpicture;
-      // dd($photo[1]);
-    // dd($product->Productpicture);
-    // if (Auth::check()) {
-    // // The user is logged in...
-    // $user = Auth::user();
-    // } else{
-    //   $user= new User;
-    // }
+
     $user=session()->get('user');
     $cart= new Cart;
-    // ssi existe tengo que tomar el activo que viene de la session con el id.
+  
 
     if(!session('cartId')){
       $cart= Cart::create([]);
