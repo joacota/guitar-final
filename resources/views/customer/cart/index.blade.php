@@ -18,7 +18,7 @@
 
 </div>
 
-  
+
   <div class="row">
     <div class="col-lg-12">
 
@@ -65,8 +65,8 @@
 @else
   <td>  </td>
   <td>  </td>
-  <td class="text-center"> {{$cartProduct['cantidad']}} </td>
-  <td class="text-right"> $ {{number_format($cartProduct->price*$cartProduct->qty,2)}} </td>
+  <td class="text-center"> {{$cartProduct->pivot->qty}} </td>
+  <td class="text-right"> $ {{number_format($cartProduct->price*$cartProduct->pivot->qty,2)}} </td>
 @endif
   {{-- <td> {{$cartProduct['cantidad']}} </td>
   <td> $ {{$cartProduct->price*$cartProduct['cantidad']}} </td> --}}

@@ -20,28 +20,28 @@ class CartsController extends Controller
 
       $user="perfil";
 
-      if (Auth::check()) {
-    // The user is logged in...
-        $user = Auth::user();
-
-        //$cart = Cart::where('user_id',$user->id);
-        $cart = Cart::find(session()->get('cartId'));
-
-      }else{
-        if(session('cartId')){
-          // dd(session()->get('cartId'));
-
-            $user= new User;
-
-          $cart = Cart::find(session()->get('cartId'));
-        }else{
-
-          return redirect()->back();
-        }
-
-      }
-
-
+    //   if (Auth::check()) {
+    // // The user is logged in...
+    //     $user = Auth::user();
+    //
+    //     //$cart = Cart::where('user_id',$user->id);
+    //     $cart = Cart::find(session()->get('cartId'));
+    //
+    //   }else{
+    //     if(session('cartId')){
+    //       // dd(session()->get('cartId'));
+    //
+    //         $user= new User;
+    //
+    //       $cart = Cart::find(session()->get('cartId'));
+    //     }else{
+    //
+    //       return redirect()->back();
+    //     }
+    //
+    //   }
+            $user=session()->get('user');
+            $cart = Cart::find(session()->get('cartId'));
               $cartProducts= $cart->products()->orderBy('product_id')->get();
               // $cartProducts=Cart_Product::where('cart_id',$cart->id)->groupBy('product_id')->get();
 
@@ -119,7 +119,7 @@ class CartsController extends Controller
 
         $cart->products()->attach($id);
       //si esta logueado meto tambien el user id al Carrito si no lo tiene
-
+      session(['cartId' => $cartUser->id]);
        return redirect()->back();
     }
 
