@@ -117,9 +117,18 @@ class CartsController extends Controller
 
         $cart=Cart::find(session('cartId'));
 
-        $cart->products()->attach($id);
+        $item = $cart->products()->find($id);
+
+        if($item){
+
+          $item->pivot->qty++;
+          $item->pivot->save();
+        }else{
+          $cart->products()->syncWithoutDetaching($id); //$cart->products()->attach($id);
+        }
+        
       //si esta logueado meto tambien el user id al Carrito si no lo tiene
-      session(['cartId' => $cartUser->id]);
+      session(['cartId' => $cart->id]);
        return redirect()->back();
     }
 

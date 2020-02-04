@@ -54,16 +54,12 @@ class LoginController extends Controller
      */
      public function authenticated(Request $request, $user) //(Request $request, $user)
      {
-       // dd($request, $user);
-      // Con la variable $user relaciono el carrito con el usuario recien autenticado
-   // dd($user->id);
+      
         $cartUser= Cart::where('user_id', $user->id)->latest()->first();
-      // dd($cartUser->id);
-       // dd($cartUser? 'true' :'false');
 
         if($cartUser){
           session(['cartId' => $cartUser->id]);
-          // dd(session('cartId'));  
+
         }else {
           $cart=Cart::find(session('cartId'));
 

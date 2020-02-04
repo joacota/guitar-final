@@ -59,7 +59,7 @@
 										<a href="{{asset('logout')}}" class="btn btn-outline-secondary btn-sm mr-2"> log out</a>
 								@endif
 
-								<a class="btn btn-outline-secondary btn-sm "href="{{ $formCarrito }}">{{ $cart->products->count() }} pc<img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"> $ {{ number_format($totalCart,2) }}</a>
+								<a class="btn btn-outline-secondary btn-sm "href="{{ $formCarrito }}">{{ $cart->products->sum('pivot.qty')}} pc<img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"> $ {{ number_format($totalCart,2) }}</a>
 
 							</div>
 						</div>

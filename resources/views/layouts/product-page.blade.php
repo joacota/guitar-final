@@ -145,9 +145,10 @@ $formPerfil="";
 								</div>
 
               <section class="product-tipos-disp">
-								@if($product->offert)
+								{{-- @if($product->offer)
 									{{$product->offer->factor}}
-								@endif
+
+								@endif --}}
 
 
               </section>
@@ -159,7 +160,7 @@ $formPerfil="";
 
 											<div class="row">
 
-												<p style="text-decoration: line-through">
+												<p class="oldprice" style="text-decoration: line-through">
 													$ {{number_format($product->price,2)}}
 												</p>
 											</div>
@@ -171,7 +172,7 @@ $formPerfil="";
 
 											<div class="row">
 												<p >
-													$ {{number_format($product->price*$product->offer->factor,2)}}
+													$ {{number_format($product->price*(1-$product->offer->factor),2)}}
 												</p>
 											</div>
 
