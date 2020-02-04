@@ -233,7 +233,7 @@
           <div class="form-group row" style="margin-top:70px;">
 
             <div class="col-md-6 form-control-label boton_editar">
-              @if($method=='patch')
+              @if($method=='patch' || $method=='post')
                 <button  class="btn btn-dark">Grabar</button>
               @endif
 

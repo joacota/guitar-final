@@ -86,10 +86,7 @@ Route::post('/cart', function (){
     return 'recibo el productoque voy a agregar al carrito';
 });
 
-
-Route::get('/faq', function (){
-    return 'aca se muestran las preguntas frecuentes';
-});
+Route::get('/faq', 'FaqController@index');
 
 Route::get('/contact', function (){
     return 'aca se muestra el formulario de contacto';

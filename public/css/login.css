@@ -7,14 +7,18 @@ body {
     background-size: cover;
   }
 
+  h1 {
+      margin-top: 25px;
+  }
+
 #formulario{
-    width:412px;
-    margin:10vh auto;
+    width:550px;
+    margin:0vh auto;
 }
 
 #formulario form {
     width: 100%;
-    max-width: 410px;
+    max-width: 550px;
     padding: 15px;
     margin: auto;
 }
@@ -42,16 +46,18 @@ body {
     padding-top:10px;
     color: rgb(159, 184, 209);
     margin-top: 5px;
+    padding-left: 0px;
+    text-align: left;
 }
 
-button[type=submit] {
+/*button[type=submit] {
     background-color: rgb(27, 27, 27);
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+  }*/
 
   @media screen and (max-width:500px){
     #formulario{
