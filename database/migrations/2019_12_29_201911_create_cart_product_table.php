@@ -21,6 +21,7 @@ class CreateCartProductTable extends Migration
             $table->unsignedBigInteger('cart_id');
             $table->foreign('cart_id')->references('id')->on('carts');
             $table->softdeletes();
+            $table->integer('qty')->default(1);
         });
     }
 

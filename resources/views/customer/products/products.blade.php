@@ -17,10 +17,12 @@
           <a href="/products/{{$product->id}}">
             @if(count($product->productpicture)>0)
               <img src="{{url( 'storage/' . $product->productpicture[0]->src)}}" class="card-img-top" alt="..." maxwidth="80px" height="150px">
+
             @else
-              <img src="{{url( 'storage/imagesProducts/musicgeneric.jpg')}}" class="card-img-top" alt="..." maxwidth="80px" height="150px">
+              <img src="{{url( '/imagesProducts/musicgeneric.jpg')}}" class="card-img-top" alt="..." maxwidth="80px" height="150px">
             @endif
           </a>
+
           <div class="card-body">
           <h5 class="card-title">{{ $product->name}}</h5>
           {{-- <p class="card-text desc">{{ $products[$i]->description}}</p> --}}
@@ -30,7 +32,7 @@
           @else
               <p class="card-text">_____________</p>
           @endif
-          <p class="card-text">{{'$'}} {{ $product->price}}</p>
+          <p class="card-text">{{'$'}} {{number_format($product->price,2)}}</p>
 
           <a href="/cart/{{$product->id}}" class="btn btn-dark">Agregar al Carrito</a>
           </div>
@@ -42,7 +44,7 @@
   @endforeach
 
 </div>
-<div class="row">
+  <div class="row">
   <bn>
   {{ $products->links() }}
   </div>

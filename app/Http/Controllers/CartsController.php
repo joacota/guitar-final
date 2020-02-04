@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Cart;
 use App\Category;
+use App\User;
 
 class CartsController extends Controller
 {
@@ -19,59 +20,74 @@ class CartsController extends Controller
 
       $user="perfil";
 
-      if (Auth::check()) {
-    // The user is logged in...
-        $user = Auth::user();
-
-        //$cart = Cart::where('user_id',$user->id);
-        $cart = Cart::find(session()->get('cartId'));
-
-      }else{
-        if(session('cartId')){
-          // dd(session()->get('cartId'));
-          $cart = Cart::find(session()->get('cartId'));
-        }else{
-
-          return redirect()->back();
-        }
-
-      }
-
-
+    //   if (Auth::check()) {
+    // // The user is logged in...
+    //     $user = Auth::user();
+    //
+    //     //$cart = Cart::where('user_id',$user->id);
+    //     $cart = Cart::find(session()->get('cartId'));
+    //
+    //   }else{
+    //     if(session('cartId')){
+    //       // dd(session()->get('cartId'));
+    //
+    //         $user= new User;
+    //
+    //       $cart = Cart::find(session()->get('cartId'));
+    //     }else{
+    //
+    //       return redirect()->back();
+    //     }
+    //
+    //   }
+            $user=session()->get('user');
+            $cart = Cart::find(session()->get('cartId'));
               $cartProducts= $cart->products()->orderBy('product_id')->get();
               // $cartProducts=Cart_Product::where('cart_id',$cart->id)->groupBy('product_id')->get();
 
-              $productosCarro=[];
-              $t=0;
-              foreach ($cartProducts as $key => $value) {
-              $cuenta=1;
-                foreach ($productosCarro as $key1 => $value1) {
-                  if($value1['producto']['id']==$value->id){
-                      $cuenta++;
-                      $t=$key1;
-                  }
+              // $productosCarro=[];
+              // $t=0;
+              // foreach ($cartProducts as $key => $value) {
+              // $cuenta=1;
+              //   foreach ($productosCarro as $key1 => $value1) {
+              //     if($value1['producto']['id']==$value->id){
+              //         $cuenta++;
+              //         $t=$key1;
+              //     }
+              //
+              //   }
+              //   if($cuenta>1){
+              //     $productosCarro[$t]['cantidad']++;
+              //
+              //   }else {
+              //     $productosCarro[]=[
+              //       'producto'=>$value,
+              //       'cantidad'=>1,
+              //     ];
+              //
+              //   }
+              //
+              // }
 
-                }
-                if($cuenta>1){
-                  $productosCarro[$t]['cantidad']++;
 
-                }else {
-                  $productosCarro[]=[
-                    'producto'=>$value,
-                    'cantidad'=>1,
-                  ];
+              // $totalCart=$cartProducts->sum('price');
+              $totalCart=0;
 
+              foreach ($cart->Products as $value) {
+                if(isset($value->offer)){
+                  $totalCart=$totalCart+($value->price*(1-$value->offer->factor)*$value->pivot->qty);
+                }else{
+                  $totalCart=$totalCart+$value->price*$value->pivot->qty;
                 }
 
               }
 
-              $totalCart=$cartProducts->sum('price');
               $subcategories = Category::all();
               $categories = Category::whereNull('category_id')->get();
 
               return view('customer.cart.index', [
                 'title'=>'Carrito con productos',
-                'cartProducts' => $productosCarro,
+                'cartProducts' => $cartProducts,
                 'totalCart'=>$totalCart,
                 'categories' => $categories,
                 'subcategories' => $subcategories,
@@ -101,9 +117,18 @@ class CartsController extends Controller
 
         $cart=Cart::find(session('cartId'));
 
-        $cart->products()->attach($id);
-      //si esta logueado meto tambien el user id al Carrito si no lo tiene
+        $item = $cart->products()->find($id);
 
+        if($item){
+
+          $item->pivot->qty++;
+          $item->pivot->save();
+        }else{
+          $cart->products()->syncWithoutDetaching($id); //$cart->products()->attach($id);
+        }
+        
+      //si esta logueado meto tambien el user id al Carrito si no lo tiene
+      session(['cartId' => $cart->id]);
        return redirect()->back();
     }
 
@@ -138,56 +163,36 @@ class CartsController extends Controller
      */
     public function updateplus(Request $request, $id)
     {
-
       $cart=Cart::find(session('cartId'));
 
-      $cart->products()->attach($id);
-      //si esta logueado meto tambien el user id al Carrito si no lo tiene
+      $item = $cart->products()->find($id);
+
+      $item->pivot->qty++;
+
+      $item->pivot->save();
 
       return redirect('/cart');
     }
 
     public function updateminus(Request $request, $id)
     {
-
-      $n=0;
       $cart=Cart::find(session('cartId'));
-      foreach ($cart->products as $key => $value) {
-        if($value->id==$id){
-          $n=$n+1;
-        }
-      }
 
-      $cart->products()->detach($id);
+      $item = $cart->products()->find($id);
 
-      for ($i=1; $i <$n ; $i++) {
-        $cart->products()->attach($id);
-      }
+      $item->pivot->qty--;
 
-      //si esta logueado meto tambien el user id al Carrito si no lo tiene
+      $item->pivot->save();
 
       return redirect('/cart');
     }
 
     public function updatetrash(Request $request, $id)
     {
-
       $cart=Cart::find(session('cartId'));
 
       $cart->products()->detach($id);
 
       return redirect('/cart');
-    }
-
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }

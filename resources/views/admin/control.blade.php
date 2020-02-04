@@ -4,76 +4,76 @@
 
 
 <div class="row">
-  <h3>PRoductos</h3>
+  <h5>PRoductos</h5>
 </div>
 <div class="row">
   <h4>
-    <a href="#">lista de producto</a></h3>
+    <a href="/admin/products">lista de producto</a></h5>
 </div>
 <div class="row">
   <h4>
-    <a href="/admin/products/add">Nuevo de producto</a></h3>
+    <a href="/admin/products/add">Nuevo de producto</a></h5>
 </div>
 <div class="row">
   <h4>
-    <a href="#">Buscar de producto (editar/Borrar)</a></h3>
+    <a href="#">Buscar de producto (editar/Borrar)</a></h5>
 </div>
 
 <div class="row">
-  <h3>----------------</h3>
+  <h5>----------------</h5>
 </div>
 <div class="row">
-  <h3>Categorias</h3>
-</div>
-<div class="row">
-  <h4>
-    <a href="/admin/categories">lista de Categorias</a></h3>
+  <h5>Categorias</h5>
 </div>
 <div class="row">
   <h4>
-    <a href="#">Nuevo de Categoria</a></h3>
+    <a href="/admin/categories">lista de Categorias</a></h5>
 </div>
 <div class="row">
   <h4>
-    <a href="#">Buscar de Categoria (editar/Borrar)</a></h3>
+    <a href="#">Nuevo de Categoria</a></h5>
+</div>
+<div class="row">
+  <h4>
+    <a href="#">Buscar de Categoria (editar/Borrar)</a></h5>
 </div>
 
 <div class="row">
-  <h3>----------------</h3>
+  <h5>----------------</h5>
 </div>
 <div class="row">
-<h3>Marcas</h3>
-</div>
-<div class="row">
-<h4>
-  <a href="#">lista de Marcaa</a></h3>
+<h5>Marcas</h5>
 </div>
 <div class="row">
 <h4>
-  <a href="#">Nuevo de Marca</a></h3>
+  <a href="#">lista de Marcaa</a></h5>
 </div>
 <div class="row">
 <h4>
-  <a href="#">Buscar de Marca (editar/Borrar)</a></h3>
+  <a href="#">Nuevo de Marca</a></h5>
+</div>
+<div class="row">
+<h4>
+  <a href="#">Buscar de Marca (editar/Borrar)</a></h5>
 </div>
 
 
 <div class="row">
-  <h3>----------------</h3>
+  <h5>----------------</h5>
 </div>
 <div class="row">
-<h3>Metodos de pago</h3>
-</div>
-<div class="row">
-<h4>
-  <a href="/admin/paymentmethods">lista de Metodos</a></h3>
+<h5>Metodos de pago</h5>
 </div>
 <div class="row">
 <h4>
-  <a href="admin/paymentmethods/add">Nuevo de Metodo/a></h3>
+  <a href="/admin/paymentmethods">lista de Metodos</a></h5>
 </div>
 <div class="row">
 <h4>
-  <a href="#">Buscar de metodo (editar/Borrar)</a></h3>
+  <a href="admin/paymentmethods/add">Nuevo de Metodo/a></h5>
+</div>
+<div class="row">
+<h4>
+  <a href="#">Buscar de metodo (editar/Borrar)</a></h5>
 </div>
 @stop

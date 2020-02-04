@@ -1,7 +1,9 @@
 
 @php
-	$usuarioNombre="perfil";
-	$formCarrito="";
+$usuarioNombre= $user->name;
+
+$formCarrito="/cart";
+$formPerfil="";
 @endphp
 
 
@@ -23,73 +25,13 @@
 
 <!-- COMIENZO DEL HEADER -->
 <header>
+	@include('layouts.header',[
+		'method'=>'post',
+		'url'=> '/admin/categories',
+
+	]);
 
 
-						<div class="container-fluid">
-								<!-- esto es el header -->
-								<nav class="navbar navbar-expand-lg navbar-light bg-light">
-							{{-- <a class="navbar-brand" href="index.php"><img  width= "110px"src="public/photosBrands/logo.png" alt=""></a> --}}
-							<a class="navbar-brand" href="/"><img  width= "110px" src={{asset("imagesWebsite/logo.png")}} alt=""></a>
-
-
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-
-							<div class="collapse navbar-collapse" id="navbarSupportedContent">
-								<ul class="navbar-nav mr-auto">
-
-										@foreach ($categories as $category)
-
-									 		<li class="nav-item dropdown">
-
-												<a class="nav-link dropdown-toggle categoria" href="/gh/{{$category->id}}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-													{{$category->name}}{{$category->category_id}}
-												</a>
-
-	 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
-										 	 	@foreach ($subcategories as $subcategory)
-
-
-											 		 @if($subcategory->category_id == $category->id)
-														 <a class="dropdown-item" href="/gh/{{$subcategory->id}}">
-															 {{$subcategory->name}}
-														</a>
-											 		 @endif
-
-										 	 	@endforeach
-
-									 		</div>
-
-									 		</li>
-									  @endforeach
-
-									</ul>
-
-
-								<div class="menu-derecha navbar-nav mr-1">
-
-
-									<?php if($usuarioNombre == "perfil"):?>
-												<a href="Formularios/registro.php" class="btn btn-outline-secondary btn-sm mr-2"> registrate</a>
-												<a href="Formularios/login.php" class="btn btn-outline-secondary btn-sm mr-2"> log in</a>
-										<?php else: ?>
-											<a href="<?= $formPerfil ?>" class="btn btn-outline-secondary btn-sm mr-2"> <?= $usuarioNombre ?></a>
-											<a href="index.php?log=0" class="btn btn-outline-secondary btn-sm mr-2"> log out</a>
-									<?php  endif; ?>
-
-									<a class="btn btn-outline-secondary btn-sm "href="<?= $formCarrito ?>"><img src="https://img.icons8.com/windows/26/000000/shopping-cart.png"></a>
-
-								</div>
-							</div>
-						</nav>
-
-
-
-							<!-- final del header -->
-
-						</div>
 </header>
   <!-- FINAL DEL HEADER -->
 
@@ -104,8 +46,9 @@
       <h6>
         <ul>
           <li>
-            <a href="#">{{$categories[($cat->category_id)-1]->name}} |</a>
+            <a href="#">{{$categories[($cat->category_id)]->name}} |</a>
           </li>
+
           <li>
             <a href="/gh/{{$cat->id}}">{{$cat->name}} </a>
           </li>
@@ -129,7 +72,7 @@
                     <a href="#">
 											{{-- validar que tenga fotos --}}
 										@if(count($product->productpicture)>0)
-                      <img  src="{{url( 'storage/' . $product->productpicture[0]->src)}}" alt="">
+                      <img  src="{{Storage::url($product->productpicture[0]->src) }}" alt="">
 											{{-- <p>{{'storage/' . substr($product->productpicture[0]->src,7)}} {{asset('storage/' . $product->productpicture[0]->src)}}</p> --}}
 										@else
 											<img  src="/imagesProducts/logo.jpg" alt="">
@@ -144,11 +87,12 @@
                   <section class="product-photos-min">
 
                       <ul>
+												@if(count($product->productpicture)>0)
 												@foreach ($product->productpicture as $picture)
 													<li>
 
 														<a href="#">
-															<img  src="{{url( 'storage/' . $picture->src)}}" alt="">
+															<img width="50px" height="50px" src="{{Storage::url($picture->src) }}">
 
 
 														</a>
@@ -156,7 +100,7 @@
 
 
 												@endforeach
-
+											@endif
 
                       </ul>
 
@@ -201,44 +145,47 @@
 								</div>
 
               <section class="product-tipos-disp">
+								{{-- @if($product->offer)
+									{{$product->offer->factor}}
 
-                  <ul>
-                    <li>
-                      <a href="#">
-                        {{-- <img  src="/imagesProducts/" . {{$product->product_photo->src}} alt=""> --}}
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img  src="/imagesProducts/guitarranegra.jpg" alt="">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img  src="/imagesProducts/guitarra.jpg" alt="">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <img  src="/imagesProducts/guitarranegra.jpg" alt="">
-                      </a>
-                    </li>
+								@endif --}}
 
-                  </ul>
 
               </section>
 
 
-              <div class="product-price">
-                <p>
-                  $ {{$product->price}}
-                </p>
+							<div class="product-price">
+		              @if(isset($product->offer))
+
+
+											<div class="row">
+
+												<p class="oldprice" style="text-decoration: line-through">
+													$ {{number_format($product->price,2)}}
+												</p>
+											</div>
+
+											<div class="row">
+
+												<p>{{$product->offer->name}}</p>
+											</div>
+
+											<div class="row">
+												<p >
+													$ {{number_format($product->price*(1-$product->offer->factor),2)}}
+												</p>
+											</div>
+
+									@else
+											<p class="text-center">
+												$ {{number_format($product->price,2)}}
+											</p>
+									@endif
 
               </div>
 
-
             <div class="product-button-comprar">
-              <a href="carrito.php">COMPRAR</a>
+              <a href="/cart/{{$product->id}}">Agregar al Carrito</a>
             </div>
 
             </div>
@@ -298,7 +245,7 @@
 
   </section>
 
-@yield('content')
+{{-- @yield('content') --}}
 
 
 </div>
@@ -306,10 +253,54 @@
 
 
 <!-- COMIENZO FOOTER -->
+<!-- COMIENZO FOOTER -->
 <footer>
+  <section class="container-fluid">
+  <div class="row footer-l1">
+      <div class="col-12 col-md-4">
+        <a href="Formularios/faq.php"><h5>Preguntas frecuentes!</h5></a>
+      </div>
+      <div class="col-12 col-md-4">
+        <a href="index.php"><img src={{asset("imagesWebsite/logo.png")}} alt="">  </a>
+      </div>
+      <div class="col-12 col-md-4">
+        <a href="Formularios/contacto.php"><h5>Contactanos</h5></a>
+      </div>
 
-@include('/layouts/footer')
+  </div>
 
+  <div class="row footer-l2">
+    <div class="col-12 col-md-4 seguinos">
+
+      <div class="row">
+        <h6>Seguinos</h6>
+      <!-- </div>
+      <div class="row"> -->
+        <div class="redes">
+          <a href="http://www.facebook.com"><img src="imagenes/iconos/icons8-facebook-old-26.png" alt=""></a>
+          <a href="http://instagram.com"><img src="imagenes/iconos/icons8-instagram-50.png" alt=""></a>
+          <a href="http://twitter.com"><img src="imagenes/iconos/icons8-twitter-24.png" alt=""></a>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="col-12 col-md-4 trabaja">
+      <a href="#"><h5>Trabaja Con nosotros</h5>  </a>
+    </div>
+
+    <div class="col-12 col-md-4 contactanos">
+      <a href="#"><h5>+54 11 5263-7400</h5></a>
+    </div>
+
+
+  </div>
+
+  </section>
+
+
+{{-- @yield('footer') --}}
 
 
 </footer>
@@ -321,3 +312,5 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

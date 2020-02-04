@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 use Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use App\cart;
 
 class LoginController extends Controller
 {
@@ -41,4 +43,32 @@ class LoginController extends Controller
     //   Auth::logout();
     //   return redirect('/'); //  return redirect('/login');
     // }
+
+
+    /**
+     * The user has been authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+     public function authenticated(Request $request, $user) //(Request $request, $user)
+     {
+      
+        $cartUser= Cart::where('user_id', $user->id)->latest()->first();
+
+        if($cartUser){
+          session(['cartId' => $cartUser->id]);
+
+        }else {
+          $cart=Cart::find(session('cartId'));
+
+          //le tengo que asignar el user id al carro existente
+
+          $cart->user_id= $user->id;
+          $cart->save();
+        }
+
+      }
+
 }
