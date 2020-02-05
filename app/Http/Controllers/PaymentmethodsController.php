@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Paymentmethod;
+use App\Category;
+use App\User;
+use App\Cart;
 
 class PaymentmethodsController extends Controller
 {
@@ -16,10 +19,30 @@ class PaymentmethodsController extends Controller
     {
 
       $paymentmethods = Paymentmethod::all();
+      $user=session()->get('user');
+      $cart=Cart::find(session('cartId'));
+      $subcategories = Category::all();
+      $categories = Category::whereNull('category_id')->get();
+
+      $totalCart=0;
+      foreach ($cart->Products as $value) {
+        if(isset($value->offer)){
+          $totalCart=$totalCart+($value->price*$value->offer->factor);
+        }else{
+          $totalCart=$totalCart+$value->price;
+        }
+
+      }
+
 
       return view('admin.paymentmethods.index', [
         'title'=>'listado de Metodos de pago',
         'paymentmethods' => $paymentmethods,
+        'categories' => $categories,
+        'subcategories' => $subcategories,
+        'user'=>$user,
+        'cart'=>$cart,
+        'totalCart'=>$totalCart,
       ]);
     }
 
@@ -31,11 +54,30 @@ class PaymentmethodsController extends Controller
     public function create()
     {
       $paymentmethods = Paymentmethod::all();
+      $user=session()->get('user');
 
+      $cart=Cart::find(session('cartId'));
+      $subcategories = Category::all();
+      $categories = Category::whereNull('category_id')->get();
+
+      $totalCart=0;
+      foreach ($cart->Products as $value) {
+        if(isset($value->offer)){
+          $totalCart=$totalCart+($value->price*$value->offer->factor);
+        }else{
+          $totalCart=$totalCart+$value->price;
+        }
+
+      }
       return view('admin.paymentmethods.create', [
         'title'=>'carga de formas de Pago',
         'paymentmethod'=>new Paymentmethod,
         'paymentmethods'=>$paymentmethods,
+        'categories' => $categories,
+        'subcategories' => $subcategories,
+        'user'=>$user,
+        'cart'=>$cart,
+        'totalCart'=>$totalCart,
       ]);
     }
 
@@ -81,9 +123,31 @@ class PaymentmethodsController extends Controller
     public function edit($id)
     {
       $paymentmethod=Paymentmethod::find($id);
+
+      $subcategories = Category::all();
+      $categories = Category::whereNull('category_id')->get();
+
+      $user=session()->get('user');
+
+      $cart=Cart::find(session('cartId'));
+
+      $totalCart=0;
+      foreach ($cart->Products as $value) {
+        if(isset($value->offer)){
+          $totalCart=$totalCart+($value->price*$value->offer->factor);
+        }else{
+          $totalCart=$totalCart+$value->price;
+        }
+
+      }
       return view('admin.paymentmethods.edit', [
         'title'=>'Edicion de formas de Pago',
         'paymentmethod'=>$paymentmethod,
+        'categories' => $categories,
+        'subcategories' => $subcategories,
+        'user'=>$user,
+        'cart'=>$cart,
+        'totalCart'=>$totalCart,
       ]);
     }
 
@@ -114,6 +178,63 @@ class PaymentmethodsController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $paymentmethod=Paymentmethod::find($id)->delete();
+      $paymentmethods = Paymentmethod::all();
+      $subcategories = Category::all();
+      $categories = Category::whereNull('category_id')->get();
+
+      $user=session()->get('user');
+
+      $cart=Cart::find(session('cartId'));
+
+      $totalCart=0;
+      foreach ($cart->Products as $value) {
+        if(isset($value->offer)){
+          $totalCart=$totalCart+($value->price*$value->offer->factor);
+        }else{
+          $totalCart=$totalCart+$value->price;
+        }
+
+      }
+      return view('admin.paymentmethods.index', [
+        'title'=>'Edicion de formas de Pago',
+        'paymentmethods'=>$paymentmethods,
+        'categories' => $categories,
+        'subcategories' => $subcategories,
+        'user'=>$user,
+        'cart'=>$cart,
+        'totalCart'=>$totalCart,
+      ]);
+    }
+
+    public function delete($id)
+    {
+      $paymentmethod=Paymentmethod::find($id);
+      //
+      $subcategories = Category::all();
+      $categories = Category::whereNull('category_id')->get();
+
+      $user=session()->get('user');
+
+      $cart=Cart::find(session('cartId'));
+
+      $totalCart=0;
+      foreach ($cart->Products as $value) {
+        if(isset($value->offer)){
+          $totalCart=$totalCart+($value->price*$value->offer->factor);
+        }else{
+          $totalCart=$totalCart+$value->price;
+        }
+
+      }
+      return view('admin.paymentmethods.destroy', [
+        'title'=>'Edicion de formas de Pago',
+        'paymentmethod'=>$paymentmethod,
+        'categories' => $categories,
+        'subcategories' => $subcategories,
+        'user'=>$user,
+        'cart'=>$cart,
+        'totalCart'=>$totalCart,
+      ]);
     }
 }

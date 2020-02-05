@@ -43,7 +43,7 @@
             <div class="col-md-3 form-control-valign">
 
                   <div class="foto">
-                    <img src="" alt="avatar">
+                    <img src="{{ isset($brand->src) ? Storage::url($brand->src) : '/imagesProducts/musicgeneric.jpg' }}" alt="avatar">
 
                   </div>
 
@@ -51,7 +51,7 @@
 
             <div class="col-md-6 form-control-valign">
 
-                  <input type="file" name="src">
+                  <input type="file" name="picture">
                   <!-- <input type="submit" value="Upload Image" name="submit"> -->
 
             </div>
@@ -88,24 +88,34 @@
 
 
 <!-- Botones para grabar o editar -->
-      <div class="form-group row ">
+<div class="form-group row" style="margin-top:70px;">
 
-        {{-- {{ $disabled ?? '' }} --}}
-          <div class="col-md-3 form-control-label boton_editar">
-            <input type="hidden" name="grabar" value="1">
-            <button type="submit" class="btn btn-dark">Grabar</button>
+  <div class="col-md-3 form-control-label boton_Crear">
+    @if($method=='post')
+      <button  class="btn btn-dark">Grabar</button>
+    @endif
+
+  </div>
 
 
-          </div>
+  <div class="col-md-3 form-control-label boton_editar">
+    @if($method=='patch')
+      <button  class="btn btn-dark">Grabar</button>
+    @endif
 
+  </div>
 
-              <div class="col-md-3 " >
-                <p><a href="../index.php">Volver a Home!</a></p>
-              </div>
+  <div class="col-md-3 form-control-label boton_Borrar">
+    @if($method=='delete')
+      <button  class="btn btn-dark">Eliminar</button>
+    @endif
+  </div>
 
-    <!-- <a href="../home.html"><h6>volver a HOME</h6></a> -->
+  <div class="col-md-2 " >
+    <p><a href="/admin/control1" class="btn btn-dark">Volver</a></p>
+  </div>
 
-      </div>
+</div>
 
 </section>
 

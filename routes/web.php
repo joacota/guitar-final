@@ -69,7 +69,21 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function(){
     Route::post('/categories', 'CategoriesController@store');
     Route::get('/categories/{id}/edit', 'CategoriesController@edit');
     Route::patch('/categories/{id}', 'CategoriesController@update');
+    Route::get('/categories/{id}/delete', 'CategoriesController@delete');
     Route::delete('/categories/{id}', 'CategoriesController@destroy');
+    Route::get('/categories/add', 'CategoriesController@catcreate');
+    Route::post('/categoriesL1', 'CategoriesController@catstore');
+
+    Route::get('/brands', 'BrandsController@index'); //->middleware('role');
+    Route::get('/brands/add', 'BrandsController@create');
+    Route::post('/brands', 'BrandsController@store');
+    Route::get('/brands/{id}/edit', 'BrandsController@edit');
+    Route::patch('/brands/{id}', 'BrandsController@update');
+    Route::get('/brands/{id}/delete', 'BrandsController@delete');
+    Route::delete('/brands/{id}', 'BrandsController@destroy');
+
+
+
 
     Route::get('/paymentmethods', 'PaymentmethodsController@index');
     Route::get('/paymentmethods/add', 'PaymentmethodsController@create');
@@ -77,7 +91,7 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function(){
     Route::get('/paymentmethods/{id}/edit', 'PaymentmethodsController@edit');
     Route::patch('/paymentmethods/{id}', 'PaymentmethodsController@update');
     Route::delete('/paymentmethods/{id}', 'PaymentmethodsController@destroy');
-
+    Route::get('/paymentmethods/{id}/delete', 'PaymentmethodsController@delete');
  });
 });
 

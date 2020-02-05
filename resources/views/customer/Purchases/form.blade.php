@@ -15,8 +15,8 @@
 
         <div class="row">
           <select name="paymentmethod" class="form-control" class="opciones">
-              @foreach ($paymentmethods as $brandpaymentmethod)
-                <option>{{$brandpaymentmethod->id . " " . $brandpaymentmethod->name }}  </option>
+              @foreach ($paymentmethods as $paymentmethod)
+                <option>{{$paymentmethod->id . " " . $paymentmethod->name }}  </option>
 
               @endforeach
 
@@ -31,13 +31,13 @@
           <h2>Datos de la compra</h2>
         </div>
         <div class="row">
-          <h3>Total de la compra: $ {{number_format($totalCart,2)}}</h3>
+          <h3>Total de la compra: $ {{$totalPurchase!=0 ? number_format($totalPurchase,2) : number_format($totalCart,2)}}</h3>
         </div>
         <div class="row">
-          <h3>IVA 21% : $ {{number_format($totalCart*0.21,2)}}</h3>
+          <h3>IVA 21% : $ {{$totalPurchase!=0 ? number_format($totalPurchase*0.21,2) : number_format($totalCart*0.21,2) }}</h3>
         </div>
         <div class="row">
-          <h3>Total a pagar : $ {{number_format($totalCart*1.21,2)}}</h3>
+          <h3>Total a pagar : $ {{$totalPurchase!=0 ? number_format($totalPurchase*1.21,2) : number_format($totalCart*1.21,2)}}</h3>
         </div>
 
       </div>
