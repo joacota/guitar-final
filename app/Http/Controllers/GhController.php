@@ -39,10 +39,10 @@ class GhController extends Controller
       $products = Product::whereNotnull('offer_id')->paginate(8);
       $subcategories = Category::all();
       $categories = Category::whereNull('category_id')->get();
-      // $categories = Category::with('subcategories')->get();
-      foreach ($cart->Products as $value) {
-        $totalCart=$totalCart+$value->price;
-      }
+       $categories = Category::with('subcategories')->get();
+       foreach ($cart->Products as $value) {
+         $totalCart=$totalCart+$value->price;
+       }
 
 // Get the currently authenticated user...
 
