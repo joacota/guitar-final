@@ -4,7 +4,7 @@
 
 
         @include('customer.cart.form',[
-          'method'=>'post',
+          'method'=>'get',
           'url'=> '/purchases',
         ])
 

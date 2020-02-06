@@ -246,7 +246,7 @@
             </div>
 
             <div class="col-md-3 " >
-              <p><a href="/">Volver a Home!</a></p>
+              <p><a href="/admin/control1">Volver</a></p>
             </div>
 
           </div>

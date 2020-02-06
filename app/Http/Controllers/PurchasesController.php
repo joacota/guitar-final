@@ -37,8 +37,13 @@ class PurchasesController extends Controller
         $categories = Category::whereNull('category_id')->get();
 
         $totalCart=0;
-        foreach ($cart->products as $key => $product) {
-          $totalCart=$totalCart+ $product->price * $product->pivot->qty;
+        foreach ($cart->Products as $value) {
+          if(isset($value->offer)){
+            $totalCart=$totalCart+($value->price*(1-$value->offer->factor)*$value->pivot->qty);
+          }else{
+            $totalCart=$totalCart+$value->price*$value->pivot->qty;
+          }
+
         }
         // $totalCart=$cart->products->sum('price' * 'pivot.qty');
 
@@ -47,6 +52,7 @@ class PurchasesController extends Controller
           'title'=>'Pago de la compra',
           'paymentmethods' => $paymentmethods,
           'totalCart'=>$totalCart,
+          'totalPurchase'=> 0,
           'cart'=>$cart,
           'user'=> $user,
           'categories' => $categories,
@@ -75,15 +81,22 @@ class PurchasesController extends Controller
 
         $user=session()->get('user');
         $cart=Cart::find(session('cartId'));
-        $paymentmethod=Paymentmethod::find($dato);
+        $paymentmethods=Paymentmethod::all();
         $subcategories = Category::all();
         $categories = Category::whereNull('category_id')->get();
 
         $totalCart=0;
-        foreach ($cart->products as $key => $product) {
-          $totalCart=$totalCart+ $product->price * $product->pivot->qty;
+
+        foreach ($cart->Products as $value) {
+          if(isset($value->offer)){
+            $totalCart=$totalCart+($value->price*(1-$value->offer->factor)*$value->pivot->qty);
+          }else{
+            $totalCart=$totalCart+$value->price*$value->pivot->qty;
+          }
+
         }
-        // dd($totalCart);
+         // dd($totalCart);
+         $totalCart=$totalCart/1000;
         // guardar daots en base de datos
         $purchase=Purchase::create([
         'paymentmethod_id'=>$dato,
@@ -93,24 +106,34 @@ class PurchasesController extends Controller
         ]);
         // soft delete del carrito
 
+
+
+        // $cart->products()->delete();
         $cart->delete();
         if ($cart) {
             // return redirect('admin/products')->with('alert','asdasdas');
 
         } else {
-          
+
             // $response = $this->notFoundMessage();
             // return response('no se encontro el producto', 200)
             //    ->header('Content-Type', 'text/plain');
         }
+        // if(!session('cartId')){
+          $cart= new Cart;
+          $cart= Cart::create(['user_id' => $user->id]);
+          session(['cartId' => $cart->id]);
+        // }
         // generar un nuevo carro a la session
-
+// $purchase=Purchase::find()
         //asignarle el usuario
-
+// dd($totalCart, $purchase);
         return view('customer.purchases.show', [
           'title'=>'Compra exitosa',
-          'paymentmethod' => $paymentmethod,
-          'totalCart'=>$totalCart,
+          'paymentmethods' => $paymentmethods,
+          'paymentmethod' => $purchase->paymentmethod_id,
+          'totalCart'=>0,
+          'totalPurchase'=>$purchase->total_price,
           'cart'=>$cart,
           'user'=> $user,
           'categories' => $categories,

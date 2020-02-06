@@ -14,10 +14,6 @@
   <h4>
     <a href="/admin/products/add">Nuevo de producto</a></h5>
 </div>
-<div class="row">
-  <h4>
-    <a href="#">Buscar de producto (editar/Borrar)</a></h5>
-</div>
 
 <div class="row">
   <h5>----------------</h5>
@@ -31,11 +27,7 @@
 </div>
 <div class="row">
   <h4>
-    <a href="#">Nuevo de Categoria</a></h5>
-</div>
-<div class="row">
-  <h4>
-    <a href="#">Buscar de Categoria (editar/Borrar)</a></h5>
+    <a href="/admin/categories/add">Nuevo de Categoria</a></h5>
 </div>
 
 <div class="row">
@@ -46,11 +38,11 @@
 </div>
 <div class="row">
 <h4>
-  <a href="#">lista de Marcaa</a></h5>
+  <a href="/admin/brands">lista de Marcaa</a></h5>
 </div>
 <div class="row">
 <h4>
-  <a href="#">Nuevo de Marca</a></h5>
+  <a href="/admin/brands/add">Nuevo de Marca</a></h5>
 </div>
 <div class="row">
 <h4>
@@ -70,10 +62,7 @@
 </div>
 <div class="row">
 <h4>
-  <a href="admin/paymentmethods/add">Nuevo de Metodo/a></h5>
+  <a href="/admin/paymentmethods/add">Nuevo de Metodo/a></h5>
 </div>
-<div class="row">
-<h4>
-  <a href="#">Buscar de metodo (editar/Borrar)</a></h5>
-</div>
+
 @stop
