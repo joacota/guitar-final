@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-01-2020 a las 18:12:15
--- Versión del servidor: 10.4.8-MariaDB
--- Versión de PHP: 7.3.10
+-- Tiempo de generación: 06-02-2020 a las 16:23:27
+-- Versión del servidor: 10.4.6-MariaDB
+-- Versión de PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -42,46 +42,31 @@ CREATE TABLE `brands` (
 --
 
 INSERT INTO `brands` (`id`, `created_at`, `updated_at`, `name`, `src`, `deleted_at`) VALUES
-(1, '2020-01-16 15:02:29', '2020-01-16 15:02:29', 'A sint sint nemo.', 'App/public/photosBrands/images.png', NULL),
-(2, '2020-01-16 15:02:29', '2020-01-16 15:02:29', 'Doloremque.', 'App/public/photosBrands/images.png', NULL),
-(3, '2020-01-16 15:02:29', '2020-01-16 15:02:29', 'Magnam illo.', 'App/public/photosBrands/images.png', NULL),
-(4, '2020-01-16 15:02:29', '2020-01-16 15:02:29', 'Et est vel ex.', 'App/public/photosBrands/images.png', NULL),
-(5, '2020-01-16 15:02:29', '2020-01-16 15:02:29', 'Fugiat architecto.', 'App/public/photosBrands/images.png', NULL),
-(6, '2020-01-16 15:02:29', '2020-01-16 15:02:29', 'Est et dignissimos.', 'App/public/photosBrands/images.png', NULL),
-(7, '2020-01-16 15:02:29', '2020-01-16 15:02:29', 'Quisquam et totam.', 'App/public/photosBrands/images.png', NULL),
-(8, '2020-01-16 15:02:29', '2020-01-16 15:02:29', 'Sint mollitia.', 'App/public/photosBrands/images.png', NULL),
-(9, '2020-01-16 15:02:29', '2020-01-16 15:02:29', 'Molestias atque.', 'App/public/photosBrands/images.png', NULL),
-(10, '2020-01-16 15:02:30', '2020-01-16 15:02:30', 'Nisi in ea dolor ut.', 'App/public/photosBrands/images.png', NULL),
-(11, '2020-01-16 15:02:30', '2020-01-16 15:02:30', 'Quasi repudiandae.', 'App/public/photosBrands/images.png', NULL),
-(12, '2020-01-16 15:02:30', '2020-01-16 15:02:30', 'Nam autem mollitia.', 'App/public/photosBrands/images.png', NULL),
-(13, '2020-01-16 15:02:30', '2020-01-16 15:02:30', 'Doloribus aut neque.', 'App/public/photosBrands/images.png', NULL),
-(14, '2020-01-16 15:02:30', '2020-01-16 15:02:30', 'Quasi dolorum.', 'App/public/photosBrands/images.png', NULL),
-(15, '2020-01-16 15:02:30', '2020-01-16 15:02:30', 'Maxime maxime.', 'App/public/photosBrands/images.png', NULL),
-(16, '2020-01-16 15:02:31', '2020-01-16 15:02:31', 'Asperiores quidem.', 'App/public/photosBrands/images.png', NULL),
-(17, '2020-01-16 15:02:31', '2020-01-16 15:02:31', 'Tempora nihil nihil.', 'App/public/photosBrands/images.png', NULL),
-(18, '2020-01-16 15:02:31', '2020-01-16 15:02:31', 'Repellat optio.', 'App/public/photosBrands/images.png', NULL),
-(19, '2020-01-16 15:02:31', '2020-01-16 15:02:31', 'Porro rerum quasi.', 'App/public/photosBrands/images.png', NULL),
-(20, '2020-01-16 15:02:31', '2020-01-16 15:02:31', 'Saepe optio.', 'App/public/photosBrands/images.png', NULL),
-(21, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'In et totam.', 'App/public/photosBrands/images.png', NULL),
-(22, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Incidunt numquam.', 'App/public/photosBrands/images.png', NULL),
-(23, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Neque quos.', 'App/public/photosBrands/images.png', NULL),
-(24, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Odio sint magnam.', 'App/public/photosBrands/images.png', NULL),
-(25, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Labore occaecati.', 'App/public/photosBrands/images.png', NULL),
-(26, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Quaerat odio et.', 'App/public/photosBrands/images.png', NULL),
-(27, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Incidunt laboriosam.', 'App/public/photosBrands/images.png', NULL),
-(28, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Ad quia vel hic.', 'App/public/photosBrands/images.png', NULL),
-(29, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Totam praesentium.', 'App/public/photosBrands/images.png', NULL),
-(30, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Provident minima.', 'App/public/photosBrands/images.png', NULL),
-(31, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Perferendis.', 'App/public/photosBrands/images.png', NULL),
-(32, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Laboriosam et vero.', 'App/public/photosBrands/images.png', NULL),
-(33, '2020-01-16 15:04:34', '2020-01-16 15:04:34', 'Nihil qui placeat.', 'App/public/photosBrands/images.png', NULL),
-(34, '2020-01-16 15:04:35', '2020-01-16 15:04:35', 'Odit ducimus.', 'App/public/photosBrands/images.png', NULL),
-(35, '2020-01-16 15:04:35', '2020-01-16 15:04:35', 'Esse aut nisi et.', 'App/public/photosBrands/images.png', NULL),
-(36, '2020-01-16 15:04:35', '2020-01-16 15:04:35', 'Officia praesentium.', 'App/public/photosBrands/images.png', NULL),
-(37, '2020-01-16 15:04:35', '2020-01-16 15:04:35', 'Magnam qui impedit.', 'App/public/photosBrands/images.png', NULL),
-(38, '2020-01-16 15:04:35', '2020-01-16 15:04:35', 'Quo ipsum ut ipsa.', 'App/public/photosBrands/images.png', NULL),
-(39, '2020-01-16 15:04:35', '2020-01-16 15:04:35', 'Nam laboriosam sit.', 'App/public/photosBrands/images.png', NULL),
-(40, '2020-01-16 15:04:35', '2020-01-16 15:04:35', 'Omnis eius porro.', 'App/public/photosBrands/images.png', NULL);
+(1, '2020-01-16 05:29:35', '2020-01-16 05:29:35', 'Doloribus occaecati.', 'App/public/photosBrands/images.png', NULL),
+(2, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Aliquam qui.', 'App/public/photosBrands/images.png', NULL),
+(3, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Ut sed mollitia.', 'App/public/photosBrands/images.png', NULL),
+(4, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'At porro nobis.', 'App/public/photosBrands/images.png', NULL),
+(5, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'In unde minus.', 'App/public/photosBrands/images.png', NULL),
+(6, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Dolore sint et.', 'App/public/photosBrands/images.png', NULL),
+(7, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Eveniet libero et.', 'App/public/photosBrands/images.png', NULL),
+(8, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Ullam blanditiis.', 'App/public/photosBrands/images.png', NULL),
+(9, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Nobis in.', 'App/public/photosBrands/images.png', NULL),
+(10, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Repellat.', 'App/public/photosBrands/images.png', NULL),
+(11, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Ut et distinctio.', 'App/public/photosBrands/images.png', NULL),
+(12, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Laudantium ipsa.', 'App/public/photosBrands/images.png', NULL),
+(13, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Sit debitis esse.', 'App/public/photosBrands/images.png', NULL),
+(14, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Dolorem recusandae.', 'App/public/photosBrands/images.png', NULL),
+(15, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Qui repudiandae ut.', 'App/public/photosBrands/images.png', NULL),
+(16, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Sapiente eum quos.', 'App/public/photosBrands/images.png', NULL),
+(17, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Ex velit.', 'App/public/photosBrands/images.png', NULL),
+(18, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Consequatur.', 'App/public/photosBrands/images.png', NULL),
+(19, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Molestiae modi id.', 'App/public/photosBrands/images.png', NULL),
+(20, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Minima esse sed.', 'App/public/photosBrands/images.png', NULL),
+(21, '2020-02-05 17:58:22', '2020-02-05 17:58:22', 'Yamaha', 'C:\\xampp\\tmp\\php1175.tmp', NULL),
+(22, '2020-02-05 18:02:59', '2020-02-05 18:02:59', 'Zildijian', 'C:\\xampp\\tmp\\php4C59.tmp', NULL),
+(23, '2020-02-05 18:16:25', '2020-02-05 18:16:25', 'Logan', 'public/imagesProducts/I8wLpcZXxPDLx5uH2ObU5Pd9V6MczHtVoZP8Haou.jpeg', NULL),
+(24, '2020-02-05 18:18:20', '2020-02-05 18:30:40', 'Grestch2', 'public/imagesProducts/lSqegHYApBE8x3nngcuAXWsMNOAu6BjSpCefJweL.png', NULL),
+(26, '2020-02-06 04:37:50', '2020-02-06 04:37:50', 'Stainway and Son', 'public/imagesProducts/Lmmo87S1W45hkBz8Tgke0KIReqDBxPzDgKdC9gg4.jpeg', NULL);
 
 -- --------------------------------------------------------
 
@@ -99,6 +84,103 @@ CREATE TABLE `carts` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `carts`
+--
+
+INSERT INTO `carts` (`id`, `created_at`, `updated_at`, `closed_at`, `purchase_id`, `user_id`, `deleted_at`) VALUES
+(1, '2020-02-01 16:12:38', '2020-02-01 16:12:38', '2020-02-01 13:12:38', NULL, NULL, NULL),
+(2, '2020-02-01 19:22:42', '2020-02-01 19:22:42', '2020-02-01 16:22:42', NULL, NULL, NULL),
+(3, '2020-02-01 22:55:50', '2020-02-01 22:55:50', '2020-02-01 19:55:50', NULL, NULL, NULL),
+(4, '2020-02-01 22:58:34', '2020-02-01 22:58:34', '2020-02-01 19:58:34', NULL, NULL, NULL),
+(5, '2020-02-02 05:07:25', '2020-02-02 05:07:25', '2020-02-02 02:07:25', NULL, NULL, NULL),
+(6, '2020-02-03 15:13:33', '2020-02-03 15:13:33', '2020-02-03 12:13:34', NULL, NULL, NULL),
+(7, '2020-02-03 15:28:38', '2020-02-03 15:28:38', '2020-02-03 12:28:38', NULL, NULL, NULL),
+(8, '2020-02-03 15:31:56', '2020-02-03 15:31:56', '2020-02-03 12:31:56', NULL, NULL, NULL),
+(9, '2020-02-03 22:07:07', '2020-02-03 22:07:07', '2020-02-03 19:07:07', NULL, NULL, NULL),
+(10, '2020-02-03 22:10:20', '2020-02-03 22:10:20', '2020-02-03 19:10:20', NULL, NULL, NULL),
+(11, '2020-02-03 22:36:22', '2020-02-03 22:36:22', '2020-02-03 19:36:22', NULL, NULL, NULL),
+(12, '2020-02-03 22:58:51', '2020-02-03 22:58:51', '2020-02-03 19:58:51', NULL, NULL, NULL),
+(13, '2020-02-03 23:00:56', '2020-02-03 23:00:56', '2020-02-03 20:00:56', NULL, NULL, NULL),
+(14, '2020-02-03 23:12:45', '2020-02-03 23:12:45', '2020-02-03 20:12:45', NULL, NULL, NULL),
+(15, '2020-02-03 23:14:33', '2020-02-03 23:14:33', '2020-02-03 20:14:33', NULL, NULL, NULL),
+(16, '2020-02-03 23:50:29', '2020-02-03 23:50:29', '2020-02-03 20:50:29', NULL, NULL, NULL),
+(17, '2020-02-03 23:51:43', '2020-02-03 23:51:43', '2020-02-03 20:51:43', NULL, NULL, NULL),
+(18, '2020-02-03 23:53:11', '2020-02-03 23:53:11', '2020-02-03 20:53:11', NULL, NULL, NULL),
+(19, '2020-02-03 23:53:50', '2020-02-03 23:53:50', '2020-02-03 20:53:50', NULL, NULL, NULL),
+(20, '2020-02-04 00:36:26', '2020-02-04 00:36:26', '2020-02-03 21:36:26', NULL, NULL, NULL),
+(21, '2020-02-04 00:41:07', '2020-02-04 00:41:07', '2020-02-03 21:41:07', NULL, NULL, NULL),
+(22, '2020-02-04 00:42:02', '2020-02-04 00:42:02', '2020-02-03 21:42:02', NULL, NULL, NULL),
+(23, '2020-02-04 00:45:40', '2020-02-05 00:45:47', '2020-02-03 21:45:40', NULL, 101, '2020-02-05 00:45:47'),
+(24, '2020-02-04 02:45:13', '2020-02-04 02:45:13', '2020-02-03 23:45:13', NULL, NULL, NULL),
+(25, '2020-02-04 02:52:13', '2020-02-04 02:52:13', '2020-02-03 23:52:13', NULL, NULL, NULL),
+(26, '2020-02-04 02:55:14', '2020-02-04 02:55:14', '2020-02-03 23:55:14', NULL, NULL, NULL),
+(27, '2020-02-04 02:56:41', '2020-02-04 02:56:41', '2020-02-03 23:56:41', NULL, NULL, NULL),
+(28, '2020-02-04 02:59:22', '2020-02-04 02:59:22', '2020-02-03 23:59:22', NULL, NULL, NULL),
+(29, '2020-02-04 03:01:05', '2020-02-04 03:01:05', '2020-02-04 00:01:05', NULL, NULL, NULL),
+(30, '2020-02-04 03:02:16', '2020-02-04 03:02:16', '2020-02-04 00:02:16', NULL, NULL, NULL),
+(31, '2020-02-04 03:07:03', '2020-02-04 03:07:03', '2020-02-04 00:07:03', NULL, NULL, NULL),
+(32, '2020-02-04 03:07:48', '2020-02-04 03:07:48', '2020-02-04 00:07:48', NULL, NULL, NULL),
+(33, '2020-02-04 03:08:57', '2020-02-04 03:08:57', '2020-02-04 00:08:57', NULL, NULL, NULL),
+(34, '2020-02-04 03:11:36', '2020-02-04 03:11:36', '2020-02-04 00:11:36', NULL, NULL, NULL),
+(35, '2020-02-04 03:13:15', '2020-02-05 15:25:04', '2020-02-04 00:13:15', NULL, 103, '2020-02-05 15:25:04'),
+(36, '2020-02-04 03:14:45', '2020-02-04 03:14:45', '2020-02-04 00:14:45', NULL, NULL, NULL),
+(37, '2020-02-04 03:15:39', '2020-02-04 03:15:39', '2020-02-04 00:15:39', NULL, NULL, NULL),
+(38, '2020-02-04 03:21:49', '2020-02-04 03:21:49', '2020-02-04 00:21:49', NULL, NULL, NULL),
+(39, '2020-02-04 03:24:05', '2020-02-04 03:24:05', '2020-02-04 00:24:05', NULL, NULL, NULL),
+(40, '2020-02-04 05:59:42', '2020-02-04 05:59:42', '2020-02-04 02:59:42', NULL, NULL, NULL),
+(41, '2020-02-04 15:27:14', '2020-02-04 15:27:49', '2020-02-04 12:27:14', NULL, 104, NULL),
+(42, '2020-02-04 15:29:53', '2020-02-04 15:29:53', '2020-02-04 12:29:53', NULL, NULL, NULL),
+(43, '2020-02-04 15:36:57', '2020-02-04 15:36:57', '2020-02-04 12:36:57', NULL, NULL, NULL),
+(44, '2020-02-04 15:37:44', '2020-02-04 15:37:44', '2020-02-04 12:37:45', NULL, NULL, NULL),
+(45, '2020-02-04 15:49:55', '2020-02-04 15:49:55', '2020-02-04 12:49:55', NULL, NULL, NULL),
+(46, '2020-02-04 16:03:25', '2020-02-04 16:03:25', '2020-02-04 13:03:25', NULL, NULL, NULL),
+(47, '2020-02-04 16:05:13', '2020-02-04 16:05:13', '2020-02-04 13:05:13', NULL, NULL, NULL),
+(48, '2020-02-04 16:06:42', '2020-02-04 16:06:42', '2020-02-04 13:06:42', NULL, NULL, NULL),
+(49, '2020-02-04 16:47:49', '2020-02-04 16:47:49', '2020-02-04 13:47:49', NULL, NULL, NULL),
+(50, '2020-02-04 16:50:03', '2020-02-04 16:50:03', '2020-02-04 13:50:03', NULL, NULL, NULL),
+(51, '2020-02-04 16:53:35', '2020-02-05 23:30:50', '2020-02-04 13:53:35', NULL, 110, '2020-02-05 23:30:50'),
+(52, '2020-02-04 16:56:40', '2020-02-04 16:56:40', '2020-02-04 13:56:40', NULL, NULL, NULL),
+(53, '2020-02-04 23:50:19', '2020-02-04 23:50:19', '2020-02-04 20:50:19', NULL, NULL, NULL),
+(54, '2020-02-04 23:50:21', '2020-02-04 23:50:21', '2020-02-04 20:50:21', NULL, NULL, NULL),
+(55, '2020-02-05 00:39:08', '2020-02-05 00:40:31', '2020-02-04 21:39:08', NULL, 105, '2020-02-05 00:40:31'),
+(56, '2020-02-05 00:44:54', '2020-02-05 00:44:54', '2020-02-04 21:44:54', NULL, NULL, NULL),
+(57, '2020-02-05 00:45:48', '2020-02-05 00:45:48', '2020-02-04 21:45:48', NULL, NULL, NULL),
+(58, '2020-02-05 00:58:35', '2020-02-05 00:59:07', '2020-02-04 21:58:35', NULL, 101, '2020-02-05 00:59:07'),
+(59, '2020-02-05 00:59:08', '2020-02-05 01:00:36', '2020-02-04 21:59:08', NULL, 101, '2020-02-05 01:00:36'),
+(60, '2020-02-05 01:00:37', '2020-02-05 14:54:57', '2020-02-04 22:00:37', NULL, 101, '2020-02-05 14:54:57'),
+(61, '2020-02-05 14:53:48', '2020-02-05 14:53:48', '2020-02-05 11:53:48', NULL, NULL, NULL),
+(62, '2020-02-05 14:54:57', '2020-02-05 15:02:34', '2020-02-05 11:54:57', NULL, 101, '2020-02-05 15:02:34'),
+(63, '2020-02-05 15:02:34', '2020-02-05 15:10:19', '2020-02-05 12:02:34', NULL, 101, '2020-02-05 15:10:19'),
+(64, '2020-02-05 15:10:20', '2020-02-05 15:11:01', '2020-02-05 12:10:20', NULL, 101, '2020-02-05 15:11:01'),
+(65, '2020-02-05 15:11:01', '2020-02-05 15:14:40', '2020-02-05 12:11:01', NULL, 101, '2020-02-05 15:14:40'),
+(66, '2020-02-05 15:14:40', '2020-02-05 15:31:08', '2020-02-05 12:14:40', NULL, 101, '2020-02-05 15:31:08'),
+(67, '2020-02-05 15:17:17', '2020-02-05 15:17:17', '2020-02-05 12:17:17', NULL, NULL, NULL),
+(68, '2020-02-05 15:25:04', '2020-02-05 15:25:04', '2020-02-05 12:25:04', NULL, 103, NULL),
+(69, '2020-02-05 15:29:54', '2020-02-05 15:29:54', '2020-02-05 12:29:54', NULL, NULL, NULL),
+(70, '2020-02-05 15:31:09', '2020-02-05 15:32:06', '2020-02-05 12:31:09', NULL, 101, '2020-02-05 15:32:06'),
+(71, '2020-02-05 15:32:06', '2020-02-06 03:59:13', '2020-02-05 12:32:06', NULL, 101, '2020-02-06 03:59:13'),
+(72, '2020-02-05 22:11:05', '2020-02-05 22:11:05', '2020-02-05 19:11:09', NULL, NULL, NULL),
+(73, '2020-02-05 23:29:49', '2020-02-05 23:29:49', '2020-02-05 20:29:49', NULL, NULL, NULL),
+(74, '2020-02-05 23:30:50', '2020-02-05 23:30:50', '2020-02-05 20:30:50', NULL, 110, NULL),
+(75, '2020-02-06 02:17:13', '2020-02-06 02:17:13', '2020-02-05 23:17:13', NULL, NULL, NULL),
+(76, '2020-02-06 03:59:13', '2020-02-06 04:02:56', '2020-02-06 00:59:13', NULL, 101, '2020-02-06 04:02:56'),
+(77, '2020-02-06 04:02:56', '2020-02-06 04:05:00', '2020-02-06 01:02:56', NULL, 101, '2020-02-06 04:05:00'),
+(78, '2020-02-06 04:05:00', '2020-02-06 04:11:11', '2020-02-06 01:05:00', NULL, 101, '2020-02-06 04:11:11'),
+(79, '2020-02-06 04:11:11', '2020-02-06 04:16:54', '2020-02-06 01:11:11', NULL, 101, '2020-02-06 04:16:54'),
+(80, '2020-02-06 04:16:54', '2020-02-06 04:17:18', '2020-02-06 01:16:54', NULL, 101, '2020-02-06 04:17:18'),
+(81, '2020-02-06 04:17:19', '2020-02-06 04:21:46', '2020-02-06 01:17:19', NULL, 101, '2020-02-06 04:21:46'),
+(82, '2020-02-06 04:21:46', '2020-02-06 04:22:54', '2020-02-06 01:21:46', NULL, 101, '2020-02-06 04:22:54'),
+(83, '2020-02-06 04:22:54', '2020-02-06 04:24:46', '2020-02-06 01:22:54', NULL, 101, '2020-02-06 04:24:46'),
+(84, '2020-02-06 04:24:46', '2020-02-06 04:25:33', '2020-02-06 01:24:46', NULL, 101, '2020-02-06 04:25:33'),
+(85, '2020-02-06 04:25:34', '2020-02-06 04:26:42', '2020-02-06 01:25:34', NULL, 101, '2020-02-06 04:26:42'),
+(86, '2020-02-06 04:26:42', '2020-02-06 04:28:50', '2020-02-06 01:26:42', NULL, 101, '2020-02-06 04:28:50'),
+(87, '2020-02-06 04:28:50', '2020-02-06 04:28:50', '2020-02-06 01:28:50', NULL, 101, NULL),
+(88, '2020-02-06 14:28:41', '2020-02-06 14:28:41', '2020-02-06 11:28:42', NULL, NULL, NULL),
+(89, '2020-02-06 16:10:18', '2020-02-06 16:10:18', '2020-02-06 13:10:18', NULL, NULL, NULL),
+(90, '2020-02-06 16:12:06', '2020-02-06 16:12:06', '2020-02-06 13:12:06', NULL, NULL, NULL),
+(91, '2020-02-06 16:23:54', '2020-02-06 16:23:54', '2020-02-06 13:23:54', NULL, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -111,8 +193,43 @@ CREATE TABLE `cart_product` (
   `updated_at` timestamp NULL DEFAULT NULL,
   `product_id` bigint(20) UNSIGNED NOT NULL,
   `cart_id` bigint(20) UNSIGNED NOT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `qty` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `cart_product`
+--
+
+INSERT INTO `cart_product` (`id`, `created_at`, `updated_at`, `product_id`, `cart_id`, `deleted_at`, `qty`) VALUES
+(2, NULL, NULL, 100, 4, NULL, 2),
+(3, NULL, NULL, 2, 5, NULL, 3),
+(4, NULL, NULL, 1, 8, NULL, 1),
+(5, NULL, NULL, 39, 11, NULL, 2),
+(6, NULL, NULL, 2, 23, NULL, 2),
+(9, NULL, NULL, 3, 23, NULL, 1),
+(10, NULL, NULL, 5, 34, NULL, 2),
+(11, NULL, NULL, 99, 34, NULL, 1),
+(14, NULL, NULL, 55, 35, NULL, 3),
+(17, NULL, NULL, 20, 40, NULL, 1),
+(19, NULL, NULL, 3, 41, NULL, 4),
+(20, NULL, NULL, 39, 41, NULL, 1),
+(21, NULL, NULL, 1, 45, NULL, 2),
+(22, NULL, NULL, 3, 45, NULL, 1),
+(23, NULL, NULL, 3, 51, NULL, 6),
+(24, NULL, NULL, 2, 55, NULL, 1),
+(25, NULL, NULL, 1, 55, NULL, 1),
+(26, NULL, NULL, 8, 58, NULL, 1),
+(27, NULL, NULL, 2, 60, NULL, 1),
+(28, NULL, NULL, 2, 63, NULL, 1),
+(29, NULL, NULL, 99, 63, NULL, 1),
+(30, NULL, NULL, 8, 66, NULL, 1),
+(31, NULL, NULL, 2, 70, NULL, 1),
+(32, NULL, NULL, 100, 70, NULL, 1),
+(33, NULL, NULL, 5, 51, NULL, 2),
+(34, NULL, NULL, 2, 71, NULL, 1),
+(35, NULL, NULL, 99, 81, NULL, 2),
+(36, NULL, NULL, 5, 89, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -134,21 +251,19 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `created_at`, `updated_at`, `name`, `category_id`, `deleted_at`) VALUES
-(1, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Instrumentos', NULL, NULL),
-(2, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Discos', NULL, NULL),
-(3, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Audio', NULL, NULL),
-(4, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Guitarras', 1, NULL),
-(5, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Rock & Roll', 2, NULL),
-(6, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Pop', 2, NULL),
-(7, '2020-01-16 15:05:16', '2020-01-20 20:21:58', 'Pianos', 7, NULL),
-(8, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Auriculares', 3, NULL),
-(9, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Parlantes', 3, NULL),
-(10, '2020-01-16 15:05:16', '2020-01-20 20:25:30', 'Pianos de cola', 1, NULL),
-(11, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Clasicos', 2, NULL),
-(12, '2020-01-20 15:00:39', '2020-01-20 15:00:39', 'Trompetas', 1, NULL),
-(13, '2020-01-20 20:13:39', '2020-01-20 20:13:39', 'Pianos', 10, NULL),
-(14, '2020-01-20 20:28:49', '2020-01-20 20:28:49', 'contrabajo', 1, NULL),
-(15, '2020-01-21 00:24:41', '2020-01-21 00:24:41', 'Punk', 2, NULL);
+(1, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Audio', NULL, NULL),
+(2, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Instrumentos', NULL, NULL),
+(3, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Discos', NULL, NULL),
+(4, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Guitarra 1', 2, NULL),
+(5, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Pianos', 2, NULL),
+(6, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Auriculares', 1, NULL),
+(7, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Parlantes', 1, NULL),
+(8, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Metalica', 3, NULL),
+(9, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Rolling stones', 3, NULL),
+(11, '2020-02-05 16:54:22', '2020-02-05 16:54:22', 'Accesorios', NULL, NULL),
+(12, '2020-02-05 16:54:44', '2020-02-05 16:54:44', 'Puas', 11, NULL),
+(13, '2020-02-05 16:59:40', '2020-02-05 16:59:40', 'los tucu tucu', 3, NULL),
+(14, '2020-02-05 17:06:26', '2020-02-05 17:06:26', 'Lerner', 3, NULL);
 
 -- --------------------------------------------------------
 
@@ -182,23 +297,24 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2019_12_29_201901_create_offers_table', 1),
-(5, '2019_12_29_201902_create_paymentmethods_table', 1),
-(6, '2019_12_29_201903_create_brands_table', 1),
-(7, '2019_12_29_201904_create_categories_table', 1),
-(8, '2019_12_29_201905_create_products_table', 1),
-(9, '2019_12_29_201906_create_product_photos_table', 1),
-(10, '2019_12_29_201907_create_recommended_table', 1),
-(11, '2019_12_29_201908_create_offer__product_table', 1),
-(12, '2019_12_29_201909_create_purchases_table', 1),
-(13, '2019_12_29_201910_create_carts_table', 1),
-(14, '2019_12_29_201911_create_cart_product_table', 1),
-(15, '2020_01_16_200114_create_productpictures_table', 2),
-(16, '2020_01_21_141504_alter_users_table', 3),
-(17, '2020_01_25_131206_alter_carts_table', 4);
+(29, '2014_10_12_000000_create_users_table', 1),
+(30, '2014_10_12_100000_create_password_resets_table', 1),
+(31, '2019_08_19_000000_create_failed_jobs_table', 1),
+(32, '2019_12_29_201901_create_offers_table', 1),
+(33, '2019_12_29_201902_create_paymentmethods_table', 1),
+(34, '2019_12_29_201903_create_brands_table', 1),
+(35, '2019_12_29_201904_create_categories_table', 1),
+(36, '2019_12_29_201905_create_products_table', 1),
+(37, '2019_12_29_201906_create_product_photos_table', 1),
+(38, '2019_12_29_201907_create_recommended_table', 1),
+(39, '2019_12_29_201908_create_offer__product_table', 1),
+(40, '2019_12_29_201909_create_purchases_table', 1),
+(41, '2019_12_29_201910_create_carts_table', 1),
+(42, '2019_12_29_201911_create_cart_product_table', 1),
+(43, '2020_01_16_200114_create_productpictures_table', 2),
+(44, '2020_01_21_141504_alter_users_table', 2),
+(45, '2020_02_04_141015_create_purchasesproductslist_table', 3),
+(46, '2020_02_04_183931_alter_purchases_table', 3);
 
 -- --------------------------------------------------------
 
@@ -209,7 +325,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 CREATE TABLE `offers` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
   `start_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `finish_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `factor` double(8,2) NOT NULL,
@@ -223,31 +339,8 @@ CREATE TABLE `offers` (
 --
 
 INSERT INTO `offers` (`id`, `name`, `user_id`, `start_at`, `finish_at`, `factor`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(21, '30 % de Descuento', NULL, '2020-01-16 13:56:30', '2020-01-16 13:56:30', 0.30, '2020-01-16 16:56:30', '2020-01-16 16:56:30', NULL),
-(22, '10 % de Descuento', NULL, '2020-01-16 13:56:30', '2020-01-16 13:56:30', 0.10, '2020-01-16 16:56:30', '2020-01-16 16:56:30', NULL),
-(23, '40 % de Descuento', NULL, '2020-01-16 13:56:30', '2020-01-16 13:56:30', 0.40, '2020-01-16 16:56:30', '2020-01-16 16:56:30', NULL),
-(24, '60 % de Descuento', NULL, '2020-01-16 13:56:30', '2020-01-16 13:56:30', 0.60, '2020-01-16 16:56:30', '2020-01-16 16:56:30', NULL),
-(25, '30 % de Descuento', NULL, '2020-01-16 13:56:30', '2020-01-16 13:56:30', 0.30, '2020-01-16 16:56:30', '2020-01-16 16:56:30', NULL),
-(26, '70 % de Descuento', NULL, '2020-01-16 13:56:30', '2020-01-16 13:56:30', 0.70, '2020-01-16 16:56:30', '2020-01-16 16:56:30', NULL),
-(27, '10 % de Descuento', NULL, '2020-01-16 13:56:30', '2020-01-16 13:56:30', 0.10, '2020-01-16 16:56:30', '2020-01-16 16:56:30', NULL),
-(28, '50 % de Descuento', NULL, '2020-01-16 13:56:30', '2020-01-16 13:56:30', 0.50, '2020-01-16 16:56:30', '2020-01-16 16:56:30', NULL),
-(29, '10 % de Descuento', NULL, '2020-01-16 13:56:30', '2020-01-16 13:56:30', 0.10, '2020-01-16 16:56:30', '2020-01-16 16:56:30', NULL),
-(30, '50 % de Descuento', NULL, '2020-01-16 13:56:30', '2020-01-16 13:56:30', 0.50, '2020-01-16 16:56:30', '2020-01-16 16:56:30', NULL);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `offer__product`
---
-
-CREATE TABLE `offer__product` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `product_id` bigint(20) UNSIGNED NOT NULL,
-  `offer_id` bigint(20) UNSIGNED NOT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+(1, '50%', 1, '2020-01-16 02:32:30', '2020-01-16 02:32:30', 0.50, NULL, NULL, NULL),
+(2, '25% de descuento', 5, '2020-01-16 02:33:02', '2020-01-16 02:33:02', 0.25, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -280,12 +373,9 @@ CREATE TABLE `paymentmethods` (
 --
 
 INSERT INTO `paymentmethods` (`id`, `created_at`, `updated_at`, `name`, `deleted_at`) VALUES
-(1, '2019-12-30 19:52:43', '2020-01-21 16:40:43', 'Efectivo taca taca', NULL),
-(2, '2019-12-30 19:52:43', '2019-12-30 19:52:43', 'Tarjeta de Debito', NULL),
-(3, '2019-12-30 19:52:43', '2019-12-30 19:52:43', 'Tarjeta de Credito', NULL),
-(4, '2020-01-21 16:20:00', '2020-01-21 16:20:00', 'Mercado Pago', NULL),
-(5, '2020-01-21 16:21:52', '2020-01-21 16:21:52', 'Mercado Pago', NULL),
-(6, '2020-01-21 16:24:24', '2020-01-21 16:24:24', 'Mercado Pago', NULL);
+(1, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Visa', NULL),
+(2, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Debito', NULL),
+(3, '2020-01-12 03:00:00', '2020-01-12 03:00:00', 'Efectivo', NULL);
 
 -- --------------------------------------------------------
 
@@ -308,79 +398,19 @@ CREATE TABLE `productpictures` (
 --
 
 INSERT INTO `productpictures` (`id`, `created_at`, `updated_at`, `product_id`, `src`, `title`, `deleted_at`) VALUES
-(1, '2019-12-30 19:52:43', '2019-12-30 19:52:43', 9, 'criolla1.jpg', 'criolla', NULL),
-(2, '2019-12-30 19:52:43', '2019-12-30 19:52:43', 9, 'criolla2.jpg', 'criolla2', NULL),
-(3, '2019-12-30 19:52:43', '2019-12-30 19:52:43', 9, 'criolla3.jpg', NULL, NULL),
-(4, '2019-12-30 19:52:43', '2019-12-30 19:52:43', 9, 'criolla4.jpg', NULL, NULL),
-(5, '2020-01-19 00:00:05', '2020-01-19 00:00:05', 104, 'imagesProducts/HHM6XAXlP8bPWBgRJVoGg8BoQZAbmjxiYErDhmwE.jpeg', NULL, NULL),
-(6, '2020-01-19 00:00:05', '2020-01-19 00:00:05', 104, 'imagesProducts/He6nj0h6p5hBFSRY1bbYPGrhW0eXAf1ERk7dh9gf.jpeg', NULL, NULL),
-(7, '2020-01-19 00:00:05', '2020-01-19 00:00:05', 104, 'imagesProducts/XsLdYB8fYwDpZ3sgM1s5nZnY2xCbIgNS4JvIVULl.jpeg', NULL, NULL),
-(8, '2020-01-19 00:00:05', '2020-01-19 00:00:05', 104, 'imagesProducts/E6UuqS8m0gmcUjwqP2wGGPxNRhEU1lqTSoXqD5qY.jpeg', NULL, NULL),
-(9, '2020-01-19 00:01:58', '2020-01-19 00:01:58', 105, 'imagesProducts/JYyGYehuVAFrNRFupRcfpWIfxVB5UD1paP1pYF7I.jpeg', NULL, NULL),
-(10, '2020-01-19 00:01:59', '2020-01-19 00:01:59', 105, 'imagesProducts/Sc6BFY1YiVEkswZQgTfdlOo2VccMk5T40MLJg7Y1.jpeg', NULL, NULL),
-(11, '2020-01-19 00:01:59', '2020-01-19 00:01:59', 105, 'imagesProducts/UAyLmB3V3FzrHBNbtTWrGcahWiJfalwgjuAAFEy9.jpeg', NULL, NULL),
-(12, '2020-01-19 00:01:59', '2020-01-19 00:01:59', 105, 'imagesProducts/ia4WugIzhaxZRvZwpMcQZE8qhrCw3fwqnNyPKEig.jpeg', NULL, NULL),
-(13, '2020-01-19 01:34:52', '2020-01-19 01:34:52', 106, 'imagesProducts/6Iy1Z2MbTkzGNDtWawLREwakDHSFD4WiGDdRvLTc.jpeg', NULL, NULL),
-(14, '2020-01-19 01:34:53', '2020-01-19 01:34:53', 106, 'imagesProducts/lnu5avP7LyAblUlUXwAAdOubqUsZadRqz3Tnq9Nc.jpeg', NULL, NULL),
-(15, '2020-01-19 01:34:53', '2020-01-19 01:34:53', 106, 'imagesProducts/IT0LBxvYnWLnXYcK17EIDnMg7XEtian3G4TZqhIc.jpeg', NULL, NULL),
-(16, '2020-01-19 01:34:53', '2020-01-19 01:34:53', 106, 'imagesProducts/j1DLkBREAaQmyMr4G6nabtcq8YoSSKtxQIql2deK.jpeg', NULL, NULL),
-(17, '2020-01-19 02:01:18', '2020-01-19 02:01:18', 110, 'imagesProducts/G6it020r3PkX2F3k0lHivf2Sh88muA5JybpO22uP.jpeg', NULL, NULL),
-(18, '2020-01-19 02:01:18', '2020-01-19 02:01:18', 110, 'imagesProducts/6tWwmvNtb4Murd05KEuo6qkT4hKCKR2sYEkGNJ6Q.jpeg', NULL, NULL),
-(19, '2020-01-19 02:01:19', '2020-01-19 02:01:19', 110, 'imagesProducts/kvC0OmaoDBwvwbtMoHKb4Km9t0IqzLkY1uIjDR5Y.jpeg', NULL, NULL),
-(20, '2020-01-19 02:01:19', '2020-01-19 02:01:19', 110, 'imagesProducts/pAgO1igPsheu2iFYoBdypddB6umIGSNA1lKlJ2QS.jpeg', NULL, NULL),
-(21, '2020-01-19 05:47:47', '2020-01-19 05:47:47', 111, 'imagesProducts/OpaKmbeVMvWERftFuGyLchbAhp2f0IaSxCjXnbof.jpeg', NULL, NULL),
-(22, '2020-01-19 05:47:47', '2020-01-19 05:47:47', 111, 'imagesProducts/82iEDCGotfNn7DvYj6VWejachGkPDLs4lJC93com.jpeg', NULL, NULL),
-(23, '2020-01-19 05:47:47', '2020-01-19 05:47:47', 111, 'imagesProducts/2Hwr1CdKF1282YfFoeq5FiHse3AtV4V40WJCY16r.jpeg', NULL, NULL),
-(24, '2020-01-19 05:47:47', '2020-01-19 05:47:47', 111, 'imagesProducts/eMI7vQobVOrIifFOdYIvzVzmngvuV5wQ1TrSroz7.png', NULL, NULL),
-(25, '2020-01-19 05:56:08', '2020-01-19 05:56:08', 112, 'imagesProducts/hpJPpVmL8PGkLAdU87wcULqJ0tDxb5gPpkFtbKrS.jpeg', NULL, NULL),
-(26, '2020-01-19 05:56:08', '2020-01-19 05:56:08', 112, 'imagesProducts/F2M2kmCIz2VLihqGl1NnV1lt1wyWQtCgkQJdCiMY.jpeg', NULL, NULL),
-(27, '2020-01-19 05:56:09', '2020-01-19 05:56:09', 112, 'imagesProducts/n98XRrCAedOM7DdPIMQxzsmHyhI8HwFo94J0PLsG.jpeg', NULL, NULL),
-(28, '2020-01-19 05:56:09', '2020-01-19 05:56:09', 112, 'imagesProducts/JyrEL2idIUnaVXi1A28W7f6dc5fHW8bENypJX6mk.jpeg', NULL, NULL),
-(29, '2020-01-19 18:02:43', '2020-01-19 18:11:33', 114, 'imagesProducts/WBKr0COT8sttpll46hnxVTgwBH5DfRz2LL7XA2Jk.jpeg', NULL, NULL),
-(30, '2020-01-19 18:02:43', '2020-01-19 18:08:15', 114, 'imagesProducts/epwb3q2ZkFYKWbXxMqKXzYzz8aGBxx5XptCDhHxt.jpeg', NULL, NULL),
-(31, '2020-01-19 18:02:43', '2020-01-19 18:08:15', 114, 'imagesProducts/dAJFvkJqO4JyiY5WF3sLM0xi8GiL83dgRpijYoEw.jpeg', NULL, NULL),
-(32, '2020-01-19 18:02:43', '2020-01-19 18:08:15', 114, 'imagesProducts/EiqsWa5Q3QFy5xX5ydn5cMXDHa96jJRHWYIrN7Mp.jpeg', NULL, NULL),
-(33, '2020-01-19 22:55:39', '2020-01-19 22:55:39', 116, 'imagesProducts/rnoGl5BLLwegkeD8BbXzGnFZyux7FWDohWv38sdr.jpeg', NULL, NULL),
-(34, '2020-01-19 22:55:39', '2020-01-19 22:55:39', 116, 'imagesProducts/G0kwaMu75luCr7DiZxjPWHFfGuGyNSG7tF01aEsw.jpeg', NULL, NULL),
-(35, '2020-01-19 22:55:39', '2020-01-19 22:55:39', 116, 'imagesProducts/ENzCNd1CuHGU48tsyEIxspWcHKSKqVOmy3gXiQjA.jpeg', NULL, NULL),
-(36, '2020-01-19 22:55:39', '2020-01-19 22:55:39', 116, 'imagesProducts/ByTMZYFHCqvyKiE0gpUymYJI3eekMsbkZ6iCoENg.jpeg', NULL, NULL),
-(37, '2020-01-19 22:57:40', '2020-01-19 22:57:40', 117, 'imagesProducts/jSXQJFTBp4s6u6dJ1bfMQ1PUBcsNabJwCJhKRMgK.png', NULL, NULL),
-(38, '2020-01-19 22:57:41', '2020-01-19 22:57:41', 117, 'imagesProducts/Yfx1v3EuvbJ3KunUBKGuPoKwsFTeXjfeJqm4f2e9.png', NULL, NULL),
-(39, '2020-01-19 22:57:41', '2020-01-19 22:57:41', 117, 'imagesProducts/14ZDddWgMYXZK5p8QTOVAKnwdOZ8fSRkTR8BFcuh.png', NULL, NULL),
-(40, '2020-01-19 22:57:41', '2020-01-19 22:57:41', 117, 'imagesProducts/wW9Xgm0FocEwF4C2Z7NPHrGjhJvQkjrxh9FJhIff.png', NULL, NULL),
-(41, '2020-01-19 23:07:59', '2020-01-19 23:07:59', 118, 'imagesProducts/0g6iVh8NY5KfEcUmGrJDA4HNsEHYPsR6MuxSTskm.jpeg', NULL, NULL),
-(42, '2020-01-19 23:07:59', '2020-01-19 23:07:59', 118, 'imagesProducts/92spw5thd66guE59CgRzfkAbsbMV5K05fsxDg2fO.jpeg', NULL, NULL),
-(43, '2020-01-19 23:07:59', '2020-01-19 23:07:59', 118, 'imagesProducts/WMvXSyM7qWOByT45QAvlitwvV8nXbExaMbtvuHmz.png', NULL, NULL),
-(44, '2020-01-19 23:07:59', '2020-01-19 23:07:59', 118, 'imagesProducts/DDiXuk2VwdO1gZxkZBiQWmjWSHUNxuk4gnKwSAPH.jpeg', NULL, NULL),
-(45, '2020-01-21 00:26:25', '2020-01-21 00:26:25', 120, 'imagesProducts/8iytq14JDqJjr1Mcd1v8iJM8T801w5w3qANkv0BZ.png', NULL, NULL),
-(46, '2020-01-21 00:26:25', '2020-01-21 00:26:25', 120, 'imagesProducts/2CHXFe04LhyrZBR6HTjCmBQ68wM5nEF8zaIwYPgd.png', NULL, NULL),
-(47, '2020-01-21 00:26:25', '2020-01-21 00:26:25', 120, 'imagesProducts/cl7YJXZnfxUy9y4hSZq7nYyBq80xAduSqSWq3bwP.jpeg', NULL, NULL),
-(48, '2020-01-21 00:26:25', '2020-01-21 00:26:25', 120, 'imagesProducts/2Gm3OYI8S19wzm4aNcJmrjNT7lCNXIPyxEvIG5Hc.jpeg', NULL, NULL),
-(49, '2020-01-21 00:28:10', '2020-01-21 00:28:10', 121, 'imagesProducts/ihiRsrGkoBQzfQbyTiwbBFoyJa23UUlTfpdQc3Mz.jpeg', NULL, NULL),
-(50, '2020-01-21 00:28:10', '2020-01-21 00:28:10', 121, 'imagesProducts/LVnrYRi6edOl5dbtCcKVD14TLJHmprfl7TlMFmGw.png', NULL, NULL),
-(51, '2020-01-21 00:28:10', '2020-01-21 00:28:10', 121, 'imagesProducts/8GO6GMeISqwVCIeJcJddZJpPsxuoDfQyd3igN4bI.jpeg', NULL, NULL),
-(52, '2020-01-21 00:28:10', '2020-01-21 00:28:10', 121, 'imagesProducts/QFbq0tdsAIEHPhRr0CLZDuFizku447PMrTea7v6I.jpeg', NULL, NULL),
-(53, '2020-01-21 00:30:54', '2020-01-21 00:30:54', 122, 'imagesProducts/65QjviObH3wdIlcfj0fmOzUEvGJO35z4PP43Zpap.jpeg', NULL, NULL),
-(54, '2020-01-21 00:30:55', '2020-01-21 00:30:55', 122, 'imagesProducts/Hly4gRJz1ehJ3ihHowiKb08uEm4aPsKDuHfsYkqA.png', NULL, NULL),
-(55, '2020-01-21 00:30:55', '2020-01-21 00:30:55', 122, 'imagesProducts/8fui5VFh9IePJu9FwZDWSNzioEs9vxvMljvGbLQj.jpeg', NULL, NULL),
-(56, '2020-01-21 00:30:55', '2020-01-21 00:30:55', 122, 'imagesProducts/BwIO185pl2uzq11YMffdXhGnbbc6JJrGuTaNptba.jpeg', NULL, NULL),
-(57, '2020-01-21 00:37:21', '2020-01-21 00:37:21', 127, 'imagesProducts/kRuLJiWM2D0iIYNbacgKdhdvggjHUvzwblxe4wY7.jpeg', NULL, NULL),
-(58, '2020-01-21 00:38:16', '2020-01-21 00:38:16', 128, 'imagesProducts/hU4wtRcqCQu7GziAFmpLpKptbCzWIteaE2bfjKNb.jpeg', NULL, NULL),
-(59, '2020-01-21 00:38:17', '2020-01-21 00:38:17', 128, 'imagesProducts/C2V7ANe1EQ3CSwLMG8JapsPBbxKUawkZPE5QZfqU.jpeg', NULL, NULL),
-(60, '2020-01-21 00:38:17', '2020-01-21 00:38:17', 128, 'imagesProducts/UAoRvTT1LsoQXFQ8jcxQhkVoUCkLX6RHzh1iGLpP.jpeg', NULL, NULL),
-(61, '2020-01-21 00:38:17', '2020-01-21 00:38:17', 128, 'imagesProducts/re1AUiuM28qg7pPfZP9bQEonnkhfoIxg9fYW9djG.jpeg', NULL, NULL),
-(62, '2020-01-21 00:39:26', '2020-01-21 00:39:26', 129, 'imagesProducts/TLDcv0tTiRq6ZIYe2yNvnVURWkW2MEYG2XRLgZDL.jpeg', NULL, NULL),
-(63, '2020-01-21 00:39:26', '2020-01-21 00:39:26', 129, 'imagesProducts/XtcqdEMnCgSOuMCbGcVSePXKy1yshP4qX3IhrrgY.png', NULL, NULL),
-(64, '2020-01-21 00:39:26', '2020-01-21 00:39:26', 129, 'imagesProducts/OHSrdlqPRvmVhKEx5L0gmZQ2lCwwJMmzbWawRAu3.jpeg', NULL, NULL),
-(65, '2020-01-21 00:39:26', '2020-01-21 00:39:26', 129, 'imagesProducts/2UOzoa4m6b9jfjyjDDbstFjCbZVnE1MPaElCpXHI.jpeg', NULL, NULL),
-(66, '2020-01-21 00:41:42', '2020-01-21 00:41:42', 130, 'imagesProducts/OZ9vObEdgemZWMwKjFP4NfGdD5kWMk0e61cvdFbM.jpeg', NULL, NULL),
-(67, '2020-01-21 00:41:42', '2020-01-21 00:41:42', 130, 'imagesProducts/9hKhauLWuOpYFs7Anlqp970tAB0vTBGyUmg6QvKQ.png', NULL, NULL),
-(68, '2020-01-21 00:41:42', '2020-01-21 00:41:42', 130, 'imagesProducts/NmltSusdYYEkxktDNPPJhcmwTKkB8EtYQvaAG2ln.jpeg', NULL, NULL),
-(69, '2020-01-21 00:41:42', '2020-01-21 00:41:42', 130, 'imagesProducts/UC8GY2ljVbagxWcCaK2BcHpRNBKYrRNjBZnQtpRW.jpeg', NULL, NULL),
-(70, '2020-01-21 00:46:12', '2020-01-21 00:46:12', 132, 'imagesProducts/pXjl29yvuhaSv6HgaeYJrb95XlYLY2uc1HiXWOJK.jpeg', NULL, NULL),
-(71, '2020-01-21 00:46:12', '2020-01-21 00:46:12', 132, 'imagesProducts/3QiW58yA5NMHaWhKiRQO2qW03a0rUx2GMX080njo.jpeg', NULL, NULL),
-(72, '2020-01-21 00:46:12', '2020-01-21 00:46:12', 132, 'imagesProducts/wMD3KIngoB94KXcBn35DhjB4iMN2jneAf02kNxDC.jpeg', NULL, NULL),
-(73, '2020-01-21 00:46:12', '2020-01-21 00:46:12', 132, 'imagesProducts/RygiWdsSUbnciQlLGA7KhAWOlBPlEd6pj4SRPV0f.jpeg', NULL, NULL);
+(1, '2020-02-01 23:21:19', '2020-02-02 00:06:44', 100, 'public/imagesProducts/8Y8sqzD0yrCNCLSdRqNnRiyjNygdl1PjWOg6rfpY.jpeg', NULL, NULL),
+(2, '2020-02-01 23:21:19', '2020-02-01 23:21:19', 100, 'public/imagesProducts/87KZKfXbCubTGu2uc9F00ChnNp9rYdmkWDSHN07E.jpeg', NULL, NULL),
+(3, '2020-02-01 23:21:20', '2020-02-02 00:03:29', 100, 'public/imagesProducts/8FSI6DGy1eceOxxOk3QLw1wRFtxEwuAVkEsIi9aY.png', NULL, NULL),
+(4, '2020-02-02 00:05:59', '2020-02-02 00:05:59', 100, 'public/imagesProducts/TwYiH16XzLlzGi2SgiN46UbLtIGTIybEIxTDeRMe.jpeg', NULL, NULL),
+(5, '2020-02-03 17:09:25', '2020-02-03 17:09:25', 11, 'public/imagesProducts/tWG2b1HaFYPMIWM5bBUcM46UmH6SrlmlYdo5z2jq.jpeg', NULL, NULL),
+(6, '2020-02-03 17:09:25', '2020-02-03 17:09:25', 11, 'public/imagesProducts/hgIPh962U6M1gyZhBwW1M2Yj7bpipRVKQLoE82Ys.jpeg', NULL, NULL),
+(7, '2020-02-03 17:09:25', '2020-02-03 17:09:25', 11, 'public/imagesProducts/k5eA28fgHo1U3QtOPQNWCg9ad6ykFCet9sHiA9he.jpeg', NULL, NULL),
+(8, '2020-02-03 17:09:26', '2020-02-03 17:09:26', 11, 'public/imagesProducts/auTB40XIomNCnSJiijRBLMFGZ0bWMNFvC7XlH5Lq.jpeg', NULL, NULL),
+(9, '2020-02-03 17:11:29', '2020-02-03 17:11:29', 14, 'public/imagesProducts/89yCGcbxuHCbHGDTxM1hfIe3yG0q0feL9Zg4Mi5f.png', NULL, NULL),
+(10, '2020-02-03 17:11:29', '2020-02-03 17:11:29', 14, 'public/imagesProducts/X7rdsolXlQ1zJouUxxt0s4gE6AW4QreV9syHR8bN.png', NULL, NULL),
+(11, '2020-02-03 17:11:29', '2020-02-03 17:11:29', 14, 'public/imagesProducts/APIqtorT1vxEH2M0aZdB9YmR7PRlqYJvmT6AnXSo.png', NULL, NULL),
+(12, '2020-02-03 17:11:29', '2020-02-03 17:11:29', 14, 'public/imagesProducts/dVCTxzaSMFIzOVKhWIpSS2EuAhjLu1LE7DgD9lsR.jpeg', NULL, NULL),
+(13, '2020-02-06 05:02:54', '2020-02-06 05:02:54', 39, 'public/imagesProducts/HrsMDruj1BxbafqDneP9bwjQzj4BydTSUmuprztR.jpeg', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -408,162 +438,106 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `created_at`, `updated_at`, `name`, `description`, `specifications`, `price`, `category_id`, `brand_id`, `deleted_at`, `stock`, `offer_id`) VALUES
-(2, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Mollitia quia sit.', 'Saepe ut quae delectus quia ullam dicta accusantium. Enim praesentium dicta quae atque dignissimos nihil numquam. Vero sunt nam blanditiis. Asperiores ut qui nesciunt corporis et occaecati quo facere.', 'Eos asperiores sapiente culpa tempora sunt unde. Aperiam autem et officia sint. Enim consectetur sit sed ipsum quia molestiae excepturi quaerat.', 326856.53, 7, 1, NULL, 16, 21),
-(3, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Et est nesciunt.', 'Temporibus omnis suscipit rerum et repellat. Omnis labore minus corrupti mollitia ipsam ullam. Ad accusantium hic ipsam ut dolorum vel et. Ipsa est totam vitae qui porro est.', 'Quis voluptate quam enim a et cum temporibus. Quia quas nemo quaerat repudiandae ipsa rerum. Sed id facere non aut. Ea voluptate eos debitis et.', 843370.42, 7, 1, NULL, 3, 26),
-(4, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Est repellendus.', 'Natus rerum a temporibus unde nobis accusamus dolorum reprehenderit. Sunt vel voluptate vel autem reprehenderit necessitatibus in. Dolorem dolorem odit sit magni est qui blanditiis neque. In laborum ea eum.', 'Praesentium voluptatem sit necessitatibus est repudiandae quod occaecati. Doloremque laudantium ut labore velit in et corrupti qui. Illo eligendi veritatis qui exercitationem voluptatem.', 160074.16, 6, 1, NULL, 27, 26),
-(5, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Doloremque omnis.', 'Qui quas aut perferendis excepturi aliquam velit dolore. Dolor facere magnam quia libero quis et. Repudiandae qui omnis quis voluptatem. Sed animi cumque aut eos nobis.', 'Mollitia aut quo assumenda minus optio sint in. Atque et cumque occaecati quia inventore sit. Non omnis illum laboriosam fugit nihil. Voluptates natus eligendi natus commodi. Est saepe veritatis accusantium ab nihil similique ullam.', 500863.48, 7, 1, NULL, 74, 28),
-(6, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Suscipit et qui.', 'Blanditiis saepe adipisci odit dolorem. Porro repellendus ex natus accusamus deleniti. Alias odit repudiandae dicta.', 'Nihil expedita quia quibusdam qui. Nobis et eligendi exercitationem ut esse quis. Consequatur quia asperiores eos voluptates perspiciatis atque.', 703436.71, 6, 1, NULL, 36, NULL),
-(7, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Tempora excepturi.', 'Velit aspernatur rerum dicta excepturi. Molestiae modi velit illo dicta qui tenetur. Temporibus tempora iste at explicabo occaecati minima.', 'Officia ipsa autem ipsa ut enim. Quaerat corrupti quos ut dolores quia qui voluptas. Ut consequatur odit magni nesciunt alias et.', 905622.80, 5, 1, NULL, 69, NULL),
-(8, '2020-01-16 15:05:16', '2020-01-16 15:05:16', 'Eius non quia ab.', 'Et et rerum maiores voluptatem voluptatem pariatur ut quasi. Nihil eligendi sit perferendis nostrum iusto. Cum aspernatur ut optio non ut vel repellendus. Rerum in nam ut provident.', 'Sit voluptatem temporibus repellendus quasi iusto. Repellendus adipisci deserunt ex qui maxime amet. Nihil necessitatibus ad qui aut repellendus aliquid quam. Perspiciatis aut quibusdam qui mollitia nihil laboriosam.', 63936.48, 6, 1, NULL, 31, NULL),
-(9, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'guitarrita loca', 'Ducimus vel eos placeat quidem placeat illo officia. Quis et rem sapiente et. Dolores ullam labore est explicabo fugiat reiciendis deleniti.', 'Odio odit amet et officia sapiente. Maxime architecto earum et et iusto. Aut nemo id cumque est quo qui.', 339749.28, 4, 1, NULL, 96, 27),
-(10, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Et cum provident.', 'Similique quia sunt odio quia. Quasi omnis explicabo qui consequatur repudiandae aperiam voluptatem dolores. Architecto qui et a consequatur sit.', 'Natus a blanditiis officia non neque consequuntur dolores. Iste doloribus ea incidunt hic exercitationem veniam. Ab veniam aut qui tenetur veniam eaque aut.', 826316.35, 4, 1, NULL, 0, NULL),
-(11, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Itaque ipsum sunt.', 'Ipsa et nam consequatur alias dolorem. Culpa atque voluptas quis.', 'Voluptates soluta voluptas tempora et. Nesciunt voluptatum mollitia laboriosam dolore alias. Rem optio assumenda tempora dolor aut.', 387834.42, 5, 1, NULL, 60, NULL),
-(12, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Similique et.', 'Ut sed consectetur voluptas et odio in cumque eligendi. Hic aut itaque aut nulla nisi dolor. Est aut qui explicabo itaque. Est quibusdam modi sapiente aperiam recusandae eos aut.', 'Voluptas rerum ducimus adipisci aut consectetur dolor. Ut perferendis dolores nulla aspernatur at non rem. Exercitationem corrupti ad cumque et quia consequatur consequatur beatae.', 867330.12, 4, 1, NULL, 81, 25),
-(13, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Sunt est sunt.', 'Exercitationem vero ut exercitationem aspernatur et praesentium. Aliquid rerum reprehenderit enim id consequatur officia quibusdam.', 'Eius consequuntur quibusdam dignissimos aut voluptates suscipit. Sit in at iste labore assumenda dicta adipisci cum. Doloremque reiciendis praesentium hic a omnis. Corporis et dolorem quia.', 591308.98, 4, 1, NULL, 4, NULL),
-(14, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Necessitatibus.', 'Iste rem velit explicabo aut ipsum. Exercitationem non sunt ipsam perferendis fugiat repellendus.', 'Eius minima asperiores sunt fugit praesentium mollitia autem. Voluptatem atque perferendis et ea. Ad et voluptate laudantium vero quos eaque.', 722512.49, 5, 1, NULL, 67, NULL),
-(15, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Ducimus libero.', 'Voluptates est cumque explicabo ea mollitia. Ratione et aut cum maiores expedita placeat eum. Nostrum qui repudiandae et aut assumenda beatae. Quis voluptas temporibus illo rerum aut ut accusantium.', 'Cupiditate laboriosam ut nulla dolores deleniti. Dolorum non quam ullam consequatur veniam eum.', 576782.99, 5, 1, NULL, 99, NULL),
-(16, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Omnis qui autem.', 'Quisquam numquam in aspernatur porro dolor et facere. Non dignissimos est velit perferendis. Voluptates quas reiciendis pariatur aliquam.', 'Natus expedita perferendis consequatur minus sint praesentium reiciendis. Quisquam qui dolores omnis esse unde facere. Consequatur doloremque quia odio non dignissimos.', 884569.77, 7, 1, NULL, 44, NULL),
-(17, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Atque quas velit.', 'Molestiae aliquid nostrum nobis cupiditate doloremque ipsum. Maxime vitae ea possimus rerum et architecto esse. Aut sed nam quo aperiam quia sed omnis et.', 'Animi vero consequatur dolores incidunt dicta quas in repudiandae. Harum aut assumenda voluptas sed nihil aut iusto quae.', 232679.92, 5, 1, NULL, 89, NULL),
-(18, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Sapiente.', 'Tenetur illum cumque cumque earum ab perferendis. Explicabo distinctio sequi ut est eos quia tenetur. Quia quos autem minus molestias qui velit in. Ex adipisci doloremque quaerat est numquam. Doloremque aut labore et atque sed quos eum sunt.', 'Perferendis illum quia nobis ab inventore sed. Eveniet accusantium itaque omnis et enim velit architecto. Itaque adipisci cupiditate eos eum culpa nobis.', 353003.01, 4, 1, NULL, 20, NULL),
-(19, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Distinctio.', 'Vitae officia corrupti vitae pariatur voluptates aut. Ea omnis repellendus consequuntur quisquam. Autem molestiae vitae eum omnis reprehenderit.', 'Qui hic voluptas eveniet delectus. Voluptas autem harum quidem expedita mollitia blanditiis doloribus voluptatem. Molestiae nesciunt molestiae nihil sit eius pariatur ea.', 647345.74, 5, 1, NULL, 84, NULL),
-(20, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Velit sed.', 'Ducimus quidem necessitatibus eum voluptas aut delectus maxime ipsa. Id quia quod sit. Aut reprehenderit pariatur debitis fuga quasi et officiis.', 'Sint quas commodi qui iste omnis rerum. Autem dolorem eos modi. Molestiae est tempore voluptatem non tenetur perspiciatis consequatur consequatur.', 908161.32, 7, 1, NULL, 55, NULL),
-(21, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Et quos ratione.', 'Magni rerum quasi natus laboriosam dolor est. Repellendus molestiae quod eveniet ipsum nam qui. Modi voluptas maiores quia dolores.', 'Esse voluptas quia quasi ut necessitatibus aperiam. Aut sit voluptas voluptas neque repudiandae deserunt. Molestiae laborum qui et facilis.', 605529.86, 6, 1, NULL, 48, NULL),
-(22, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Tempora.', 'Maiores minus dolore voluptas in doloremque quos beatae. At sint aut quis minus.', 'Eos labore qui et voluptatibus sint eligendi. Placeat molestiae nihil velit inventore praesentium sunt placeat. Dolorum veritatis adipisci sed omnis. Facere aut eligendi minus et repellendus et autem ipsum.', 444354.68, 6, 1, NULL, 64, NULL),
-(23, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Et at impedit.', 'Fuga consequatur repellat et sed nisi porro et. Aut in ut voluptatem amet blanditiis ex. Itaque exercitationem eum quo accusamus distinctio.', 'Suscipit itaque unde ratione esse. Ullam velit quod veniam et earum corrupti. Eligendi cum et et est facere quis repudiandae.', 19613.86, 4, 1, NULL, 62, NULL),
-(24, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Sunt et et.', 'Eos non sequi ex eum magni dolor sunt. Aut porro occaecati alias magni. Quod omnis consequatur exercitationem labore dignissimos ratione maxime.', 'Magnam rerum totam voluptas. Accusamus quam commodi fuga eum. Itaque ut fugiat autem ut sequi. Non architecto ducimus eaque corrupti molestiae velit.', 752291.58, 7, 1, NULL, 2, NULL),
-(25, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Iure nobis.', 'Iusto tenetur dicta ea aut reprehenderit doloribus. Deleniti voluptatibus ut iste consequatur dolores. Dolorem consequatur dolorem magni quis. Voluptatibus aut in illum.', 'Et fugiat voluptas sint. Sed facere debitis facilis numquam cupiditate. Quae excepturi cupiditate blanditiis beatae nobis nemo. Est hic amet numquam doloremque dolorum.', 528428.24, 5, 1, NULL, 100, NULL),
-(26, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Necessitatibus.', 'Non aut nemo nostrum vero quis. Architecto commodi totam aliquam consectetur a ipsa.', 'Nemo quaerat autem rerum magnam perferendis dolores. Magni ea vero facere officiis saepe non quaerat. Saepe quidem ratione occaecati vero. Illo quia sapiente qui et aspernatur.', 670414.35, 7, 1, NULL, 47, NULL),
-(27, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Ad odit facere.', 'Ullam dolorem ipsum soluta. Quisquam illo perferendis aliquam minus provident. Et molestias est tempora vero voluptatibus temporibus.', 'Aliquam sed rerum aspernatur et aut aut occaecati adipisci. Est animi qui et beatae est earum. Porro voluptatem voluptas eos cum odio. Aliquid quis animi ea sed.', 343927.19, 7, 1, NULL, 9, NULL),
-(28, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Quis aut sint et.', 'Labore eum incidunt corrupti vitae dolore. Cupiditate provident voluptatum ullam ratione sed. Id et et amet et at pariatur occaecati corrupti. Nemo tenetur impedit at expedita excepturi est.', 'Neque saepe nihil aut corrupti vero eligendi officiis autem. Necessitatibus atque accusamus ab ea est placeat totam qui. Perferendis molestiae nostrum voluptates non soluta.', 706759.02, 4, 1, NULL, 66, NULL),
-(29, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Molestiae enim.', 'Quia sed modi enim nesciunt mollitia. Explicabo ad et molestiae earum et sed fugit. At sed quisquam sed magni maiores itaque itaque. Repudiandae ut perferendis perspiciatis.', 'Et fuga deserunt est occaecati. Adipisci possimus eum omnis explicabo iusto. Dolorem voluptates alias voluptatibus dolores autem error veniam itaque. Sit aut quisquam ut et similique ut et.', 769139.00, 5, 1, NULL, 68, NULL),
-(30, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Sed adipisci.', 'Officiis id consectetur suscipit alias sed. Praesentium sit ea harum accusantium. Amet atque fugit fugit nisi.', 'Magnam unde quia libero libero nobis voluptas tempora aut. Numquam doloribus nemo ea quam ullam modi nihil. Blanditiis aut voluptatem ea laudantium. Laudantium deleniti architecto accusamus ut quod quod nostrum.', 629235.71, 6, 1, NULL, 30, NULL),
-(31, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Ut quia.', 'Sed qui totam quia ea. Libero pariatur eum ex numquam quo necessitatibus. Molestiae illo expedita autem. Qui quo non illum saepe dolor cum itaque qui.', 'Beatae accusantium maiores quo et perspiciatis nulla soluta. Modi vel fugiat harum et vel et sed. Provident autem rem ex qui dolor et. Excepturi aut explicabo tempora temporibus.', 973236.33, 6, 1, NULL, 39, NULL),
-(32, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Modi voluptatem.', 'A quaerat commodi alias sed. Blanditiis omnis fugit soluta eos minus et. At culpa doloribus et sapiente quis corrupti ea. Eos sapiente veniam velit veniam molestias atque aut.', 'Corporis laboriosam et saepe sint. Non cupiditate modi cupiditate tempora quae sit. Fugiat inventore omnis ipsam cum et. Iure debitis eos sunt et alias illum quia. Et sequi quo temporibus.', 576410.03, 7, 1, NULL, 4, NULL),
-(33, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Odit voluptatibus.', 'Amet aut odio sint sed. Qui voluptate non earum voluptatum. At molestias eius et nesciunt odit est sapiente. Molestias qui sunt sit quam maxime.', 'Maiores deleniti aut exercitationem maiores aut. Modi alias aut neque neque repudiandae unde et. Adipisci ducimus perspiciatis voluptatem consequatur. Voluptatibus sunt similique eius voluptatem.', 541838.78, 4, 1, NULL, 58, NULL),
-(34, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Quia id est ut.', 'Minima aut fugiat aut. Quod maiores natus libero. Illo pariatur omnis animi iure.', 'Eum saepe velit modi. Nemo porro et vitae est ullam ut et. Odit ipsam dignissimos saepe id laborum dolor labore. Qui voluptates sunt officiis. Tenetur atque non aliquam nisi.', 957207.05, 5, 1, NULL, 91, NULL),
-(35, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Necessitatibus.', 'Iste quasi laboriosam necessitatibus ipsum. Qui magni est magnam et laborum facilis. Similique deleniti est mollitia et veritatis et. Debitis et similique et error.', 'Ratione fugit et sit delectus a neque quidem. Laudantium cumque quia molestiae error doloremque dolores. Harum est eos in sit. Quis sapiente animi accusantium vel sint.', 858881.52, 5, 1, NULL, 72, NULL),
-(36, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Rerum et est.', 'Dolores minima totam qui libero et recusandae aut. Ab pariatur incidunt quae in sed impedit facere. Modi vitae vitae quis expedita at ullam optio et.', 'Aliquam recusandae accusantium optio nisi atque et laborum. Dignissimos sequi mollitia labore id aspernatur. Animi ab illum ullam iure repudiandae aut.', 753558.06, 6, 1, NULL, 23, NULL),
-(37, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Molestiae.', 'Et quo vel delectus ea doloribus pariatur. Omnis tempore nostrum eum animi omnis similique. Sit quod quis doloribus sunt officia. Id quaerat ipsa laboriosam tenetur qui est.', 'Dolores consequatur quidem dolore reprehenderit. Ut blanditiis qui nisi sint. Aliquid maiores aut et voluptatem ut eum hic.', 589605.89, 4, 1, NULL, 44, NULL),
-(38, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'At consectetur.', 'Suscipit id quos nostrum esse doloribus et. Omnis fugit labore sed animi. Fugit inventore quia quasi est corporis non id. Et nihil laboriosam aut ut molestiae debitis.', 'Ad perspiciatis aut sunt dolorem dolores. Culpa maiores et eligendi est quasi voluptatem omnis. Cumque maiores et voluptate inventore laborum.', 840778.68, 7, 1, NULL, 10, NULL),
-(39, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Quisquam nostrum.', 'Beatae et voluptates aut quaerat aspernatur rerum placeat. Non cum aut reiciendis corrupti mollitia. Deleniti nulla molestiae sunt est.', 'Enim ipsa omnis quasi aliquid suscipit unde. Ad voluptatem ut delectus deleniti.', 249116.00, 6, 1, NULL, 82, NULL),
-(40, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Soluta sit dolore.', 'Voluptates autem qui natus. Hic aut error rerum error veritatis eos maxime. Deleniti nihil quidem est ut sit architecto.', 'Ea nemo ut inventore nostrum. Voluptas soluta delectus id sed libero. Consequuntur et quos optio similique. Optio non et exercitationem quod et qui ipsa illo. Harum vitae sapiente nemo dolorum ea molestiae.', 365761.16, 6, 1, NULL, 26, NULL),
-(41, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Quia optio.', 'Reiciendis vel assumenda numquam sunt laboriosam. Accusantium ut non repudiandae quo sed quis. Consequatur odit nihil aliquam.', 'Libero velit neque incidunt accusantium earum. Sunt et in consequatur ea quo perferendis id. Qui suscipit earum nam autem quos odio. Consectetur accusamus vel aliquam sunt dolores quia inventore.', 279337.82, 5, 1, NULL, 55, NULL),
-(42, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Autem tempore.', 'Sint ut similique et perferendis quam. Nobis quo nemo provident inventore cum libero non. Itaque fugiat quibusdam omnis fugiat distinctio aspernatur tenetur.', 'Unde sapiente adipisci aut veniam natus assumenda. Iste sed at fugiat totam perferendis voluptatibus. Quod officiis architecto id sit. Asperiores velit corrupti rerum laudantium sed.', 389502.86, 7, 1, NULL, 30, NULL),
-(43, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Qui voluptatum.', 'Atque reiciendis recusandae minima ab quia. Itaque distinctio non in excepturi tempora et eligendi et.', 'Qui incidunt et sit dolorem. Asperiores et tenetur quidem iusto repudiandae velit. Labore sint eos harum aperiam sit assumenda ut. Vitae optio ullam voluptatum excepturi totam dicta ea.', 812003.72, 5, 1, NULL, 70, NULL),
-(44, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Totam sint nulla.', 'Quidem cupiditate quia omnis praesentium illo minus est. Officia qui culpa dignissimos dolor sit reprehenderit qui. Voluptatem dolore fuga neque iure vel exercitationem dolorem. Itaque sed iusto asperiores quae qui ut.', 'Praesentium optio ex sed natus quod velit. Sed molestiae quia qui temporibus reprehenderit.', 334492.34, 6, 1, NULL, 46, NULL),
-(45, '2020-01-16 15:05:17', '2020-01-16 15:05:17', 'Ex harum voluptas.', 'Et quis fugiat et magni rem. Autem eos accusamus minima error sint et velit. Quos nesciunt error debitis. Sunt voluptatibus culpa at ut molestias.', 'Doloribus qui molestiae sunt aliquid et quam. Dolorem qui qui magni ab saepe voluptas eum. Tempora libero harum repudiandae nemo amet ea.', 413936.37, 7, 1, NULL, 54, NULL),
-(46, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Assumenda fuga.', 'Repellat consequatur sint illum non molestiae hic quam. Ipsam non inventore sequi officia sint omnis qui deleniti. Incidunt debitis provident sunt veritatis non. Tenetur enim voluptate dolorem eum in sit dicta.', 'Magnam odio quo qui eum libero molestiae. Dolorum qui minus incidunt atque cupiditate. Iste qui sed ratione cupiditate et voluptas. Iste qui et a veritatis est.', 817372.12, 5, 1, NULL, 0, NULL),
-(47, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Dolores dolore ut.', 'Excepturi error voluptatem animi eius quo totam amet. Et provident qui qui ea quibusdam. Quidem aspernatur doloremque molestias accusantium id.', 'At odit veniam facilis molestiae consequatur. Harum quia omnis id velit. Qui eaque molestiae reprehenderit.', 966916.60, 5, 1, NULL, 62, NULL),
-(48, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Labore provident.', 'Libero ut impedit voluptatem aut laboriosam. Nisi ut nihil et rerum. Debitis illum in debitis error hic magnam et esse. Nihil autem et autem.', 'Ad vero sit nesciunt modi consequatur. Dolorem animi sed veritatis atque. Provident facilis ut aut illum. Autem fugiat quo ex voluptatem repudiandae beatae officiis.', 399433.20, 6, 1, NULL, 62, NULL),
-(49, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Quis sit ut dolor.', 'In harum quasi harum animi. Quis autem veniam hic molestias. Quo distinctio sint ut ratione iure iste aliquam. Necessitatibus dolorum aut sed nobis non illum sint.', 'In voluptatem aperiam odio autem fugiat ut enim autem. Corrupti quia delectus vel et. Ea unde veniam dolores voluptas quis. Molestiae aut amet ipsa possimus eaque placeat beatae.', 897307.15, 4, 1, NULL, 11, NULL),
-(50, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Adipisci.', 'Placeat eum est in voluptatem voluptas. Non inventore ut occaecati facilis dolores omnis quia molestiae.', 'Et quia voluptate earum ea asperiores veniam. Qui quod officia ut itaque aut provident. Architecto esse iste aut omnis omnis facilis autem.', 791153.16, 6, 1, NULL, 31, NULL),
-(51, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Quo odio.', 'Dolores nihil illo iure magnam fugit. Laborum reprehenderit quis quos soluta. Enim error autem aliquam amet.', 'Voluptatem corrupti voluptatem aspernatur aperiam eos dicta asperiores. Ut explicabo vel labore excepturi inventore. Perspiciatis esse iusto et vitae.', 987895.25, 5, 1, NULL, 88, NULL),
-(52, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Minus temporibus.', 'Repudiandae quo et corporis et quasi repudiandae. Debitis placeat consequatur excepturi quo. Totam possimus rerum corrupti libero.', 'Voluptatem minus excepturi nihil natus ullam. Voluptates consequatur incidunt ea quam. Et animi corporis eum quas consequuntur sint laudantium.', 901798.02, 6, 1, NULL, 53, NULL),
-(53, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Quidem dolor.', 'Sequi aut ut ex assumenda quas eum voluptate. Cupiditate itaque amet ea molestiae. Necessitatibus quis a eius accusamus.', 'Numquam asperiores saepe optio eum iure. Vel minima pariatur maiores placeat repellendus esse et.', 792601.55, 5, 1, NULL, 33, NULL),
-(54, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Ducimus corporis.', 'Aut beatae doloribus qui omnis vel veniam. Et illum hic libero. Mollitia facilis est dolores quas. Qui placeat rem omnis incidunt sit voluptate nesciunt.', 'Suscipit sequi quam praesentium aperiam. Quam repellendus temporibus saepe vel omnis est ut. Magni blanditiis deleniti aut rerum voluptas.', 282269.10, 4, 1, NULL, 90, NULL),
-(55, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'In quae ratione.', 'Tempora dolores doloremque voluptas a eum quo et. Eum asperiores in distinctio aut voluptatem totam. Aut id voluptatem nemo beatae.', 'Sit aliquam perferendis illo qui quo impedit laboriosam. Quibusdam dolorem expedita explicabo. Non suscipit aliquam blanditiis est dolorum fugit minus. Deserunt perspiciatis sunt error eum dolores labore. Aut repellendus quasi ut recusandae sunt.', 238229.74, 6, 1, NULL, 72, NULL),
-(56, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Qui libero sit.', 'Magni ipsum dolorem totam qui distinctio voluptas. Enim maiores hic saepe suscipit. Ut explicabo deserunt eum corporis. Commodi quia aut natus est et similique tempora.', 'Esse nemo cumque modi aliquam perferendis non atque a. Dolores molestiae itaque omnis quisquam consequuntur vero. Animi ab omnis nemo sint quas eos laboriosam. Saepe nobis commodi est dolor.', 279572.08, 6, 1, NULL, 100, NULL),
-(57, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Dolorum non culpa.', 'Sunt et dolor sapiente perspiciatis incidunt in eius ea. Illo autem et laudantium placeat quidem et ea repellendus. Pariatur quos eum numquam est dignissimos. Sapiente enim aut quia. Dicta maxime unde nostrum cum ut qui.', 'Et non enim libero officia praesentium. Odit iure nobis nam natus. Totam beatae libero voluptas quis.', 86218.04, 7, 1, NULL, 78, NULL),
-(58, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Id qui voluptate.', 'Quas consectetur distinctio fuga nihil consectetur blanditiis et. Id quis delectus dolores quibusdam non commodi ratione. Molestias corporis omnis ea qui et dicta voluptatem.', 'Et sit perspiciatis qui voluptas est soluta accusamus. Sunt assumenda laboriosam omnis ratione. Quasi quis iure in beatae. Repellat dolor et et magnam accusamus et ratione.', 115611.66, 6, 1, NULL, 99, NULL),
-(59, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Quia optio.', 'In vel eos quaerat rerum nulla soluta vel vel. Dolores quibusdam ea fuga dolores repudiandae quibusdam voluptatum. Odit animi adipisci repellat aperiam vitae quibusdam.', 'A totam aut ipsa et voluptatum. Beatae sequi quod veritatis unde earum ipsa et.', 177636.13, 7, 1, NULL, 55, NULL),
-(60, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Architecto.', 'Magnam natus possimus placeat. Magnam sed atque et ipsa reiciendis. Possimus autem ipsam earum sunt sunt repellat maiores aliquam. Accusantium quasi sit magni quia quae minus.', 'Qui rerum blanditiis saepe nemo tempore. Dolorem consequatur quae sequi dignissimos.', 774132.70, 4, 1, NULL, 32, NULL),
-(61, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Sapiente eum eos.', 'Quidem aut aut molestias eum. Veritatis quasi laudantium rerum quos suscipit. Quia fugit laboriosam quo eum voluptatum eos magnam. Quos voluptas quos qui ea consequatur amet.', 'Beatae aut similique eum ullam maxime ea veniam et. Omnis laboriosam non nisi ut dolores. Modi architecto ut et consequatur.', 184135.71, 7, 1, NULL, 21, NULL),
-(62, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Veritatis non.', 'Consectetur doloremque qui sapiente ut qui eveniet nulla. Tempora illum ut totam. Ad ea et ex magnam beatae. Non soluta quia porro aspernatur error eligendi itaque.', 'Eveniet aliquam perferendis fugiat voluptate quia consequatur. Doloremque quibusdam adipisci sed ea repellendus itaque est. Ut voluptas et rem consectetur quam. Consequatur voluptas asperiores sunt omnis adipisci et quia.', 360709.63, 7, 1, NULL, 45, NULL),
-(63, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Rerum non.', 'Dignissimos non eveniet aliquid voluptas. Odit nostrum dolores minus totam non. Et illo vel sapiente illo quia. Voluptas error laudantium aliquid dolore.', 'Qui aut hic accusamus ipsam rerum rerum consequatur nesciunt. Velit ab est esse esse. Rerum et itaque nemo incidunt. Et totam assumenda et debitis sint.', 907788.50, 6, 1, NULL, 5, NULL),
-(64, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Sit iure minima.', 'Earum architecto qui deleniti aliquam dolores blanditiis nostrum illum. Sequi eius cum non ex suscipit est. Voluptates eos enim consequatur aspernatur.', 'Ut ab in praesentium officiis quis nam. Quidem qui voluptas sint eius aut. Quo nostrum aut sint explicabo modi nihil porro fuga. Qui enim nisi accusamus quos omnis atque.', 652417.10, 6, 1, NULL, 66, NULL),
-(65, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Sit labore modi.', 'Omnis sunt soluta est et animi aut deserunt. Aut quia accusamus molestias aut. Adipisci quia omnis ad beatae nihil.', 'Delectus ex aut officia laudantium enim. Dicta fugiat perspiciatis enim ipsa est rem quaerat iste. Veniam maiores distinctio reiciendis impedit laboriosam.', 342620.14, 5, 1, NULL, 76, NULL),
-(66, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Id quasi enim.', 'Necessitatibus assumenda commodi doloremque illo. Ut et ea expedita consequatur. Sapiente dignissimos error minus et quaerat odio. Voluptatem ad saepe blanditiis provident eos magni suscipit.', 'Veritatis suscipit voluptatem libero nulla quod natus ut. Nam veniam iusto est qui temporibus delectus non. Quis minus non dignissimos non sint tempore.', 935342.38, 4, 1, NULL, 71, NULL),
-(67, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Doloribus eos.', 'Cupiditate sapiente explicabo ut incidunt. Nesciunt sit aut impedit aut. Perferendis provident in sint voluptatem ut eligendi.', 'Placeat nulla sint repellendus nesciunt ea neque tempora. Eligendi omnis sunt sit perferendis officiis quod neque. Dolorum quod ipsum velit nam odio atque.', 827993.56, 4, 1, NULL, 90, NULL),
-(68, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Qui laudantium.', 'Eveniet et quo vero tempore fugiat illo consequatur aut. Error autem autem tempore ea esse placeat recusandae. Quae aut temporibus et odit nulla. Excepturi rem quasi praesentium molestias est placeat.', 'Aut labore assumenda magni quis repellat cum. Dolorem itaque veniam maiores repudiandae a aut. Neque et veniam vero doloribus.', 628848.76, 6, 1, NULL, 50, NULL),
-(69, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Quasi voluptas.', 'Quae impedit non quae et vel. Hic commodi deleniti iure eum consequuntur. Est facere et aliquam quaerat iste. Vel magni veritatis autem est quo tempora.', 'Ea sequi delectus dolorem atque porro. Ad nam ut praesentium atque sint ad repellendus. Unde est ut at.', 824617.29, 5, 1, NULL, 30, NULL),
-(70, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Nemo est rerum.', 'Voluptatum rerum sint dolores. Sint laboriosam et at aut. Aut dolorem et sit dolores vero aut.', 'Dolores amet quia adipisci est harum mollitia laborum. Sapiente quia ut nobis repudiandae laudantium iusto quibusdam quia. Eum blanditiis possimus explicabo animi laborum.', 627352.67, 7, 1, NULL, 98, NULL),
-(71, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Eos pariatur quod.', 'Reprehenderit et porro repellendus sint ea non necessitatibus. Pariatur ut quia rerum officia. Dignissimos dicta sed libero.', 'Reiciendis temporibus qui et sapiente. Dolores quae est qui impedit non nesciunt aut. Aut aliquid sed iste.', 285206.23, 7, 1, NULL, 64, NULL),
-(72, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Vel quis soluta.', 'Pariatur aut velit iste nemo saepe. Ratione tenetur consequatur ea deserunt. Aut pariatur excepturi atque asperiores provident nihil in. In quos rerum iste dignissimos voluptatem dicta.', 'Illum consequatur quisquam voluptatem quos provident velit rem accusamus. Non tempore nisi rerum debitis. Inventore aperiam deleniti doloribus voluptatibus.', 607435.75, 4, 1, NULL, 57, NULL),
-(73, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Praesentium quam.', 'Et voluptatem pariatur qui et nostrum sed illo. Eos et consequatur explicabo sed quaerat. Saepe dolores quos et quo iure et omnis. Doloribus voluptates natus reprehenderit incidunt iure.', 'Ut nisi ex qui. Assumenda vel ut et doloremque quo. Dolorum perferendis voluptas omnis vitae iusto.', 943874.65, 5, 1, NULL, 37, NULL),
-(74, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Ea non et aut.', 'Ea expedita et quo. Eos possimus odio aut sint aut nemo aut. Neque sunt facilis rem facilis sit eum cum maiores. Eos cumque ut non asperiores at corporis dolorem.', 'Voluptas et eum quis molestiae et. Cumque ut iste neque ullam. Omnis quos alias laborum non a.', 875912.00, 6, 1, NULL, 11, NULL),
-(75, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Quod et tempora.', 'Eos ipsam numquam quisquam harum. Culpa distinctio voluptas sed rerum deleniti voluptatum vel. Voluptatem enim repellendus voluptatibus.', 'Et dolorem temporibus eum harum corrupti dolor mollitia. Quos esse dolorem maxime. Doloremque repellendus aspernatur repudiandae a praesentium impedit. Qui quisquam autem voluptas qui praesentium.', 177865.05, 4, 1, NULL, 13, NULL),
-(76, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Quia et.', 'Ullam consectetur explicabo eos quis animi ducimus. Earum alias animi a eos dolores similique sapiente quod. Accusamus totam animi eaque non asperiores quo.', 'Voluptas quo ad facilis itaque vitae. Ipsa neque ut veritatis. Veniam deleniti beatae quia. Earum voluptatum quod est facilis doloremque eaque est.', 460904.10, 6, 1, NULL, 78, NULL),
-(77, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Odio similique et.', 'Vitae pariatur consectetur numquam quos assumenda magnam. Ipsum quod velit qui impedit sunt non ea. Nobis non voluptas aut expedita aspernatur neque eos. Vero et sed est aut.', 'Rem et molestiae facere sapiente neque temporibus. Dolor sint nostrum autem ipsa nihil error. Iusto libero sint fugit illum laboriosam fugit libero.', 857252.40, 6, 1, NULL, 65, NULL),
-(78, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Debitis et facere.', 'Reiciendis voluptas omnis quo. Dolores optio similique dolorum sed. Labore nostrum rem dolores quo odio ab debitis. Repellat aliquid odit expedita id quia est facere.', 'Ea voluptatem enim fugit dolor quisquam culpa. Ratione maiores dignissimos iusto voluptate quod. Unde tempore beatae nihil explicabo et quia dicta reiciendis. Natus harum quam laborum non et at dolore at.', 595700.48, 5, 1, NULL, 14, NULL),
-(79, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Facilis tenetur.', 'Est dolorum veniam neque et et ab omnis modi. Aut eos facere deserunt vitae. Inventore autem eius a omnis quia ut. Quas facilis numquam consequatur commodi. Ea omnis voluptas et et aut totam enim.', 'Rerum aut dignissimos et cumque. Voluptatem recusandae ipsa voluptates. Error incidunt non quibusdam animi. Qui aut quibusdam quidem aliquam.', 390025.62, 5, 1, NULL, 93, NULL),
-(80, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Distinctio sint.', 'Et dolores et voluptatibus voluptatibus. Et nesciunt ducimus harum iusto. Iusto inventore doloribus similique fugiat adipisci asperiores iste. Molestiae ut ut quos hic.', 'Ratione incidunt sed totam quia. Rerum aperiam ipsum fuga eligendi ut. Dignissimos tempora esse numquam qui in impedit dicta. Quo possimus eaque esse porro et qui.', 512043.64, 6, 1, NULL, 2, NULL),
-(81, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Et voluptas aut.', 'Eveniet rerum id culpa est voluptates nostrum sequi magnam. Beatae maxime sequi et sed neque. Ut ex placeat dolorum natus sit.', 'Explicabo neque et voluptatibus corrupti laboriosam eum dicta nihil. Aut et est esse aut ut. Natus qui qui quis qui molestiae nemo doloribus.', 863433.49, 4, 1, NULL, 6, NULL),
-(82, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Harum nulla velit.', 'Ut eos debitis nam dolor voluptatem recusandae porro. Temporibus quo numquam accusantium asperiores dignissimos placeat. Debitis illum quibusdam ratione placeat aut vel. Debitis numquam quam incidunt optio.', 'In expedita asperiores est. Consectetur deleniti dolore blanditiis voluptatem quam. Et commodi occaecati soluta ea perferendis veritatis. Facilis illum distinctio facilis voluptatem blanditiis.', 521966.65, 5, 1, NULL, 62, NULL),
-(83, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Voluptas rerum.', 'Expedita ratione voluptatem a. Aut quidem explicabo blanditiis voluptate distinctio. Quibusdam porro dolorem ut architecto ducimus cum rem.', 'Et explicabo quia doloremque incidunt magni. Veniam nihil cumque ut omnis praesentium reprehenderit at. Veniam illum fugiat dolore harum beatae autem corrupti.', 985877.04, 4, 1, NULL, 38, NULL),
-(84, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Cumque autem.', 'Corporis aut eaque repudiandae eius odio. Consequatur suscipit quisquam ut eligendi aliquid et fugit eveniet. Error commodi officia corrupti omnis.', 'Veritatis est perferendis expedita iusto id. Quis aut sit atque tenetur aliquam minima. Neque repellendus enim qui repellendus incidunt.', 463255.76, 7, 1, NULL, 65, NULL),
-(85, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Quia architecto.', 'Exercitationem vero natus iusto illo sint. Qui iste aut reprehenderit accusantium. Adipisci sint vel sint.', 'Ut eligendi error quam cum. Harum quia rem explicabo iste et. Ullam laudantium id dolorum voluptate dignissimos. Animi laudantium voluptate ex maxime ipsam consequatur architecto.', 21065.92, 7, 1, NULL, 27, NULL),
-(86, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Dolorum sed omnis.', 'Totam debitis ut sed. Qui est consequatur amet qui rerum.', 'Rerum officiis rerum harum et doloribus est est ullam. Suscipit tenetur dolorum dignissimos reprehenderit. Voluptatem velit ipsum vitae ipsam id error impedit. Quam consequuntur ea laborum.', 594162.90, 5, 1, NULL, 14, NULL),
-(87, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Accusantium omnis.', 'Nemo vitae maiores perspiciatis officia. Assumenda qui dolores totam et nisi. Vel earum unde molestiae et voluptates accusantium. Iure impedit cum ut voluptate et omnis. Repellat fugiat velit nisi non et corporis molestiae.', 'Nihil dicta exercitationem enim aspernatur omnis nesciunt voluptas doloribus. Molestiae et et qui hic. Ea libero dolore minima.', 848927.34, 4, 1, NULL, 52, NULL),
-(88, '2020-01-16 15:05:18', '2020-01-16 15:05:18', 'Ut mollitia earum.', 'Numquam voluptas ea commodi quas voluptatibus explicabo. Enim officiis saepe ducimus est sed ex. Nihil quia dolorem quo illum.', 'Dolores autem quasi officia et. Temporibus earum pariatur dolor natus aliquid ea. Dolores sit deserunt eligendi. Laborum consectetur labore id corporis.', 139575.01, 6, 1, NULL, 41, NULL),
-(89, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Quos commodi.', 'In quia eius quo alias tempore voluptas saepe aut. Fuga aut dignissimos similique mollitia officiis. Quis cum nemo molestias in quod. Repellat eveniet qui assumenda et autem et quis.', 'Sed tempora et sint dicta sapiente. Repellat accusamus repellendus dolor adipisci. Suscipit omnis earum quibusdam quia voluptate. Occaecati illo aspernatur quaerat ut dolorum.', 961705.24, 4, 1, NULL, 78, NULL),
-(90, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'At et et nihil.', 'Excepturi excepturi ut ut non ea sed. Aut fuga repellendus in vel. Dignissimos in repellendus repellendus vel non voluptatum. Enim doloribus est et.', 'In itaque est consequatur aut temporibus ipsa voluptas possimus. Sunt quod rem sed natus rerum. Dolorum sit libero eaque architecto.', 596628.90, 4, 1, NULL, 99, NULL),
-(91, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Qui.', 'A dignissimos ea ut rerum ab doloremque molestiae. Ea delectus facilis dolorem voluptatem velit in rerum mollitia. Eos ut adipisci ab at aspernatur.', 'Ea sit aliquam quas vel. Quasi dolorum porro ab aut rerum omnis. Magni ea et odit quos dolorem.', 671683.50, 5, 1, NULL, 49, NULL),
-(92, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Rerum cum.', 'Minima maxime et iusto magni voluptatibus. Quidem fugit et perspiciatis ullam itaque soluta. Animi commodi perspiciatis aut aut quia sunt et. Pariatur ut voluptas odit aut qui id.', 'Quas quo blanditiis commodi libero ea labore qui sed. Ex voluptate est hic quia eum qui. Veniam facilis a doloribus deserunt iste non.', 517115.19, 7, 1, NULL, 34, NULL),
-(93, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Minus hic numquam.', 'Natus unde autem cum accusamus. Vel illo eum consequatur esse possimus adipisci occaecati vitae. Odit odit officia qui aut quam.', 'Veniam expedita officiis reprehenderit eveniet. Ipsum illo aut aut. Reiciendis delectus autem itaque ullam adipisci aut qui. Fugit cum voluptatem eos provident.', 464187.40, 5, 1, NULL, 41, NULL),
-(94, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Deserunt adipisci.', 'Repellendus autem error aliquid facilis aut quas sed. Ut minus libero ea incidunt ratione ut accusantium et. Ratione consequatur aut laudantium ut voluptatem perferendis possimus.', 'Voluptatum quisquam amet qui velit. Vel est dolorem quia quas quod atque. Debitis officiis nisi cupiditate cum hic. Doloribus asperiores sit voluptatem dolores sit ad.', 720679.00, 7, 1, NULL, 47, NULL),
-(95, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Optio dignissimos.', 'Soluta quia quo sint vero autem. Ullam laboriosam et ipsa dolore. Consequuntur voluptas numquam non laborum.', 'Omnis omnis placeat consectetur consequatur accusamus iusto dolor ut. Officia nemo sed accusamus et corrupti vel. Distinctio perspiciatis magnam fugiat sit sequi laboriosam nesciunt.', 735430.65, 5, 1, NULL, 21, NULL),
-(96, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Rerum vel omnis.', 'Officia natus perspiciatis aut maiores. Ut incidunt eius rerum molestiae quibusdam asperiores nihil. Et reprehenderit fugiat harum molestiae.', 'Iusto est culpa quam. Repellendus voluptatum neque et dicta. Quia officia maiores ipsa magnam reiciendis. Et necessitatibus aut molestias in.', 10008.33, 4, 1, NULL, 30, NULL),
-(97, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Neque voluptatum.', 'Optio commodi deserunt optio rem. Rerum tenetur perspiciatis ut ea.', 'Quam neque ut porro a aut impedit ea. Placeat voluptatem reprehenderit voluptatem eius quia. Qui necessitatibus ad aperiam architecto soluta qui excepturi quia. Nostrum harum cumque ab alias debitis et. Architecto soluta quia saepe velit qui et.', 181454.71, 7, 1, NULL, 54, NULL),
-(98, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Iure corrupti.', 'Laboriosam labore non aliquam quae hic. Consequatur necessitatibus dolorem dolor ipsa cumque. Distinctio unde corrupti ea officia unde. Quam sunt corporis quasi labore praesentium labore in ea.', 'Nesciunt eligendi facilis aliquam quas. Necessitatibus eaque ab commodi nobis eius explicabo nobis. Recusandae optio est tempora eius facere eos modi.', 368962.28, 6, 1, NULL, 81, NULL),
-(99, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Debitis ea ullam.', 'Laboriosam ut voluptatibus consequuntur laborum amet quam. Corporis blanditiis officia aut sunt. Corrupti non et id est et occaecati.', 'Et id optio doloremque nulla. Omnis voluptatibus voluptatem impedit est qui id unde. Nemo corrupti temporibus ut cum ea neque facere odio. Non totam est et iusto hic voluptates.', 900483.44, 4, 1, NULL, 90, NULL),
-(100, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Voluptatum illum.', 'Suscipit provident omnis culpa eos voluptatem. Voluptates quae officia non esse architecto cupiditate nisi. Tenetur eum aperiam eveniet ad numquam odit. Facilis porro nihil doloribus.', 'Dolor aliquid ut sunt ab porro sit libero alias. Fuga dolorum pariatur ex voluptas beatae pariatur. Corrupti esse est nam.', 894321.15, 7, 1, NULL, 28, NULL),
-(101, '2020-01-16 15:05:19', '2020-01-16 15:05:19', 'Recusandae.', 'Aut assumenda omnis commodi non quia. Id quos commodi rerum est cum recusandae. Optio vel sunt voluptatibus saepe. Temporibus dolores sapiente velit eos consequatur vel velit doloremque. Sunt iure ex voluptas quis illo et ratione.', 'Voluptatem rem ut amet officia necessitatibus vel. Sunt possimus est iusto ducimus quibusdam omnis. Animi quaerat atque inventore qui officia rerum. Est et ut est ut inventore.', 887841.88, 4, 1, NULL, 16, NULL),
-(103, '2020-01-18 23:59:20', '2020-01-18 23:59:20', 'piano', 'sderdssss', 'dsadsasdas', 12.00, 4, 1, NULL, 12, NULL),
-(104, '2020-01-19 00:00:05', '2020-01-19 00:00:05', 'piano', 'sderdssss', 'dsadsasdas', 12.00, 4, 1, NULL, 12, NULL),
-(105, '2020-01-19 00:01:58', '2020-01-19 00:01:58', 'piano loco', 'sderdssss', 'dsadsasdas', 12.00, 4, 1, NULL, 12, NULL),
-(106, '2020-01-19 01:34:52', '2020-01-19 01:34:52', 'saxo', 'saxo loco', 'muy brillante', 123.00, 4, 1, NULL, 12, NULL),
-(107, '2020-01-19 01:59:57', '2020-01-19 01:59:57', 'saxo', 'saxo loco', 'muy brillante', 123.00, 4, 1, NULL, 12, NULL),
-(108, '2020-01-19 02:00:32', '2020-01-19 02:00:32', 'saxo', 'saxo loco', 'muy brillante', 123.00, 4, 1, NULL, 12, NULL),
-(109, '2020-01-19 02:00:46', '2020-01-19 02:00:46', 'saxo', 'saxo loco', 'muy brillante', 123.00, 4, 1, NULL, 12, NULL),
-(110, '2020-01-19 02:01:18', '2020-01-19 02:01:18', 'saxo', 'saxo loco', 'muy brillante', 123.00, 4, 1, NULL, 12, NULL),
-(111, '2020-01-19 05:47:47', '2020-01-19 05:47:47', 'Guitarra electrica', 'la mejor guitarra electrica del mundo', 'no todas las guitarras son iguales', 1234.00, 4, 1, NULL, 22, NULL),
-(112, '2020-01-19 05:56:08', '2020-01-19 05:56:08', 'tuba', 'sddddd', 'kkkkkkkkkkkk', 432.00, 4, 1, NULL, 44, NULL),
-(113, '2020-01-19 18:01:18', '2020-01-19 18:01:18', 'Guitarra electrica', 'la mejor guitarra electrica del mundo', 'no todas las guitarras son iguales', 1234.00, 4, 1, NULL, 22, NULL),
-(114, '2020-01-19 18:02:43', '2020-01-19 18:11:03', 'bateria', 'la mejor guitarra electrica del mundo', 'no todas las guitarras son iguales', 1234.00, 4, 1, NULL, 22, NULL),
-(115, '2020-01-19 22:55:05', '2020-01-19 22:55:05', 'saxo', 'qqqqqqqqqqq', 'wwwwwwwwwww', 444.00, 4, 3, NULL, 444, NULL),
-(116, '2020-01-19 22:55:39', '2020-01-19 22:55:39', 'saxo', 'qqqqqqqqqqq', 'wwwwwwwwwww', 444.00, 4, 3, NULL, 444, NULL),
-(117, '2020-01-19 22:57:40', '2020-01-19 22:57:40', 'charango', 'la mejor descripcion que pude hacer', 'lo que sea', 999.00, 4, 8, NULL, 12, NULL),
-(118, '2020-01-19 23:07:59', '2020-01-19 23:07:59', 'yerbomatofonoparasilicocromatico', 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz', 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz', 22.00, 4, 10, NULL, 44, NULL),
-(119, '2020-01-19 23:17:35', '2020-01-19 23:17:35', 'timbal', 'timbal inclreible', 'muy buen', 555.00, 4, 7, NULL, 12, NULL),
-(120, '2020-01-21 00:26:24', '2020-01-21 00:26:24', 'black', 'muy lindo disco', 'con todo lo que necesita', 3333.00, 2, 4, NULL, 55, NULL),
-(121, '2020-01-21 00:28:10', '2020-01-21 00:28:10', 'black', 'muy lindo disco', 'con todo lo que necesita', 3333.00, 1, 1, NULL, 55, NULL),
-(122, '2020-01-21 00:30:54', '2020-01-21 00:30:54', 'black', 'muy lindo disco', 'con todo lo que necesita', 3333.00, 1, 1, NULL, 55, NULL),
-(123, '2020-01-21 00:32:00', '2020-01-21 00:32:00', 'black', 'muy lindo disco', 'con todo lo que necesita', 3333.00, 1, 1, NULL, 55, NULL),
-(124, '2020-01-21 00:32:53', '2020-01-21 00:32:53', 'black', 'muy lindo disco', 'con todo lo que necesita', 3333.00, 1, 1, NULL, 55, NULL),
-(125, '2020-01-21 00:34:24', '2020-01-21 00:34:24', 'black', 'muy lindo disco', 'con todo lo que necesita', 3333.00, 1, 1, NULL, 55, NULL),
-(126, '2020-01-21 00:35:08', '2020-01-21 00:35:08', 'black', 'muy lindo disco', 'con todo lo que necesita', 3333.00, 1, 1, NULL, 55, NULL),
-(127, '2020-01-21 00:37:21', '2020-01-21 00:37:21', 'black', 'aaaaa', 'aaaa', 234.00, 2, 2, NULL, 22, NULL),
-(128, '2020-01-21 00:38:16', '2020-01-21 00:38:16', 'black', 'aaa', 'aaa', 222.00, 2, 2, NULL, 2, NULL),
-(129, '2020-01-21 00:39:26', '2020-01-21 00:39:26', 'black', 'a', 'a', 22.00, 2, 3, NULL, 222, NULL),
-(130, '2020-01-21 00:41:41', '2020-01-21 00:41:41', 'black', 'a', 'a', 22.00, 4, 3, NULL, 222, NULL),
-(131, '2020-01-21 00:45:39', '2020-01-21 00:45:39', 'black1', 'ddfff', 'ddd', 233.00, 4, 1, NULL, 12, NULL),
-(132, '2020-01-21 00:46:12', '2020-01-21 00:46:12', 'black2', 'ddfff', 'ddd', 233.00, 4, 1, NULL, 12, NULL);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `product_photos`
---
-
-CREATE TABLE `product_photos` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `product_id` bigint(20) UNSIGNED NOT NULL,
-  `src` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `product_photos`
---
-
-INSERT INTO `product_photos` (`id`, `created_at`, `updated_at`, `product_id`, `src`, `title`, `deleted_at`) VALUES
-(1, '2019-12-30 19:52:43', '2019-12-30 19:52:43', 9, 'criolla1.jpg', NULL, NULL),
-(2, '2019-12-30 19:52:43', '2019-12-30 19:52:43', 9, 'criolla2.jpg', NULL, NULL),
-(3, '2019-12-30 19:52:43', '2019-12-30 19:52:43', 9, 'criolla3', NULL, NULL),
-(4, '2019-12-30 19:52:43', '2019-12-30 19:52:43', 9, 'criolla4.jpg', NULL, NULL);
+(1, '2020-01-16 05:29:36', '2020-01-16 05:29:36', 'Laborum.', 'Reprehenderit dolores repellendus corporis et error facilis. Quia aut qui ipsa quam pariatur.', 'Iste tempora dolores non eligendi adipisci est. Quod reprehenderit vitae nobis nisi. Laborum ad et rerum error.', 177502.75, 7, 1, NULL, 30, 2),
+(2, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Voluptas placeat.', 'Consectetur velit est maxime. Reiciendis et voluptatibus quisquam.', 'Voluptas et officia quidem eveniet pariatur hic. Eveniet voluptas corporis id sunt cum neque minus. Molestias blanditiis ea quaerat vel pariatur quaerat.', 120263.46, 7, 1, NULL, 54, 1),
+(3, '2020-01-16 05:29:37', '2020-02-05 00:29:32', 'Alias soluta vero.', 'Quos nesciunt incidunt magni quibusdam eaque. Eum laudantium itaque sint ea. Et ducimus at adipisci corporis enim fugiat ratione.', 'Distinctio voluptatem totam asperiores optio ipsum ut quia magnam. Unde quia aut quaerat. Praesentium tempora aut voluptas labore quo necessitatibus. Illo dolore dicta recusandae repellat repudiandae est ab. Corrupti atque sapiente doloribus id ab est.', 127547.23, 7, 1, '2020-02-05 00:29:32', 52, 2),
+(4, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Molestiae ut.', 'Non veniam et molestiae magni. Consequuntur cupiditate ea pariatur atque temporibus perferendis natus.', 'Aliquid eligendi aliquid quae amet occaecati. Ad natus eum et sit mollitia asperiores fuga. Distinctio officia ducimus rerum.', 35010.33, 5, 1, NULL, 7, NULL),
+(5, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Non omnis neque.', 'Animi voluptas fugiat eum voluptatum debitis rem. Dolores minus perspiciatis sint provident.', 'Illum earum neque error et. Voluptatem sint doloremque modi repudiandae. Velit ut eveniet assumenda vel reprehenderit maxime nulla. Veniam voluptatem voluptas placeat eligendi.', 75281.12, 5, 1, NULL, 97, 2),
+(6, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Harum quasi qui.', 'Molestiae quia quaerat aut perferendis qui rerum. Autem in rerum aut fugiat molestias laudantium qui provident.', 'Nesciunt ipsam illo sit fuga consequatur. Aperiam ullam voluptate error est nulla iure est. Qui esse et reiciendis minus omnis. Eum eius nobis aliquam aut in.', 391047.74, 5, 1, NULL, 43, NULL),
+(7, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Quia perspiciatis.', 'Labore soluta distinctio sunt. Maiores quae error temporibus perferendis hic. Excepturi sint praesentium ut architecto eaque.', 'Aut blanditiis soluta voluptatibus suscipit. Fuga ut quia eum id quibusdam sint impedit. Nemo autem minima minima veniam quod.', 825497.00, 5, 1, NULL, 3, NULL),
+(8, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Cupiditate id.', 'Sint magni pariatur aperiam fugit. Et corporis vero unde. Quam eligendi eum sapiente perferendis voluptatibus vel qui. Commodi est dolorem non aperiam.', 'Laudantium at vel et. Autem non dolorum deleniti quo non voluptatibus laborum. Est omnis officiis deleniti veniam sed tenetur. Sint quisquam ut tempora repudiandae earum dolor dolor.', 596772.53, 6, 1, NULL, 22, NULL),
+(9, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Facilis totam.', 'Tempora eos occaecati odit. Vero illo praesentium veritatis iure repellendus blanditiis reprehenderit libero. Aut placeat voluptatem optio. Voluptatibus enim esse dignissimos qui hic.', 'Inventore consequatur at assumenda voluptates ducimus optio. Sunt delectus minima est sit. Sunt et doloribus corrupti cum. Vel quia eum nisi qui enim commodi.', 774824.60, 5, 1, NULL, 71, NULL),
+(10, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Eos ex ducimus.', 'Et laudantium dolorem voluptas aut porro. Fugiat sunt vero libero ea impedit. Ullam rerum voluptatem expedita excepturi.', 'Omnis et est iure. Reprehenderit quis temporibus sapiente cumque corporis rerum et. Rerum alias in qui mollitia dignissimos necessitatibus consectetur.', 810384.14, 7, 1, NULL, 23, NULL),
+(11, '2020-01-16 05:29:37', '2020-02-03 18:52:29', 'Eos et fuga.', 'Aut dolorem ex autem rerum. Sapiente sunt quibusdam incidunt dolorem. Rem ut quidem sit et nam praesentium architecto dolore. Minima autem magnam asperiores.', 'Expedita totam ipsum non corrupti dolores. Quia sit eveniet reiciendis nulla. Perspiciatis culpa et ullam rem quo laborum quia aliquam. Modi adipisci animi voluptas beatae aut et deleniti in.', 920137.93, 4, 1, '2020-02-03 18:52:29', 99, NULL),
+(12, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Soluta inventore.', 'Nemo dicta sed enim natus quis. Et quaerat laborum facere omnis enim. Blanditiis eveniet molestiae doloribus ullam molestiae.', 'Veniam deserunt magni sunt consequatur necessitatibus nemo. Ut et aperiam sapiente saepe minima iusto dolorem. Consectetur vitae quia omnis dignissimos voluptatum est. Qui nemo distinctio dignissimos in.', 650727.27, 6, 1, NULL, 54, NULL),
+(13, '2020-01-16 05:29:37', '2020-02-03 19:03:32', 'Corporis.', 'Dolor officia perferendis est accusantium quibusdam in omnis tempore. Eius iusto beatae autem. Dolores odit maxime eius aut quia debitis maiores. Laudantium quaerat maxime aut reiciendis iure eos.', 'Et dolorem maxime nam est rerum aut nihil. Id at animi est accusantium vel. Velit neque modi commodi.', 811068.39, 4, 1, '2020-02-03 19:03:32', 66, NULL),
+(14, '2020-01-16 05:29:37', '2020-02-03 19:24:55', 'Exercitationem.', 'Quam cumque voluptatem nostrum in totam iure dolor. Officiis ut commodi temporibus cumque nihil. Voluptatibus est unde rerum consequatur quia ullam et.', 'Cumque exercitationem ut quam et quam molestiae. Dolores tempore aut et reiciendis. Consectetur ducimus veniam voluptatem adipisci velit ipsa itaque. Suscipit quod culpa sit magni dolor voluptates sed animi.', 986311.19, 4, 1, '2020-02-03 19:24:55', 79, NULL),
+(15, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Fugiat ut qui qui.', 'Ex voluptatem sapiente vero quia assumenda adipisci. Molestias similique in ipsum omnis autem ducimus perspiciatis. Sed esse accusamus corrupti ut architecto praesentium. Asperiores sunt voluptatibus accusantium molestias cum est.', 'Iste esse beatae eos sunt quis aperiam. Fugiat et blanditiis placeat est et inventore voluptatem. Laboriosam officia exercitationem vero odio tempora. Ipsam voluptatem et amet illum.', 281867.93, 6, 1, NULL, 80, NULL),
+(16, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Quia.', 'Eum fugit pariatur recusandae. Veniam quia reiciendis voluptate sed voluptate. Facere officiis voluptas ut consequatur inventore inventore temporibus eveniet.', 'Quidem quia sed est qui atque. Eum expedita quas facere occaecati. Quo quia consequatur consequatur dolorem.', 916014.13, 7, 1, NULL, 0, NULL),
+(17, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Enim recusandae.', 'Tenetur neque sunt non debitis dolore fugit. Doloribus molestias eum totam incidunt. Similique eum non illum.', 'Consequatur et sunt sed in. Quibusdam optio ab suscipit eligendi.', 294648.14, 7, 1, NULL, 97, NULL),
+(18, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Officiis qui vel.', 'Inventore eveniet aut voluptatibus. Quae placeat vitae suscipit qui excepturi non et et. Iste quo ex incidunt. Quasi deleniti nesciunt autem architecto non.', 'Ipsa suscipit ut soluta nostrum. Debitis eum aut blanditiis cupiditate dicta ut modi. Laudantium non id magni laudantium maxime delectus. Numquam aut culpa quis quo sed consequatur.', 562475.89, 5, 1, NULL, 11, NULL),
+(19, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Omnis accusamus.', 'Illo et placeat qui temporibus sit et at. Alias nihil culpa mollitia quo. Doloribus consequatur animi et ad velit omnis consequatur.', 'Repellat maxime repellat in nemo. Et nihil nulla quis dolores. Ipsam quasi non sit aut perspiciatis sed quia.', 814882.55, 5, 1, NULL, 3, NULL),
+(20, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Consequatur.', 'Occaecati nobis quaerat nisi qui dolores. Fugiat quod ut dolores aspernatur cum harum minima et. Rerum recusandae dolore totam nihil asperiores necessitatibus.', 'Ad molestiae libero porro sunt nihil. Eum quod et quas nihil modi pariatur. Rerum nisi est sapiente perspiciatis minima velit nam. Eveniet nobis deleniti architecto qui.', 17814.47, 6, 1, NULL, 87, NULL),
+(21, '2020-01-16 05:29:37', '2020-02-03 19:25:50', 'Aut voluptatem.', 'Dicta et dolorem quis quia dolores ea. Occaecati ipsa est amet maiores modi at. Officia eligendi est placeat repellat aut et minus. Ab earum dignissimos cum aut.', 'Consequatur necessitatibus rerum veritatis earum a. Mollitia sunt et ratione id delectus qui autem iure. Dolorem et fuga qui. Occaecati est ullam optio ad neque eveniet. Id voluptates et asperiores sapiente odio doloribus molestiae occaecati.', 642655.93, 4, 1, '2020-02-03 19:25:50', 72, NULL),
+(22, '2020-01-16 05:29:37', '2020-02-03 19:26:20', 'Architecto saepe.', 'Expedita velit et vel dicta. Neque nisi corporis tenetur voluptatem ut corrupti dolorem et. Atque ipsa earum necessitatibus molestiae.', 'Reprehenderit quibusdam quis iste qui officiis. Doloremque inventore qui qui. Sequi perferendis sunt quibusdam commodi quibusdam debitis accusantium. Temporibus nihil quisquam est atque omnis consequatur quisquam id.', 710203.45, 4, 1, '2020-02-03 19:26:20', 24, NULL),
+(23, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Sint dolores illo.', 'Sint perspiciatis eum aut omnis nihil nihil. Accusantium earum pariatur qui impedit unde sunt dolore. Iste delectus odit ea omnis explicabo dolorem exercitationem. Voluptatibus unde atque quia.', 'At aperiam recusandae consequuntur sunt dolores. Dolorem velit cupiditate quia est necessitatibus et. Voluptatibus ut consectetur officiis architecto ut. Et possimus sed iusto fugit dolorem neque culpa consequatur.', 789089.07, 7, 1, NULL, 83, NULL),
+(24, '2020-01-16 05:29:37', '2020-02-03 19:27:21', 'Dolores ullam non.', 'Dicta totam vel vel quia. Et dolore consequatur consequatur repudiandae. Recusandae possimus quos eos quia dignissimos molestias esse. Suscipit sit quo distinctio placeat temporibus fugiat.', 'Et necessitatibus et rerum sapiente. Aut vitae vel ea ipsum ratione iste.', 354950.64, 4, 1, '2020-02-03 19:27:21', 86, NULL),
+(25, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Qui itaque vero.', 'Molestiae amet cumque deleniti vel et blanditiis. Optio corporis explicabo numquam.', 'In harum numquam autem eos iusto quae. Dolorum ut molestiae incidunt modi nam facilis iste. Quasi architecto nihil nihil cupiditate commodi.', 636557.62, 5, 1, NULL, 92, NULL),
+(26, '2020-01-16 05:29:37', '2020-01-16 05:29:37', 'Eum illum.', 'Veritatis amet deleniti distinctio deserunt recusandae temporibus architecto. Architecto libero optio sit aut. Iste sapiente aut laboriosam occaecati hic. Rerum autem assumenda quos repellendus voluptas ut.', 'Quis ratione autem sed temporibus saepe aut voluptas. Nam deleniti sint beatae. Quidem libero est architecto nulla numquam cum.', 664393.34, 6, 1, NULL, 18, NULL),
+(27, '2020-01-16 05:29:37', '2020-02-03 19:28:42', 'Animi et.', 'Velit ea odio quam sunt corrupti. Sed fugit ut eveniet dolorum deleniti corporis. Culpa est consequatur et quis modi sint voluptatum. Cumque tempore sint ab pariatur qui.', 'Quidem enim ea ipsam qui numquam dolor mollitia porro. Voluptas omnis quis minima aut corrupti. Qui aut magnam qui harum ratione eum. Beatae pariatur et fugit harum iure.', 999722.54, 4, 1, '2020-02-03 19:28:42', 3, NULL),
+(28, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Et ut dolor.', 'Facilis temporibus dolores aperiam qui voluptates a. Quia reiciendis tempora voluptatem aliquam quia facere. Ipsam sunt quos nam alias aperiam assumenda. Enim sit id est.', 'Exercitationem impedit provident est corporis corrupti laboriosam. Similique est modi nulla aliquid. Expedita recusandae officia iste optio nemo molestiae. Est corporis et est odit temporibus officia. Et dolorem velit aliquam excepturi atque.', 72997.29, 5, 1, NULL, 85, NULL),
+(29, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Error est iste.', 'Quam voluptatem alias vero cumque. Est accusamus et saepe voluptatem cum voluptates esse.', 'Architecto delectus reiciendis ut cumque non repudiandae delectus. Iste quia tenetur voluptatem consectetur est autem corporis dolor. Dignissimos praesentium ipsam autem vel nobis.', 967110.35, 7, 1, NULL, 60, NULL),
+(30, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Sed praesentium.', 'Rerum ut distinctio et est mollitia ex quia perspiciatis. Cupiditate reprehenderit deleniti qui expedita nostrum. Delectus rerum fugit doloribus est expedita et. Repudiandae doloremque est ullam optio blanditiis.', 'Harum ut et totam voluptatum. Minima dolore laborum omnis sit inventore iste. Et saepe in ipsum quidem nostrum. Fugit non reiciendis enim repellat non omnis. Quo molestiae possimus unde commodi molestiae.', 672354.37, 6, 1, NULL, 18, NULL),
+(31, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Quod quis et quis.', 'Culpa consectetur ad nostrum sed pariatur suscipit sit. Fugit impedit fuga eveniet nobis eligendi aliquam qui. Et animi a occaecati blanditiis.', 'Suscipit iure et modi. Porro expedita occaecati neque quos harum eum. Eveniet quod et atque aperiam molestias id.', 847871.59, 7, 1, NULL, 11, NULL),
+(32, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Vitae eaque ut.', 'Sit corrupti nihil velit ut id voluptatem. Ducimus non voluptas aperiam voluptas. Praesentium voluptates neque occaecati et sit. Praesentium laborum et consequatur minima omnis eligendi.', 'Necessitatibus autem et voluptatem iure animi reprehenderit voluptas architecto. Debitis delectus adipisci qui quo corrupti aut explicabo. Corrupti dolor saepe nemo.', 508616.83, 5, 1, NULL, 85, NULL),
+(33, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Tenetur nemo.', 'Quo sint aliquam beatae quia cumque id. Et fugit suscipit cum dolorum quae in eum.', 'Accusamus repellendus temporibus consequuntur omnis at earum est non. Alias facilis repudiandae nostrum nobis sunt laudantium fugit rerum. Est sed molestiae qui nobis. Quibusdam ut natus in ea.', 762895.70, 7, 1, NULL, 29, NULL),
+(34, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Reprehenderit et.', 'Et sed error laudantium eligendi earum laboriosam corporis. Ut hic voluptatem aliquid consequatur veritatis magni. Officiis magnam quaerat id alias qui exercitationem. Maiores qui rem omnis excepturi et. Necessitatibus nihil atque suscipit est.', 'Quia porro corrupti id. Similique doloremque vel incidunt dolore ut. Aut assumenda at molestias et quis magni.', 826968.32, 7, 1, NULL, 75, NULL),
+(35, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Vitae vel.', 'Deleniti ipsam adipisci illum reiciendis rerum. Sapiente perspiciatis fugiat quis enim vel qui sit. Nobis est ea doloribus ratione.', 'Quas reprehenderit asperiores soluta facere at adipisci. Recusandae non voluptas eius expedita deserunt.', 770949.42, 7, 1, NULL, 47, NULL),
+(36, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Velit asperiores.', 'Consequatur laudantium beatae aut eum et voluptatibus qui provident. Officiis quasi eveniet quod. Illo soluta dolores ut nulla quis amet et. Laudantium vel deserunt incidunt voluptatem. Eligendi rerum ex omnis ex amet et.', 'Architecto aliquid ab laudantium adipisci eos. Ratione qui ratione quaerat laboriosam quia saepe id a. Magnam sit possimus ad aut esse dicta provident qui. Blanditiis sunt id tenetur temporibus ipsa in. Praesentium impedit optio mollitia similique placeat dolores consequatur.', 120441.48, 6, 1, NULL, 72, NULL),
+(37, '2020-01-16 05:29:38', '2020-02-03 19:29:28', 'Fuga odit et hic.', 'Quod quibusdam ea voluptate facilis ut ex fugit. Omnis dolorem est aut iure itaque sunt deleniti. Delectus nesciunt iusto laboriosam pariatur aliquam consectetur.', 'Iure iste ut placeat culpa officia. Omnis fugiat voluptate vel sed modi qui repellat eum. Vel distinctio adipisci dolores consequuntur facere.', 124404.73, 4, 1, '2020-02-03 19:29:28', 78, NULL),
+(38, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Rerum repellendus.', 'Vitae quo delectus animi beatae fugiat. Quia sed aperiam aut. Iste nemo necessitatibus possimus dolore impedit natus at. Corrupti ipsa culpa dolorum ut vel velit.', 'Quia dolorem voluptatem consequatur est dicta et praesentium unde. Enim perspiciatis dolorem enim eos ut ullam. Sed labore iste aut nihil perspiciatis et ratione.', 430035.29, 7, 1, NULL, 49, NULL),
+(39, '2020-01-16 05:29:38', '2020-02-06 05:02:54', 'Aut praesentium.', 'Velit rem repellendus fuga voluptas possimus aut. Facilis omnis maiores officiis tempora sapiente nisi aut voluptatum. Odit itaque exercitationem facere recusandae molestiae. Quis quo eum qui laboriosam repudiandae eos totam possimus.', 'Blanditiis voluptatem et saepe maiores architecto et. Et quam illum totam. Quia amet illo iure quia. Et voluptatem ipsum voluptas nostrum.', 874666.62, 4, 1, NULL, 73, NULL),
+(40, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Est sint cumque.', 'Assumenda itaque non illum. Fugiat reprehenderit est voluptatem facere consequatur facere quis. Doloribus sunt nihil sed quia.', 'Odio ipsam iste temporibus expedita voluptatem repellat. Ipsum magni veniam quod beatae. Aut sint quo dolorem tempora nemo. Consequatur est architecto incidunt consequatur maiores.', 731228.40, 7, 1, NULL, 24, NULL),
+(41, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Ipsa aliquam ut.', 'Illo est delectus et dolor aut incidunt. Omnis veniam excepturi expedita temporibus et omnis. Rerum qui ipsam aliquam asperiores.', 'Eligendi facere tempora et est ut nam quia enim. Aperiam quia sequi doloremque voluptatem animi repudiandae id. Consequatur numquam cumque quidem aut dolorem earum.', 994156.55, 6, 1, NULL, 1, NULL),
+(42, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Deserunt rerum.', 'Tenetur perspiciatis autem iusto eveniet ut quis similique. Occaecati non dolores quia asperiores quia. Consequuntur et cum ad eum placeat tenetur. Nihil beatae necessitatibus corporis autem et quo doloremque.', 'Corporis porro odio officia labore harum ad. In architecto laboriosam possimus ipsam et. Aut molestiae omnis ab quia et omnis nulla. Tempora rem laudantium facere.', 773246.18, 6, 1, NULL, 7, NULL),
+(43, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Eum fugit ea.', 'Amet laborum quis et fuga ducimus totam repudiandae. Eligendi non sapiente dolorum. Sapiente aut et ab officia et.', 'Non consectetur delectus in repellendus vel nesciunt tempore aut. Exercitationem neque aliquam nemo iusto illum excepturi.', 109263.24, 6, 1, NULL, 50, NULL),
+(44, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Blanditiis est.', 'Aut sit consequatur voluptas magnam. Neque dolores reprehenderit deleniti. Quae omnis distinctio cum aut officia ut fugit adipisci. Placeat ab recusandae ea qui. Ut dolor perspiciatis ut impedit a.', 'Soluta earum et repellendus quo. Commodi adipisci earum officiis nisi fugit et. Recusandae non voluptatem laudantium.', 51914.45, 5, 1, NULL, 71, NULL),
+(45, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Dolore sed.', 'Sit alias et omnis omnis provident quia. Ea nisi omnis deserunt accusantium velit accusantium. Velit rerum aut sed ab nihil ex.', 'Officiis ut atque non inventore rerum vel. Veniam eligendi a ipsum porro dolor eaque.', 512375.45, 7, 1, NULL, 2, NULL),
+(46, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Quisquam quasi et.', 'In alias sunt et rem sit qui laboriosam quia. Voluptatem vel laudantium accusantium neque at quae autem.', 'Maiores nobis impedit ut sapiente. Consequatur quia assumenda praesentium odit voluptatem ab. Aliquid dolorum unde sunt consequuntur voluptatem natus aut. Laboriosam possimus ad praesentium vel quod ut ut.', 696020.69, 7, 1, NULL, 47, NULL),
+(47, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Mollitia sed.', 'Totam tempora ut ut alias maiores et voluptatem. Veniam quia dolores vitae quis. Aliquid et laborum tenetur veniam commodi veniam quia. Aut assumenda reiciendis accusamus ut reprehenderit et.', 'Dolor sunt quasi sit sed pariatur qui. Aut sit fuga voluptatem enim. Exercitationem hic occaecati voluptas ut est dolore mollitia.', 23152.54, 7, 1, NULL, 99, NULL),
+(48, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Eveniet quo a.', 'Aut tempore iusto neque a. Illum illum vel consequatur impedit atque neque. Dicta minima voluptatum architecto nesciunt nulla enim. Voluptatem adipisci aperiam ut.', 'Sint cupiditate sunt nam. Eveniet omnis quia iusto dolor expedita et. Neque alias iure sed. Commodi ut eaque suscipit dolorem.', 384510.52, 6, 1, NULL, 0, NULL),
+(49, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Laudantium quae.', 'In quia voluptatum ab maiores repudiandae praesentium recusandae. Omnis itaque quas labore quos. Illum soluta dicta sit ipsa incidunt adipisci corporis. Similique ad laborum quis quidem corrupti dolorum quia ullam.', 'Aut similique placeat cupiditate voluptas laudantium quia. Ea velit aut amet quaerat porro cum. Sed aut vel ab enim qui hic excepturi.', 624629.83, 4, 1, NULL, 85, NULL),
+(50, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Voluptatem vitae.', 'Tenetur voluptas et nobis suscipit adipisci beatae. Sed quas quia sunt. Qui delectus ab voluptates blanditiis dolorem dolor inventore. Eveniet et beatae et vel explicabo molestias. Quidem blanditiis animi quia veritatis quo dolorum.', 'Adipisci non repellendus est dolorem reiciendis aspernatur. Pariatur vel impedit rerum sequi officiis cumque. Ut qui et tempore voluptate. Neque officia sequi quae temporibus ea id tempora.', 991908.00, 5, 1, NULL, 82, NULL),
+(51, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Nihil temporibus.', 'Temporibus aut voluptatem totam. Quis illum harum doloremque. Nemo et eligendi nihil nisi et corporis est qui.', 'Laboriosam porro qui illum consequuntur. Deserunt laborum iure unde quas rerum rem. Similique aut repudiandae hic aspernatur. Explicabo perferendis molestias ut fugiat nam necessitatibus voluptas. Itaque repudiandae quis omnis.', 23735.20, 5, 1, NULL, 28, NULL),
+(52, '2020-01-16 05:29:38', '2020-01-16 05:29:38', 'Omnis quaerat.', 'Facilis facilis accusantium mollitia et quam. Sint repudiandae ullam quae recusandae error. Delectus necessitatibus eos nemo rerum exercitationem deserunt animi aperiam.', 'Molestias et quibusdam sunt qui eos cupiditate. Modi consequuntur autem molestias temporibus ut odio. Sunt consequatur rerum ullam rerum ducimus rerum. Tenetur quas minus non est architecto ad porro.', 566410.64, 5, 1, NULL, 6, NULL),
+(53, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Omnis soluta.', 'Non dolores repellendus aut nemo nulla. Et consequatur laudantium esse ut. Dolor totam officia suscipit minima. Deleniti culpa ipsam iste quis.', 'Repudiandae porro repellat eaque est ut corrupti eos. Qui aut quis qui vel id. Beatae beatae voluptatem sunt autem ex culpa.', 771943.48, 5, 1, NULL, 64, NULL),
+(54, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Quibusdam id qui.', 'Accusamus quia hic eligendi aliquam nostrum ducimus voluptatem. Sint optio nulla voluptatem eum et sunt. In enim voluptatem ipsa aut quia saepe.', 'Veritatis dolorem asperiores et sit vel quasi repellendus. Rem laboriosam et quis eaque tempora ut.', 795978.17, 4, 1, NULL, 99, NULL),
+(55, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Id voluptas.', 'Ipsam ipsam saepe molestias accusamus quae voluptatem nihil. Accusamus sed ut et impedit. Quo eos fugit harum doloremque blanditiis. Dolore et quaerat nesciunt.', 'Porro aliquam at totam. Dolores eos alias quis ex. Voluptatum dolores quia numquam maxime blanditiis.', 947201.65, 4, 1, NULL, 66, NULL),
+(56, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Dolor non.', 'Est illo molestiae molestiae. Consequatur qui delectus illo ratione. Veniam quia saepe velit maiores architecto est. Dolorum amet quae quia deleniti voluptatibus et ipsam fugiat.', 'Dolorum sit blanditiis ipsum sequi. Veritatis accusamus velit sequi et aut. Et facilis ut atque quas debitis. Illo iusto eum officiis quia.', 28176.30, 6, 1, NULL, 1, NULL),
+(57, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'In maiores.', 'Vitae hic harum unde voluptatibus debitis. Et et ut error qui aut facilis numquam. Eos alias aspernatur velit cumque sunt eum. Quisquam nesciunt numquam tempore sed.', 'Aperiam nemo aperiam necessitatibus deserunt consectetur. Pariatur neque earum quis eum aut est voluptatem. Et et consequatur numquam molestiae adipisci. Quod nihil dolore voluptates dolores facilis. Qui quod in architecto ea.', 473463.42, 5, 1, NULL, 97, NULL),
+(58, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Voluptatem et.', 'Totam voluptatum nostrum eos laudantium et. Beatae quas explicabo exercitationem ipsam totam accusantium consectetur. Exercitationem a ratione laboriosam aspernatur labore totam qui.', 'Aliquid ut odit ad dicta qui quis labore. Amet at quia id laboriosam. Laudantium culpa voluptatem eum nobis sapiente.', 495298.02, 6, 1, NULL, 5, NULL),
+(59, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Molestias neque.', 'Nulla ratione culpa rem voluptate laborum vel ipsa. Et tempore velit voluptas dolorum. Ea sapiente sunt labore corrupti nihil soluta dolorem. Magni animi est modi ea.', 'Sed accusamus rerum ex. Recusandae rerum quia deserunt id rem qui error aliquid. Voluptatibus ut ex at eaque molestiae. Quos corporis soluta distinctio tempora laudantium.', 500358.61, 6, 1, NULL, 4, NULL),
+(60, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Doloribus nostrum.', 'Laudantium in maiores est vero molestias. Amet in ab consequatur dignissimos consectetur velit dolorem. Quidem voluptatibus totam reiciendis totam.', 'Quas aliquam sed adipisci ipsam. Eum nihil voluptatem incidunt voluptatibus culpa non incidunt. Porro culpa labore et quia qui nulla.', 130696.66, 5, 1, NULL, 83, NULL),
+(61, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Provident odio.', 'Incidunt ut perferendis id dicta possimus alias. Ut facere molestias omnis deleniti cumque libero ut. Consequatur asperiores debitis atque dignissimos. Ipsam sint autem assumenda illo laudantium in quia.', 'Ex est facere praesentium maxime in temporibus qui. Qui doloribus ad molestiae et qui dignissimos similique. Nesciunt natus aut repellendus voluptatem doloremque vel corporis officiis. Et voluptatum officia itaque ratione.', 56541.56, 7, 1, NULL, 3, NULL),
+(62, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Aperiam soluta.', 'Non error quae assumenda. Officia unde blanditiis dolores illum rerum quas.', 'Reprehenderit quidem vitae aspernatur aspernatur quaerat dolorum doloribus. Mollitia vero cum nesciunt adipisci nostrum magni adipisci. Corrupti dolor ducimus architecto laborum suscipit.', 172301.04, 4, 1, NULL, 61, NULL),
+(63, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Sequi quia at.', 'Praesentium inventore voluptas accusantium totam reiciendis. Velit beatae ipsam quasi voluptatem aut nesciunt assumenda est. Natus rerum impedit tenetur molestias beatae sequi quasi.', 'Eius provident deleniti est eos. Eum rerum quia deleniti rerum eligendi. Molestias odit esse occaecati ad.', 234832.93, 5, 1, NULL, 36, NULL),
+(64, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Nam recusandae.', 'Molestias omnis qui et optio. Consequatur soluta aut rerum molestiae ipsa est.', 'Reiciendis aut asperiores rerum omnis aut. Ex quod at accusamus aut. Voluptas incidunt a sed in eveniet. Aut nihil nihil est enim velit.', 153723.85, 7, 1, NULL, 37, NULL),
+(65, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Quam qui ut non.', 'Sapiente laboriosam deleniti quidem qui consequuntur sunt. Dicta dolor id rerum laborum voluptates voluptatem laborum fuga. Unde blanditiis voluptatibus totam maxime ut omnis.', 'Error earum magni magnam ut alias cum. Excepturi explicabo velit sint nam.', 764040.11, 6, 1, NULL, 10, NULL),
+(66, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Id est repellat.', 'Amet facere vel dicta. Illum debitis asperiores fugit numquam. Similique consequatur veniam molestiae dignissimos et. Ipsa natus tempore id blanditiis repellat laudantium. Labore delectus quod rem.', 'Omnis illum cum voluptas et. Dolores dolorum tenetur dolorem et aut in dolorem. Officia doloremque voluptatum facilis ut maiores eum excepturi.', 580643.41, 4, 1, NULL, 22, NULL),
+(67, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Maiores nulla aut.', 'Voluptas sed quasi voluptas minus dolorem earum aperiam. Exercitationem provident pariatur aut eum. Veniam quasi quo rerum aperiam ut quia molestiae dolorum. Molestias necessitatibus placeat facilis iste.', 'Minus voluptatem quo consequuntur nihil molestiae. Totam quia recusandae temporibus tenetur sed. Deserunt ut culpa cumque in.', 721181.86, 7, 1, NULL, 91, NULL),
+(68, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Beatae et neque.', 'Qui ut tenetur accusantium odio cum facere. Suscipit amet ut nam possimus sunt neque quis nam.', 'Aut iste similique voluptatibus. Quia soluta eos sit deserunt unde natus assumenda in. Voluptate alias saepe perferendis ipsum. Optio accusamus et et sequi omnis veniam.', 339485.27, 4, 1, NULL, 94, NULL),
+(69, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Veritatis sint.', 'Id dolor eum temporibus nobis nulla. Vel porro animi fugiat itaque.', 'Repellendus pariatur voluptatibus numquam ut quia. Mollitia omnis ut pariatur et. Consequatur praesentium rerum ex in atque.', 207809.42, 5, 1, NULL, 25, NULL),
+(70, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Porro voluptatem.', 'Laboriosam nam esse voluptates accusamus sapiente. Dolorem tenetur voluptas pariatur deserunt ut laborum natus. Aliquid molestias est doloremque minima vero qui. Optio et sed commodi aut. Sint qui non adipisci cumque facere.', 'Quis quidem cum provident a. Magni et tempora et quos fuga rerum similique. Ipsam rem accusantium ducimus eos autem veritatis. Odio tempore omnis eum ut ipsa occaecati nam.', 695307.41, 4, 1, NULL, 50, NULL),
+(71, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Incidunt fugiat.', 'Soluta nemo quae delectus non veritatis. Facilis veritatis deleniti impedit ipsa. Rerum velit eius velit voluptates et.', 'Deserunt veniam sit perspiciatis et in eaque. Reprehenderit quae ut labore repellendus harum in sed numquam. Dolor suscipit fugit quas enim voluptatum sit.', 475139.01, 6, 1, NULL, 80, NULL),
+(72, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Aspernatur.', 'Et dicta labore quod eos rerum. Qui iusto porro aliquid rerum natus aut. Quo quis asperiores non aliquam commodi blanditiis. Nemo et excepturi vitae.', 'Ut non non fuga molestiae. Distinctio perferendis vel similique dicta. Minima sit perferendis et consequatur fugit vel placeat. Officiis aut non quas rerum doloremque.', 817647.20, 7, 1, NULL, 6, NULL),
+(73, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Eos sint commodi.', 'Deserunt et provident architecto quaerat est laborum. Commodi quaerat laborum libero tempore quaerat sit illum. Fuga et non aut ratione adipisci voluptatem.', 'Aperiam ex voluptates similique et autem fuga quos. Et dignissimos qui maiores quis vel nesciunt ullam.', 779790.09, 5, 1, NULL, 72, NULL),
+(74, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Facilis enim enim.', 'Et quidem similique magni autem sequi. Et praesentium esse vero velit architecto et. Occaecati ea et minus et.', 'Quod et quasi sint debitis. Nobis maiores enim error non pariatur autem sunt. Sunt saepe minima commodi. Distinctio voluptatem tempore voluptate voluptatem.', 610235.85, 6, 1, NULL, 80, NULL),
+(75, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Quis tenetur.', 'Quis officia officia est sunt. Accusantium architecto in similique nesciunt quo. Omnis nisi non culpa similique.', 'Vitae est vero perferendis distinctio quibusdam totam. Et distinctio eius repellendus vero laboriosam. Similique et error placeat quia quam eum architecto.', 540661.58, 7, 1, NULL, 85, NULL),
+(76, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Modi nihil.', 'Nobis aut eos quia voluptatem voluptas. Repudiandae mollitia deserunt qui explicabo expedita numquam. Laudantium asperiores sed aspernatur praesentium blanditiis. Quos amet dolorum voluptas iusto dolorem corrupti.', 'Saepe debitis ut aut ducimus voluptatem illo neque. Laudantium illum accusamus mollitia odio unde debitis ipsa nisi. Nihil itaque rerum at nihil quia.', 662910.16, 5, 1, NULL, 58, NULL),
+(77, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Assumenda et.', 'Et aut temporibus ex sapiente ipsum magni. Numquam sunt ad fugit omnis distinctio qui.', 'Recusandae omnis commodi voluptatem architecto magnam expedita. Minus amet et pariatur sed ex. Ipsam ut voluptates porro aut ea.', 315370.38, 5, 1, NULL, 100, NULL),
+(78, '2020-01-16 05:29:39', '2020-01-16 05:29:39', 'Ut voluptas amet.', 'Velit repudiandae incidunt quia voluptatem necessitatibus et qui incidunt. Aut atque adipisci sint ipsum. Excepturi qui esse sed adipisci.', 'Sapiente ullam et consectetur tempora delectus. Maxime sed deleniti asperiores nobis et sed. Tenetur aspernatur atque expedita eligendi dolores totam.', 415239.70, 7, 1, NULL, 70, NULL),
+(79, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Tempora pariatur.', 'Accusantium reiciendis et facilis consequuntur quaerat fugit. Et ullam et sunt voluptates eum. Natus error deserunt ut. Porro optio ut omnis repudiandae eligendi a id.', 'Odio sint quia quasi fugiat repellat consequuntur sed. Corrupti aut id aut libero praesentium facilis. Repudiandae necessitatibus et nulla itaque et.', 239367.25, 4, 1, NULL, 44, NULL),
+(80, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Adipisci corporis.', 'Dolore odio architecto temporibus. Qui dolorem error iure voluptatem sed sequi. Quia nisi reprehenderit temporibus voluptatem modi animi ut. Nihil molestiae dolores est mollitia ab.', 'Necessitatibus qui velit et rerum. Perspiciatis nam qui voluptatibus aliquam. Voluptate ut omnis necessitatibus rerum pariatur.', 276078.30, 6, 1, NULL, 53, NULL),
+(81, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Sunt ut quasi.', 'Maiores voluptates et ex est dolorem exercitationem. Ducimus suscipit placeat qui qui cupiditate. Quos magni accusantium consequatur expedita mollitia distinctio consequatur enim.', 'Nulla alias est itaque est consectetur dolor. Qui aut nisi consequatur. Eum dolorum rerum tempora sed eum molestiae quo. Eaque occaecati esse nulla aut rem accusantium voluptatem.', 853474.23, 7, 1, NULL, 15, NULL),
+(82, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Ipsum quis quidem.', 'Facilis optio ut neque ut. Et voluptatibus illum porro non. Reprehenderit atque eos repudiandae fuga voluptas.', 'Delectus minima quibusdam officiis est quia. Molestiae minima repellendus maiores accusantium accusamus ratione.', 519308.80, 5, 1, NULL, 71, NULL),
+(83, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Odio dolores et.', 'Veritatis enim est exercitationem eum voluptate. Nemo enim quis beatae velit. Voluptatem aut molestias deleniti corporis. Ad quibusdam quae facilis voluptatibus.', 'Sit est suscipit ullam sint qui quasi. Quos id iste voluptatem iure molestias porro officiis dignissimos. Consequatur eaque reprehenderit aut dolor quae. Odit aperiam ab sunt atque ratione impedit est.', 944620.03, 5, 1, NULL, 83, NULL),
+(84, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Non molestiae rem.', 'Asperiores sunt mollitia deserunt praesentium ullam iusto et. Maiores quia sunt suscipit sit quisquam et temporibus ut. Sunt quam optio ducimus.', 'Voluptatem facere aut in assumenda. Quia consequatur eos velit eligendi necessitatibus consequatur. Enim error tenetur molestias quibusdam qui iusto veritatis quae. Officia officiis ab exercitationem neque.', 904755.57, 7, 1, NULL, 43, NULL),
+(85, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Iusto incidunt.', 'Unde qui qui non cupiditate. Sed sequi perspiciatis ducimus assumenda ipsum deleniti. Vitae quis commodi aut fuga beatae.', 'Tenetur nemo non laudantium qui qui qui sed. Rerum labore ullam quo eligendi. Consequatur non quae dolorem et quis et ullam.', 189818.91, 4, 1, NULL, 43, NULL),
+(86, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Alias quaerat non.', 'Atque quam aut qui. Temporibus minus aliquid eligendi laudantium neque deserunt rerum vel.', 'Excepturi non fuga totam est quo saepe velit. Commodi omnis magni vel temporibus. Enim deleniti omnis vero id. Aperiam maxime et aspernatur error.', 211700.80, 6, 1, NULL, 63, NULL),
+(87, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Aut voluptatem.', 'Et quas blanditiis nobis et hic dolore ipsum. Et debitis rem eos. Et velit quidem veniam possimus voluptatem. Iure voluptatem inventore possimus odit quibusdam labore maiores.', 'Quod laboriosam et molestias ut et nisi consectetur. Minima distinctio quisquam rerum ipsam officiis ipsum quam. Qui rerum vitae unde molestiae quasi laboriosam. Est velit magni rerum vero nisi molestias.', 200642.29, 6, 1, NULL, 92, NULL),
+(88, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Sapiente.', 'Non sunt rem eum. Sed doloremque ratione quidem sit. Veritatis cupiditate et nihil hic doloribus aspernatur harum. Debitis ipsam et nihil suscipit dolor dolores.', 'Quia ea consequatur quisquam eligendi non. Optio exercitationem quasi ut repellat. Sit quia expedita quos ex quam repellat.', 95916.88, 6, 1, NULL, 28, NULL),
+(89, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Suscipit rerum.', 'Ut suscipit aspernatur vel ex omnis enim dolorum. Optio doloribus quia tempore ea sit. Qui sed quasi quam consequatur quas ea cumque.', 'Quos consequatur veniam ea assumenda voluptas magni eos dolor. Animi velit voluptas hic est aperiam aut enim eos. Nesciunt sit quia ipsa. Aut sint aut mollitia deserunt voluptas molestiae.', 49026.23, 5, 1, NULL, 46, NULL),
+(90, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Ea maxime eius.', 'Velit suscipit non quas aspernatur. Suscipit magnam ipsam excepturi harum delectus consequatur. Iure voluptas optio dicta autem eveniet commodi aspernatur. Ullam eum eos quo.', 'Voluptatem totam aut adipisci autem. Iusto impedit eos temporibus voluptas. Vero porro repellendus impedit dolores. Consequatur ad praesentium minus. Accusamus enim molestias omnis nihil est.', 173665.26, 6, 1, NULL, 28, NULL),
+(91, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Exercitationem.', 'Nemo voluptatem cum dolorum repellendus molestiae repellendus. Error omnis debitis doloribus sint assumenda earum alias. Omnis optio ad explicabo ipsum rerum id quia. Minima voluptate quam voluptatum occaecati ipsam consequatur et.', 'Maxime est porro fugiat pariatur similique. Repellendus voluptatem quidem dignissimos et ea aut est. Corrupti perferendis nihil possimus. Voluptate inventore enim qui tenetur.', 36841.71, 4, 1, NULL, 76, NULL),
+(92, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Quisquam laborum.', 'Et enim eius quia eveniet. Eveniet ut placeat asperiores. Nam impedit qui et eaque reprehenderit in et.', 'Sed id reiciendis eligendi voluptas adipisci neque. Veniam cupiditate qui voluptas amet animi error laboriosam. Totam quia architecto id quia dolorem libero.', 124579.91, 7, 1, NULL, 3, NULL),
+(93, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Nihil ut repellat.', 'Sint quibusdam nihil non. Culpa cum voluptate dolores quos eos. Quas sint itaque labore aliquam dolore minus autem. Quae eos dolorem possimus et omnis.', 'Modi expedita consequatur accusantium nihil architecto sed neque. Odio harum et et velit dolor. Odit deleniti et earum. Eaque at velit error commodi corporis natus cumque.', 671285.78, 4, 1, NULL, 12, NULL),
+(94, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Id atque corrupti.', 'Quam est velit nihil reiciendis. Nisi et ut nam perspiciatis. Non iure sed rem eligendi. Est ipsum totam voluptas hic sed non.', 'Autem est quos eveniet veniam. Eligendi saepe quaerat sed expedita. Mollitia reiciendis unde rerum ut architecto quia. Vel alias iste sint impedit commodi. Aliquam rem repellendus ut similique totam qui.', 652758.91, 4, 1, NULL, 59, NULL),
+(95, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Quia harum.', 'Quae consequatur modi officia in quia corrupti sapiente. Ipsum quo accusamus repudiandae quidem. Provident facere inventore sit rerum quis.', 'Quidem excepturi molestiae et quo minima. Nostrum non aut culpa in veniam eos nostrum quia. Ex autem vitae numquam recusandae nam. Alias sint ea nihil distinctio tenetur cupiditate accusamus id. Sint maxime modi sapiente odio.', 217222.04, 7, 1, NULL, 18, NULL),
+(96, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Qui eveniet.', 'Qui numquam fugiat nulla similique quas a. Similique rerum molestiae eius.', 'Velit est iste qui ea excepturi magni. Inventore incidunt a tempore. Cupiditate modi itaque omnis est velit. Sunt praesentium et recusandae.', 76247.87, 7, 1, NULL, 28, NULL),
+(97, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Nostrum placeat.', 'Quia saepe ratione voluptatibus. Architecto rerum laboriosam blanditiis necessitatibus vitae. Est eos iure exercitationem minus.', 'Repellendus eveniet atque libero voluptatem. Voluptatibus recusandae aliquam odit quia. Quod doloremque maiores ut rerum dolor. Recusandae est vel ex accusantium et commodi.', 781982.64, 4, 1, NULL, 94, NULL),
+(98, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Voluptatibus.', 'Architecto voluptatem veritatis est quaerat et eum. Placeat iusto sint odio unde aut porro debitis incidunt. In blanditiis reprehenderit veniam quas consequatur aut in error.', 'Dignissimos nesciunt adipisci praesentium culpa sit. Commodi hic labore in pariatur et impedit. Labore vel vero vel explicabo eaque et aut. Incidunt quos nihil quod eius.', 903662.38, 5, 1, NULL, 75, NULL),
+(99, '2020-01-16 05:29:40', '2020-01-16 05:29:40', 'Sint recusandae.', 'Quasi asperiores ut ut recusandae est et similique. Explicabo reiciendis sed asperiores commodi. Qui aut error exercitationem nihil enim repudiandae. Et eos sed sint aut sequi deleniti occaecati tempore.', 'Praesentium dolore aliquid enim cum optio aut quo. Qui adipisci minus rerum ratione veniam non quo eos. Maiores quo repudiandae ad totam soluta enim explicabo ut.', 686869.24, 4, 1, NULL, 100, 2),
+(100, '2020-01-16 05:29:40', '2020-02-02 00:06:44', 'Architecto illo.', 'Aut earum et aut exercitationem. Molestiae fugit tempore dolor eum ut earum. Ut quae rerum et fugiat.', 'Illo iure animi rerum sit dicta quod. Sit amet architecto aperiam officiis cumque aut voluptate voluptatum. Temporibus autem qui qui vel. Et sint nostrum animi est sed.', 51646.17, 6, 1, NULL, 71, 1);
 
 -- --------------------------------------------------------
 
@@ -578,7 +552,55 @@ CREATE TABLE `purchases` (
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `cart_id` bigint(20) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `purchases`
+--
+
+INSERT INTO `purchases` (`id`, `total_price`, `paymentmethod_id`, `user_id`, `created_at`, `updated_at`, `deleted_at`, `cart_id`) VALUES
+(1, 765283.38, 2, 110, '2020-02-05 00:10:22', '2020-02-05 00:10:22', NULL, 51),
+(2, 765283.38, 3, 110, '2020-02-05 00:20:23', '2020-02-05 00:20:23', NULL, 51),
+(3, 765283.38, 1, 110, '2020-02-05 00:27:25', '2020-02-05 00:27:25', NULL, 51),
+(4, 765283.38, 1, 110, '2020-02-05 00:29:32', '2020-02-05 00:29:32', NULL, 51),
+(5, 297766.22, 1, 105, '2020-02-05 00:40:31', '2020-02-05 00:40:31', NULL, 55),
+(6, 240526.92, 1, 101, '2020-02-05 00:45:47', '2020-02-05 00:45:47', NULL, 23),
+(7, 596772.50, 1, 101, '2020-02-05 00:59:07', '2020-02-05 00:59:07', NULL, 58),
+(8, 0.00, 1, 101, '2020-02-05 01:00:36', '2020-02-05 01:00:36', NULL, 59),
+(9, 120263.46, 1, 101, '2020-02-05 14:54:57', '2020-02-05 14:54:57', NULL, 60),
+(10, 0.00, 1, 101, '2020-02-05 15:02:34', '2020-02-05 15:02:34', NULL, 62),
+(11, 575283.69, 2, 101, '2020-02-05 15:10:19', '2020-02-05 15:10:19', NULL, 63),
+(12, 0.00, 2, 101, '2020-02-05 15:11:01', '2020-02-05 15:11:01', NULL, 64),
+(13, 0.00, 2, 101, '2020-02-05 15:14:40', '2020-02-05 15:14:40', NULL, 65),
+(14, 2841.60, 1, 103, '2020-02-05 15:25:04', '2020-02-05 15:25:04', NULL, 35),
+(15, 596.77, 1, 101, '2020-02-05 15:31:08', '2020-02-05 15:31:08', NULL, 66),
+(16, 85.95, 1, 101, '2020-02-05 15:32:06', '2020-02-05 15:32:06', NULL, 70),
+(17, 112.92, 2, 110, '2020-02-05 23:30:50', '2020-02-05 23:30:50', NULL, 51),
+(18, 60.13, 1, 101, '2020-02-06 03:59:13', '2020-02-06 03:59:13', NULL, 71),
+(19, 0.00, 1, 101, '2020-02-06 04:02:56', '2020-02-06 04:02:56', NULL, 76),
+(20, 0.00, 1, 101, '2020-02-06 04:05:00', '2020-02-06 04:05:00', NULL, 77),
+(21, 0.00, 1, 101, '2020-02-06 04:11:11', '2020-02-06 04:11:11', NULL, 78),
+(22, 0.00, 1, 101, '2020-02-06 04:16:53', '2020-02-06 04:16:53', NULL, 79),
+(23, 0.00, 1, 101, '2020-02-06 04:17:18', '2020-02-06 04:17:18', NULL, 80),
+(24, 1030.30, 1, 101, '2020-02-06 04:21:46', '2020-02-06 04:21:46', NULL, 81),
+(25, 0.00, 1, 101, '2020-02-06 04:22:54', '2020-02-06 04:22:54', NULL, 82),
+(26, 0.00, 1, 101, '2020-02-06 04:24:46', '2020-02-06 04:24:46', NULL, 83),
+(27, 0.00, 1, 101, '2020-02-06 04:25:33', '2020-02-06 04:25:33', NULL, 84),
+(28, 0.00, 1, 101, '2020-02-06 04:26:41', '2020-02-06 04:26:41', NULL, 85),
+(29, 0.00, 1, 101, '2020-02-06 04:28:50', '2020-02-06 04:28:50', NULL, 86);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `purchasesproductslist`
+--
+
+CREATE TABLE `purchasesproductslist` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -621,109 +643,116 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role`, `name`, `surname`, `email`, `birthdate`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 0, 'otro', 'apellido', 'contope1@hotmail.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'KrSmsMmGqx', '2020-01-16 15:02:25', '2020-01-16 15:02:25', NULL),
-(2, 0, 'Cathy Runte PhD', NULL, 'samara85@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'kvqFHSUWod', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(3, 0, 'Kole Mohr', NULL, 'yolanda53@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'QNIkW1SCQS', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(4, 0, 'Heber D\'Amore', NULL, 'jarod66@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'WBFEgUzDaU', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(5, 0, 'Edwin Mueller', NULL, 'hannah.buckridge@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'YstuRpYAYe', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(6, 0, 'Mr. Junior Yundt PhD', NULL, 'erdman.hellen@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'JCBplndSal', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(7, 0, 'Joshuah Homenick', NULL, 'smith.sabina@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'wMgj0x2WYz', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(8, 0, 'Bella Johnson', NULL, 'kjohnston@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'YBTFXNV0i8', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(9, 0, 'Dr. Anibal Dach DDS', NULL, 'qwindler@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'dfjtMTkoTW', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(10, 0, 'Kiara Sporer', NULL, 'aditya90@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'iOxfLM16PS', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(11, 0, 'Marilou Dooley', NULL, 'hschowalter@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Ug2P0nAdxJ', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(12, 0, 'Alejandra Sawayn', NULL, 'fletcher13@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'WXRWUDYRqu', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(13, 0, 'Pablo Wiegand MD', NULL, 'dmurphy@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'rPC7nICiS7', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(14, 0, 'Cheyanne Hartmann', NULL, 'beier.nella@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'L88z9jxRQW', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(15, 0, 'Wilburn Dickens IV', NULL, 'alexie.larkin@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'XmQ2RO9dbi', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(16, 0, 'Elisa Labadie', NULL, 'witting.dedric@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'q4QtQOd0UM', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(17, 0, 'Prof. Alfonzo Larson DDS', NULL, 'xreichel@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ToIbca1m1X', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(18, 0, 'Miss Willow Thiel', NULL, 'noelia.kuhn@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'RG7PNOZPV8', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(19, 0, 'Prof. Leo Quitzon', NULL, 'ayla07@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '4bMFPqwFvb', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(20, 0, 'Pansy Bradtke', NULL, 'marcus11@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ucdJ9Eh98v', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(21, 0, 'Oswald O\'Conner', NULL, 'dglover@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'w1QPhshjvM', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(22, 0, 'Kurt Mraz', NULL, 'konopelski.aaliyah@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'EjgQweADmq', '2020-01-16 15:02:26', '2020-01-16 15:02:26', NULL),
-(23, 0, 'Prof. Twila Kassulke Jr.', NULL, 'cordie98@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ObzGyL9rbF', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(24, 0, 'Earnestine Volkman', NULL, 'modesto.wisoky@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CR2QpdX4Dc', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(25, 0, 'Marjorie Hill', NULL, 'ohara.stefanie@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'jU5Netqo2k', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(26, 0, 'Alexane Champlin', NULL, 'stehr.saul@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'YF0MuHs1h6', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(27, 0, 'Prof. Curt Bruen I', NULL, 'dante26@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'dOxj9wKlEv', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(28, 0, 'Imani Dickinson', NULL, 'tanner07@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '0089NBYw17', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(29, 0, 'Angelina Spencer I', NULL, 'rfahey@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'YVwndJU0EM', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(30, 0, 'Prof. Krista Ferry MD', NULL, 'howe.carrie@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'hz06vgITWm', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(31, 0, 'Prof. Eulalia Murray DVM', NULL, 'isaias.schaden@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'egR3sKKAzq', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(32, 0, 'Prof. Jay Grant IV', NULL, 'herman.camille@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '0fUIFUeXKs', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(33, 0, 'Lucas Hettinger', NULL, 'jjaskolski@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'sGE9wLxupq', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(34, 0, 'Juliet Goldner I', NULL, 'vkessler@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'VwjhpDBZwI', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(35, 0, 'Elza Hamill', NULL, 'trent.purdy@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2JiD7wbR8d', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(36, 0, 'Makenna Gutkowski', NULL, 'darryl09@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'p7HlRbgtvT', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(37, 0, 'Lurline Kling', NULL, 'istroman@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '4AO7wK2GFp', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(38, 0, 'Mr. Theo Huel', NULL, 'cyril25@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'hexbWtCNCh', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(39, 0, 'Amir Daniel', NULL, 'dolly71@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'lcRgus75eM', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(40, 0, 'Maryjane Moen', NULL, 'kailyn15@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'iWqTRyTkFS', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(41, 0, 'Vicky Schmidt', NULL, 'araceli47@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '5YqZT7fIEm', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(42, 0, 'Earline Reinger', NULL, 'bjaskolski@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1wK41fzLLN', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(43, 0, 'Prof. Bo Turcotte', NULL, 'betty.rippin@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'hdFqqDratc', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(44, 0, 'Alfonso Ledner II', NULL, 'robel.christopher@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '7eiG6thkMg', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(45, 0, 'Prof. Deborah Weber DDS', NULL, 'ruecker.darian@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '89Azp7gp0x', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(46, 0, 'Toni Olson', NULL, 'ucremin@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'dzbYF23xKK', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(47, 0, 'Aidan Jacobs', NULL, 'ernser.cathy@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'H8W9S2hGMD', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(48, 0, 'Christelle Johnson', NULL, 'sally30@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'tqsnaQdjOc', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(49, 0, 'Beaulah Swaniawski', NULL, 'stark.lavada@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'X0rxJnAOHv', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(50, 0, 'Mr. Stevie Stanton MD', NULL, 'madalyn.lueilwitz@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'UfTdgdfGJU', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(51, 0, 'Chadrick Aufderhar', NULL, 'qdicki@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'kFqbEGdoDT', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(52, 0, 'Hillard Cremin', NULL, 'hazel.braun@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'AND18CkTxA', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(53, 0, 'Prof. Chris McCullough II', NULL, 'zkonopelski@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'wcpBorSS96', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(54, 0, 'Sonya Morissette', NULL, 'ima.hudson@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '6v2yxS0jfP', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(55, 0, 'Carmine Russel', NULL, 'alberto.hammes@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'OwzzO6Vfvz', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(56, 0, 'Harley Becker', NULL, 'efisher@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'QvU7coo4SG', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(57, 0, 'Kane Wuckert', NULL, 'alessia57@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'r9vKObepDv', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(58, 0, 'Prof. Jasper Schamberger MD', NULL, 'gluettgen@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'piJgCgoWWS', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(59, 0, 'Rory Mohr', NULL, 'aisha.emmerich@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Be4LzPFcZU', '2020-01-16 15:02:27', '2020-01-16 15:02:27', NULL),
-(60, 0, 'Maia Dare', NULL, 'moore.maribel@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Hfscor87gO', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(61, 0, 'Patricia Bernier', NULL, 'adah.ziemann@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'iCoYrXyCJQ', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(62, 0, 'Charlie Huels', NULL, 'mills.tabitha@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'mSiMj3ihHg', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(63, 0, 'Malcolm Connelly', NULL, 'oconn@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Xie7H5wDtn', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(64, 0, 'Tabitha Hartmann', NULL, 'gmorar@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'pZN4YOV4cN', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(65, 0, 'Ford Toy', NULL, 'ava75@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '0RJxvoBSFJ', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(66, 0, 'Erwin Kuvalis', NULL, 'jennyfer17@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'N2RDxIdnMc', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(67, 0, 'Monica Pollich', NULL, 'breitenberg.adriana@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'hlgv8Uhf1n', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(68, 0, 'Liam Schmidt', NULL, 'charlie32@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'PXRQSodvcQ', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(69, 0, 'Vladimir Denesik III', NULL, 'xfritsch@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'TNbkMThkVF', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(70, 0, 'Joel Hilpert', NULL, 'carson.brown@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'DisimMO7KR', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(71, 0, 'Dallin Tromp', NULL, 'gpacocha@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'nqomviUarW', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(72, 0, 'Shyann Keebler', NULL, 'jaylin28@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'v7PRT4ViPe', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(73, 0, 'Mr. Rylan Zboncak II', NULL, 'chris20@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'U5t1tvropJ', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(74, 0, 'Lisa Botsford', NULL, 'hickle.arely@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'fuYuiBDamz', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(75, 0, 'Francisco Rowe', NULL, 'egleason@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'KXJ7OZyLI3', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(76, 0, 'Newton Rau IV', NULL, 'connor98@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Tw3RMVB1zB', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(77, 0, 'Dimitri Mohr Jr.', NULL, 'raheem.dietrich@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'PASvFDgPtP', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(78, 0, 'Jensen Harber', NULL, 'clifton.kreiger@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '70ir265UTZ', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(79, 0, 'Easton Towne', NULL, 'igrimes@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1OsJCfYHjl', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(80, 0, 'Mrs. Filomena Spencer I', NULL, 'jasmin67@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'oqAjOXINTJ', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(81, 0, 'Dr. Benny Klocko DDS', NULL, 'gkovacek@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'l75xMwsLQj', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(82, 0, 'Mitchel Zemlak', NULL, 'kozey.jaleel@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'uy9LXDDg9i', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(83, 0, 'Leslie Nolan', NULL, 'theo94@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '6E04J31arL', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(84, 0, 'Ms. Aryanna Hand III', NULL, 'roscoe92@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'WcyKs4LYQk', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(85, 0, 'Hilton Kozey', NULL, 'eliseo.kassulke@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'kvemj85WKS', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(86, 0, 'Miss Tyra Fadel Jr.', NULL, 'garrison76@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'zZk51bkrYN', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(87, 0, 'Mr. Kristofer Klein DDS', NULL, 'cwalsh@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'jSfVbTeYz6', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(88, 0, 'Franco Kuhlman', NULL, 'ruthie.schumm@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'HD00pEVqR2', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(89, 0, 'Jocelyn Fay', NULL, 'tristin36@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'IbSje3c3tK', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(90, 0, 'Jackeline Stark', NULL, 'jgottlieb@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'eEZkHkcHqu', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(91, 0, 'Elinor Sawayn', NULL, 'cziemann@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '8WKr5xgofD', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(92, 0, 'Sienna Veum', NULL, 'champlin.bo@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'nxPApqi6rM', '2020-01-16 15:02:28', '2020-01-16 15:02:28', NULL),
-(93, 0, 'Magdalen Stamm', NULL, 'waino66@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'WUGPpPTNkc', '2020-01-16 15:02:29', '2020-01-16 15:02:29', NULL),
-(94, 0, 'Geovanni Durgan', NULL, 'efeest@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ylHw5Rlhje', '2020-01-16 15:02:29', '2020-01-16 15:02:29', NULL),
-(95, 0, 'Chesley Ruecker', NULL, 'felicita35@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'PYnfDRb6PA', '2020-01-16 15:02:29', '2020-01-16 15:02:29', NULL),
-(96, 0, 'Sierra Armstrong', NULL, 'treutel.aaron@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ywZ7mnqBkH', '2020-01-16 15:02:29', '2020-01-16 15:02:29', NULL),
-(97, 0, 'Salma Dickinson', NULL, 'skiles.sharon@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'RzuUhW7ApU', '2020-01-16 15:02:29', '2020-01-16 15:02:29', NULL),
-(98, 0, 'Prof. Pietro Towne', NULL, 'hmiller@example.net', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'yUY7CkUZ1x', '2020-01-16 15:02:29', '2020-01-16 15:02:29', NULL),
-(99, 0, 'Adelia Prosacco I', NULL, 'dstracke@example.org', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'uGtmJtmEbq', '2020-01-16 15:02:29', '2020-01-16 15:02:29', NULL),
-(100, 0, 'Myrl Abshire', NULL, 'leonora91@example.com', NULL, '2020-01-16 15:02:25', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '9RHHJ1KqTR', '2020-01-16 15:02:29', '2020-01-16 15:02:29', NULL),
-(101, 0, 'Marian', NULL, 'contope10@hotmail.com', NULL, NULL, '$2y$10$RmWQfvzb7TfDVZvWH8A8O.gUAJl4FTHIXcahNm3DdmCJsP6AO/VCi', NULL, '2020-01-18 02:41:23', '2020-01-18 02:41:23', NULL),
-(102, 0, 'Numa', NULL, 'contope@hotmail.com', NULL, NULL, '$2y$10$I2ofFNdVRnrZooruGyjIFez4qzpJDcMFgvDl34i8Zm9gYYNTEqvOm', NULL, '2020-01-21 17:48:52', '2020-01-21 17:48:52', NULL),
-(103, 0, 'Luciana', NULL, 'luciana@luciana.com', NULL, NULL, '$2y$10$uEGi.92N9Y03eWKwtxNn/uQLISYpj8l9j/bgrb2fmHv5aBHExE9Ue', NULL, '2020-01-21 19:16:39', '2020-01-21 19:16:39', NULL);
+(1, 0, 'Kiara Harris', NULL, 'qmccullough@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '2WWlvkZbXC', '2020-01-16 05:26:09', '2020-01-16 05:26:09', NULL),
+(2, 0, 'Melyssa Wilkinson', NULL, 'ofeil@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'uQYe2u7rPh', '2020-01-16 05:26:09', '2020-01-16 05:26:09', NULL),
+(3, 0, 'Prof. Alessandro Leffler PhD', NULL, 'tavares60@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '95nLsq4WJZ', '2020-01-16 05:26:09', '2020-01-16 05:26:09', NULL),
+(4, 0, 'Mrs. Daniela Harber', NULL, 'chelsey25@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'herRvo3CJi', '2020-01-16 05:26:09', '2020-01-16 05:26:09', NULL),
+(5, 0, 'Dr. Will Bosco', NULL, 'mills.lavina@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'AdqrlLc8HO', '2020-01-16 05:26:09', '2020-01-16 05:26:09', NULL),
+(6, 0, 'Prof. Gregorio Senger', NULL, 'bdubuque@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 't4dTJncyIA', '2020-01-16 05:26:09', '2020-01-16 05:26:09', NULL),
+(7, 0, 'Janiya Koelpin', NULL, 'remington87@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'PtKJ24zgx6', '2020-01-16 05:26:09', '2020-01-16 05:26:09', NULL),
+(8, 0, 'Bertha Johnson', NULL, 'tcruickshank@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'w3vKBYybF0', '2020-01-16 05:26:09', '2020-01-16 05:26:09', NULL),
+(9, 0, 'Horace Kuhic', NULL, 'angie.lang@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'zMnuJg02Jc', '2020-01-16 05:26:09', '2020-01-16 05:26:09', NULL),
+(10, 0, 'Dr. Peggie Veum V', NULL, 'sydnie32@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'nuLYCy6qvB', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(11, 0, 'Kyler Graham', NULL, 'mertz.wava@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '7lAxGdA4a4', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(12, 0, 'Holden Cormier', NULL, 'deon37@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'L4j8jhDE6J', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(13, 0, 'Rolando Doyle', NULL, 'tdouglas@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'rCF3x0AK9V', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(14, 0, 'Annabell Marks', NULL, 'elda.simonis@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'QKqAHIhihd', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(15, 0, 'Alexie Borer', NULL, 'moriah35@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'IV6anj6Lcn', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(16, 0, 'Florine Hyatt', NULL, 'karlie.kautzer@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'OFvgUvAhXx', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(17, 0, 'Edmond Harvey', NULL, 'wilderman.aiyana@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'mq0jRFIKuL', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(18, 0, 'Bradley Carroll', NULL, 'keegan58@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'i0XHSoZwt9', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(19, 0, 'Dr. Olga Simonis', NULL, 'libby.davis@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'u5iYWUGWb4', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(20, 0, 'Dr. Faye Denesik', NULL, 'hubert.stiedemann@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'EK6tjRrgel', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(21, 0, 'Benny Bailey', NULL, 'jaeden.lehner@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'dGCttHXmXv', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(22, 0, 'Berry Stroman', NULL, 'mae78@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'cvEfErXclx', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(23, 0, 'Mr. Zion Leannon', NULL, 'hodkiewicz.ben@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '54zsMKbnbC', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(24, 0, 'Dr. Ed Crooks I', NULL, 'kayley.stark@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1GvVVa9UTO', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(25, 0, 'Mr. Dewitt Schaden', NULL, 'hauck.carlee@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Sdoa5G86vp', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(26, 0, 'Albert Fadel', NULL, 'schaden.ian@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'wkKbY24Kig', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(27, 0, 'Dejuan Hackett V', NULL, 'katelyn.cremin@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '61RfnTFeh4', '2020-01-16 05:26:10', '2020-01-16 05:26:10', NULL),
+(28, 0, 'Domenic Moen Sr.', NULL, 'lura.schuster@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'E7pBS9lYuv', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(29, 0, 'Randall Marquardt', NULL, 'petra29@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'UmZvUqvyAq', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(30, 0, 'Jace Funk', NULL, 'porter.okeefe@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ZlVgvIYz2x', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(31, 0, 'Marianna Parisian', NULL, 'domingo02@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '4YUxvx6iLR', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(32, 0, 'Dovie Bartoletti', NULL, 'mbartoletti@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'McWSda1RDz', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(33, 0, 'Hosea VonRueden', NULL, 'walter.yasmeen@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'yiVChcdp3r', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(34, 0, 'Kaela Ortiz', NULL, 'woodrow08@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'TCRGEDeHQZ', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(35, 0, 'Mrs. Lulu Williamson', NULL, 'felicia36@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'jcSn6rsQKS', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(36, 0, 'Waldo Bruen', NULL, 'rcorwin@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Kq6yZWA1ll', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(37, 0, 'Daren Reichel', NULL, 'hailie.dickens@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'muuVOMLLpt', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(38, 0, 'Carson Ward', NULL, 'maryse.eichmann@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'IiTc4ppcXP', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(39, 0, 'Mable Kohler', NULL, 'lenna51@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'NsPmBbOJN8', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(40, 0, 'Arvid Rohan IV', NULL, 'zboncak.joseph@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'vFqpCSugjq', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(41, 0, 'Earl D\'Amore', NULL, 'elton27@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CRqqoXNQlv', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(42, 0, 'Eloisa DuBuque', NULL, 'quitzon.fletcher@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'QQzf30olaQ', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(43, 0, 'Ahmed McDermott', NULL, 'emory.schroeder@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '7tI9bAEuRp', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(44, 0, 'Tyra Davis I', NULL, 'holson@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CwHD5MgdGH', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(45, 0, 'Maud Hermann Sr.', NULL, 'kennedy.crist@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'GYDA0xJIJs', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(46, 0, 'Elenor Kunde DVM', NULL, 'nader.thaddeus@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'G44D42sDgx', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(47, 0, 'Sunny Herzog', NULL, 'arnulfo66@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'nU4jMzIrfH', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(48, 0, 'Clotilde Sipes', NULL, 'kimberly58@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'sx4jLa6CIV', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(49, 0, 'Hortense Feest Jr.', NULL, 'towne.erin@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'BMdDLKnOZx', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(50, 0, 'Angeline Kshlerin', NULL, 'grover64@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'mYk8kleiUW', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(51, 0, 'Otis McClure', NULL, 'mcollins@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'ReYw2yOrnc', '2020-01-16 05:26:11', '2020-01-16 05:26:11', NULL),
+(52, 0, 'Dr. Chester Cronin', NULL, 'nienow.greg@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'dtLy5FD5xP', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(53, 0, 'Jermain Beer', NULL, 'cboyle@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'JhxPMgm1nO', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(54, 0, 'Natasha Doyle', NULL, 'alexanne.cormier@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '4lpXZ4L2zo', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(55, 0, 'Sabryna Feest', NULL, 'chance21@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'E5VhNu9se7', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(56, 0, 'Ms. Daisy Streich IV', NULL, 'merle.bernhard@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'KOScW1MryJ', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(57, 0, 'Audie Cummerata', NULL, 'schroeder.chauncey@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'anUizwn5sd', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(58, 0, 'Eryn Metz', NULL, 'devonte22@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '9D4ucysC4d', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(59, 0, 'Brandyn Rempel I', NULL, 'virginie.schulist@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'uVWp8h4ONj', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(60, 0, 'Ms. Haylee Dickinson', NULL, 'rippin.howard@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'pxSzgOHHfX', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(61, 0, 'Zula Thompson DVM', NULL, 'merlin55@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'JIBO8pcHHt', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(62, 0, 'Dr. Efrain Cassin DVM', NULL, 'mkertzmann@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'OAOzUlHv3b', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(63, 0, 'Prof. Maribel Hessel', NULL, 'mayer.lucas@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'VTqJ5rXfL3', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(64, 0, 'Twila Rath', NULL, 'nasir.hane@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'wVVt3tDmCZ', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(65, 0, 'Dorris Becker', NULL, 'pstokes@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '7PBfLrLF8v', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(66, 0, 'Mr. Xander D\'Amore DVM', NULL, 'fannie95@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Hh3AJ9aRNe', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(67, 0, 'Jacky Bernhard', NULL, 'eleazar69@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '1v3fOrkuFV', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(68, 0, 'Mr. Jermain Borer', NULL, 'zvandervort@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'dLAVnyAEZ9', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(69, 0, 'Miss Kristy Wiza III', NULL, 'wblanda@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'I97o206Qqt', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(70, 0, 'Russ Denesik', NULL, 'julie43@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'tBoZt523fI', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(71, 0, 'Erin Reichel', NULL, 'qlabadie@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'Msr7diohz4', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(72, 0, 'Athena Walker', NULL, 'kschneider@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '3TcaLQHEOz', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(73, 0, 'Kraig Kilback', NULL, 'swelch@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'NQY80z6PtM', '2020-01-16 05:26:12', '2020-01-16 05:26:12', NULL),
+(74, 0, 'Ulices Oberbrunner IV', NULL, 'rau.rowland@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'CXTaUi59Dm', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(75, 0, 'Jacinthe Dach', NULL, 'prosacco.kameron@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'PqQpBPQOMU', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(76, 0, 'Chelsea Wuckert', NULL, 'burnice90@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'bs4E7h9FxB', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(77, 0, 'Isabel Gottlieb', NULL, 'madelyn99@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'teIo0sOQ2h', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(78, 0, 'Adella Kreiger', NULL, 'fausto86@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '4V3lc6xkHa', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(79, 0, 'Madelyn Morissette', NULL, 'vlangworth@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '6jkZxFjV7D', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(80, 0, 'Claud Welch', NULL, 'alexandrine46@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'na6ExaH6O2', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(81, 0, 'Nola Rau', NULL, 'smurazik@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'BpTCfDrCp9', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(82, 0, 'Elenor Emmerich', NULL, 'stuart41@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'jRXkfp9PBE', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(83, 0, 'Prof. Jayde Wilderman DDS', NULL, 'wconn@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'c8waKFjq4Y', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(84, 0, 'Mr. Fermin Hudson III', NULL, 'eloisa30@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'WODzTdtJ8R', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(85, 0, 'Annetta Turner', NULL, 'kilback.henriette@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'RC9ZpbUHuu', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(86, 0, 'Mireille Mosciski', NULL, 'maud.gusikowski@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'jfsDTy4mTx', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(87, 0, 'Prof. Howard Reichel IV', NULL, 'weber.cecil@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '9Y3DqUrA17', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(88, 0, 'Aidan Tillman', NULL, 'pmarks@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'TKysiOJo0d', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(89, 0, 'Seth Labadie', NULL, 'psimonis@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'TumnbXozg0', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(90, 0, 'Adell Sanford Sr.', NULL, 'gloria52@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'M94KyamZ9T', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(91, 0, 'Miss Jany Ritchie', NULL, 'koconner@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 's5wF3DZs54', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(92, 0, 'Ila Effertz', NULL, 'jermey02@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '6mYTvEjUc4', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(93, 0, 'Leora Zieme', NULL, 'fbernhard@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'naoeptyYDH', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(94, 0, 'Ms. Mariam Crooks', NULL, 'jayme.luettgen@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '7wUFEqUK4r', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(95, 0, 'Kamryn Trantow Jr.', NULL, 'crooks.eladio@example.net', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'k8lr7dUQ2s', '2020-01-16 05:26:13', '2020-01-16 05:26:13', NULL),
+(96, 0, 'Dr. Estevan Littel V', NULL, 'fabian53@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'cJNnFYAyik', '2020-01-16 05:26:14', '2020-01-16 05:26:14', NULL),
+(97, 0, 'Donnie Schmitt', NULL, 'okunze@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'O9siIdjPlo', '2020-01-16 05:26:14', '2020-01-16 05:26:14', NULL),
+(98, 0, 'Francisco Cummings IV', NULL, 'talia.kub@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'WbzIIC8Jz1', '2020-01-16 05:26:14', '2020-01-16 05:26:14', NULL),
+(99, 0, 'Marta Cremin', NULL, 'bbaumbach@example.com', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'lNQpbcJkCi', '2020-01-16 05:26:14', '2020-01-16 05:26:14', NULL),
+(100, 0, 'Carroll Lockman', NULL, 'anthony.beer@example.org', NULL, '2020-01-16 05:26:09', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'SyrzrExCQv', '2020-01-16 05:26:14', '2020-01-16 05:26:14', NULL),
+(101, 1, 'Numa', NULL, 'contope@hotmail.com', NULL, NULL, '$2y$10$ES.QengH4xnB1X5dH3C5VusvU9/EDd/qN08uVFPLOJk8qcHL180eq', NULL, '2020-02-01 19:25:31', '2020-02-01 19:25:31', NULL),
+(102, 0, 'Mati', NULL, 'mati@gsidj.com', NULL, NULL, '$2y$10$JCBMbYhTVwczVCMuL3KLkOIZEMjSy8SFdbXMKIXHBZ6ibPV3iWxpa', NULL, '2020-02-04 02:45:59', '2020-02-04 02:45:59', NULL),
+(103, 0, 'Joaquin', NULL, 'Joaquin@Joaquin.com', NULL, NULL, '$2y$10$PoORjSNkL79NQx5Hj130TOxkHHJJinKbnFgZrPjj5yGYnIwQ7wYz.', NULL, '2020-02-04 03:12:31', '2020-02-04 03:12:31', NULL),
+(104, 0, 'Mariangeles', NULL, 'mariangelesw@hotmail.com', NULL, NULL, '$2y$10$bo9alhZPQEY1FR2Dulv1pOEsTyXK7ucBpFIWqNxoBEPDe3xiHboFW', NULL, '2020-02-04 06:00:24', '2020-02-04 06:00:24', NULL),
+(105, 0, 'Martin', NULL, 'Martin@hotmail.com', NULL, NULL, '$2y$10$zpAOjLPsjs8Qfm6HXUdSJ.7e9VXlFyLrk8UMwCIm.Zc09Bj3avtry', NULL, '2020-02-04 15:50:51', '2020-02-04 15:50:51', NULL),
+(106, 0, 'Mariano', NULL, 'mariano@hotmail.com', NULL, NULL, '$2y$10$2UGLREw0BtnEPmmc6/QIg.2KQ9RFLrSAsOHT1LUCjCiF94YaTAzbG', NULL, '2020-02-04 16:04:15', '2020-02-04 16:04:15', NULL),
+(107, 0, 'Veronica', NULL, 'veronica@hotmail.com', NULL, NULL, '$2y$10$vkwWT3iXzgc9m52O/GVBiuxHCNxpIQ2N0Y0QpCM0vurJxUwIuKtZi', NULL, '2020-02-04 16:06:03', '2020-02-04 16:06:03', NULL),
+(108, 0, 'Felipe', NULL, 'Felipe@hotmail.com', NULL, NULL, '$2y$10$jrnKCJbL2hz/cZoWblRyyOTtRBpLwG27xEHz/nBiLqPJBQ9ISvFBy', NULL, '2020-02-04 16:48:28', '2020-02-04 16:48:28', NULL),
+(109, 0, 'Julita', NULL, 'julita@hotmail.com', NULL, NULL, '$2y$10$S68rTksBQ0fa4OD/lExGseRIHxtuUaL8M1u0HnuNaGRw5FLOHmfru', NULL, '2020-02-04 16:50:38', '2020-02-04 16:50:38', NULL),
+(110, 0, 'Vicente', NULL, 'vicente@hotmail.com', NULL, NULL, '$2y$10$6sb5s0F/w1DbezbNlW6Hp.eramzoSyuCQ.sytFnsHIyNV0nsgeaf2', NULL, '2020-02-04 16:55:20', '2020-02-04 16:55:20', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -777,14 +806,6 @@ ALTER TABLE `offers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `offer__product`
---
-ALTER TABLE `offer__product`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `offer__product_product_id_foreign` (`product_id`),
-  ADD KEY `offer__product_offer_id_foreign` (`offer_id`);
-
---
 -- Indices de la tabla `password_resets`
 --
 ALTER TABLE `password_resets`
@@ -813,19 +834,19 @@ ALTER TABLE `products`
   ADD KEY `products_offer_id_foreign` (`offer_id`);
 
 --
--- Indices de la tabla `product_photos`
---
-ALTER TABLE `product_photos`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_photos_product_id_foreign` (`product_id`);
-
---
 -- Indices de la tabla `purchases`
 --
 ALTER TABLE `purchases`
   ADD PRIMARY KEY (`id`),
   ADD KEY `purchases_paymentmethod_id_foreign` (`paymentmethod_id`),
-  ADD KEY `purchases_user_id_foreign` (`user_id`);
+  ADD KEY `purchases_user_id_foreign` (`user_id`),
+  ADD KEY `purchases_cart_id_foreign` (`cart_id`);
+
+--
+-- Indices de la tabla `purchasesproductslist`
+--
+ALTER TABLE `purchasesproductslist`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `recommended`
@@ -849,25 +870,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT de la tabla `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
 -- AUTO_INCREMENT de la tabla `cart_product`
 --
 ALTER TABLE `cart_product`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT de la tabla `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -879,48 +900,42 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `offers`
 --
 ALTER TABLE `offers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
-
---
--- AUTO_INCREMENT de la tabla `offer__product`
---
-ALTER TABLE `offer__product`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `paymentmethods`
 --
 ALTER TABLE `paymentmethods`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `productpictures`
 --
 ALTER TABLE `productpictures`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
-
---
--- AUTO_INCREMENT de la tabla `product_photos`
---
-ALTER TABLE `product_photos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- AUTO_INCREMENT de la tabla `purchases`
 --
 ALTER TABLE `purchases`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT de la tabla `purchasesproductslist`
+--
+ALTER TABLE `purchasesproductslist`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
@@ -933,7 +948,7 @@ ALTER TABLE `recommended`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- Restricciones para tablas volcadas
@@ -960,13 +975,6 @@ ALTER TABLE `categories`
   ADD CONSTRAINT `categories_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
 
 --
--- Filtros para la tabla `offer__product`
---
-ALTER TABLE `offer__product`
-  ADD CONSTRAINT `offer__product_offer_id_foreign` FOREIGN KEY (`offer_id`) REFERENCES `offers` (`id`),
-  ADD CONSTRAINT `offer__product_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
-
---
 -- Filtros para la tabla `productpictures`
 --
 ALTER TABLE `productpictures`
@@ -981,15 +989,10 @@ ALTER TABLE `products`
   ADD CONSTRAINT `products_offer_id_foreign` FOREIGN KEY (`offer_id`) REFERENCES `offers` (`id`);
 
 --
--- Filtros para la tabla `product_photos`
---
-ALTER TABLE `product_photos`
-  ADD CONSTRAINT `product_photos_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
-
---
 -- Filtros para la tabla `purchases`
 --
 ALTER TABLE `purchases`
+  ADD CONSTRAINT `purchases_cart_id_foreign` FOREIGN KEY (`cart_id`) REFERENCES `carts` (`id`),
   ADD CONSTRAINT `purchases_paymentmethod_id_foreign` FOREIGN KEY (`paymentmethod_id`) REFERENCES `paymentmethods` (`id`),
   ADD CONSTRAINT `purchases_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
