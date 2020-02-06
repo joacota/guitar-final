@@ -50,7 +50,7 @@
             <tr class="products">
               <th scope="row">{{$key+1}}</th>
               <th>{{$product->id}}</th>
-              <td><img src="{{url('storage/imagesProducts/musicgeneric.jpg')}}" alt="" width="60px" height="60px"> </td>
+              <td><img src="{{ $product->productpicture->count()>0 ? Storage::url($product->productpicture[0]->src) : '/imagesProducts/musicgeneric.jpg'}}" alt="" width="60px" height="60px"> </td>
               <td> <b> {{$product->category_id}}</b> </td>
               <td> {{$product->category->name}} </td>
               <td> <b> {{$product->name}}</b> </td>

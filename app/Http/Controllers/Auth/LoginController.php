@@ -54,7 +54,7 @@ class LoginController extends Controller
      */
      public function authenticated(Request $request, $user) //(Request $request, $user)
      {
-      
+
         $cartUser= Cart::where('user_id', $user->id)->latest()->first();
 
         if($cartUser){
@@ -70,5 +70,13 @@ class LoginController extends Controller
         }
 
       }
-
+      //public function showLoginForm()
+     //     {
+     //       if(!session()->has('url.intended'))
+     // {
+     //     session(['url.intended' => url()->previous()]);
+     // }
+     //
+     //       //  return view('auth.login');
+     //     }
 }

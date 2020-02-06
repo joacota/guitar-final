@@ -120,6 +120,7 @@ $formPerfil="";
                     <a href="#"><img src="/imagesProducts/logo-generico.png" alt="product-brand"></a>
               </div>
 
+              {{-- {{ $product->brand_id ? Storage::url($cartProduct->productpicture[0]->src) : 'storage/imagesProducts/musicgeneric.jpg'}} --}}
               <div class="product-name">
                 <h1>
                   <p>

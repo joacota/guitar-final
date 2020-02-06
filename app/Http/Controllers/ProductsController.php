@@ -138,8 +138,8 @@ $path=[];
 
 
             $picture=Productpicture::create([
-
-            'src'=>substr($path[$i-1],7),
+              'src'=>$path[$i],
+            // 'src'=>substr($path[$i-1],7),
             'product_id'=>$product->id,
             ]);
 

@@ -45,11 +45,11 @@
 
       @foreach ($cartProducts as $key => $cartProduct)
 {{-- //admin/categories/{id}/edit --}}
-
+{{-- {{Storage::url($product->productpicture[0]->src) }} --}}
 <tr class="cartProducts">
   <th scope="row">{{$key+1}}</th>
   <th class="text-center">{{$cartProduct->id}}</th>
-  <td><img src="{{url( $cartProduct->productpicture->count()>0 ? 'storage/' . $cartProduct->productpicture[0]->src : 'storage/imagesProducts/musicgeneric.jpg')}}" alt="" width="60px" height="60px"> </td>
+  <td><img src="{{ $cartProduct->productpicture->count()>0 ? Storage::url($cartProduct->productpicture[0]->src) : 'storage/imagesProducts/musicgeneric.jpg'}}" alt="" width="60px" height="60px"> </td>
   <td> <b> {{$cartProduct->name}}</b> </td>
   <td width="150px"> {{(strlen($cartProduct->description) > 50) ? substr($cartProduct->description,0,47).'...' : str_pad($cartProduct->description, 50, "_", STR_PAD_RIGHT)}} </td>
   <td class="text-right"> $ {{number_format($cartProduct->price,2)}} </td>

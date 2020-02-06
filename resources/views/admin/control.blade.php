@@ -8,11 +8,11 @@
 </div>
 <div class="row">
   <h4>
-    <a href="/admin/products">lista de producto</a></h5>
+    <a href="/admin/products">lista de producto</a></h4>
 </div>
 <div class="row">
   <h4>
-    <a href="/admin/products/add">Nuevo de producto</a></h5>
+    <a href="/admin/products/add">Nuevo de producto</a></h4>
 </div>
 
 <div class="row">
@@ -23,11 +23,11 @@
 </div>
 <div class="row">
   <h4>
-    <a href="/admin/categories">lista de Categorias</a></h5>
+    <a href="/admin/categories">lista de Categorias</a></h4>
 </div>
 <div class="row">
   <h4>
-    <a href="/admin/categories/add">Nuevo de Categoria</a></h5>
+    <a href="/admin/categories/add">Nuevo de Categoria</a></h4>
 </div>
 
 <div class="row">
@@ -38,31 +38,28 @@
 </div>
 <div class="row">
 <h4>
-  <a href="/admin/brands">lista de Marcaa</a></h5>
+  <a href="/admin/brands">lista de Marcaa</a></h4>
 </div>
 <div class="row">
 <h4>
-  <a href="/admin/brands/add">Nuevo de Marca</a></h5>
+  <a href="/admin/brands/add">Nuevo de Marca</a></h4>
 </div>
-<div class="row">
-<h4>
-  <a href="#">Buscar de Marca (editar/Borrar)</a></h5>
-</div>
+
 
 
 <div class="row">
   <h5>----------------</h5>
 </div>
 <div class="row">
-<h5>Metodos de pago</h5>
+<h5>Metodos de pago</h4>
 </div>
 <div class="row">
 <h4>
-  <a href="/admin/paymentmethods">lista de Metodos</a></h5>
+  <a href="/admin/paymentmethods">lista de Metodos</a></h4>
 </div>
 <div class="row">
-<h4>
-  <a href="/admin/paymentmethods/add">Nuevo de Metodo/a></h5>
+<h4><a href="/admin/paymentmethods/add">Nuevo Metodo de Pago</a></h4>
+
 </div>
 
 @stop

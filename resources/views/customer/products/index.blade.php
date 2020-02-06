@@ -20,8 +20,8 @@
               <div class="card text-center card-product" >
                   <a href="/products/{{$product->id}}">
                     @if(count($product->productpicture)>0)
-                      <img src="{{url( 'storage/' . $product->productpicture[0]->src)}}" class="card-img-top" alt="..." maxwidth="80px" height="150px">
-
+                      <img src="{{Storage::url($product->productpicture[0]->src) }}" class="card-img-top" alt="..." maxwidth="80px" height="150px">
+{{-- {{Storage::url($product->productpicture[0]->src) }} --}}
                     @else
                       <img src="{{url( '/imagesProducts/musicgeneric.jpg')}}" class="card-img-top" alt="..." maxwidth="80px" height="150px">
                     @endif
