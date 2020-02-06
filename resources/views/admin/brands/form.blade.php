@@ -32,13 +32,33 @@
       <section>
 
         <input type="hidden" name="id_customer" value="14">
+        <div class="form-group row ">
+          <label class="col-md-2 form-control-label required">
+                    Nombre
+                </label>
+          <div class="col-md-4">
+
+                <input
+                  class="form-control"
+                  name="name"
+                  type="text"
+                  value="{{ old('name', $brand->name)}}"
+                          >
+
+          </div>
+
+          <div class="col-md-6 form-control-comment">
+
+
+          </div>
+        </div>
 
       <div class="form-group row ">
 
         <!-- <form action="?action=perfil-usuario" method="post" enctype="multipart/form-data"> -->
-            <label class="col-md-3 form-control-label">
+            {{-- <label class="col-md-3 form-control-label">
 
-            </label>
+            </label> --}}
 
             <div class="col-md-3 form-control-valign">
 
@@ -47,9 +67,6 @@
 
                   </div>
 
-            </div>
-
-            <div class="col-md-6 form-control-valign">
 
                   <input type="file" name="picture">
                   <!-- <input type="submit" value="Upload Image" name="submit"> -->
@@ -63,26 +80,7 @@
         </div> -->
       </div>
 
-      <div class="form-group row ">
-        <label class="col-md-2 form-control-label required">
-                  Nombre
-              </label>
-        <div class="col-md-4">
 
-              <input
-                class="form-control"
-                name="name"
-                type="text"
-                value="{{ old('name', $brand->name)}}"
-                        >
-
-        </div>
-
-        <div class="col-md-6 form-control-comment">
-
-
-        </div>
-      </div>
 
 
 

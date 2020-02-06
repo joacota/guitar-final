@@ -27,7 +27,7 @@ Route::get('/', 'GhController@index')->middleware('checkuser', 'checkcart');
 Route::get('/gh/{id}', 'GhController@show')->middleware('checkuser', 'checkcart');
 
 
-Route::get('/products/{id}', 'ProductsController@show'); //muestra los datos del producto
+Route::get('/products/{id}', 'ProductsController@show'); 
 Route::get('/cart', 'CartsController@index');
 Route::get('/cart/{id}', 'CartsController@store');
 Route::get('/cartp/{id}', 'CartsController@updateplus');
@@ -38,16 +38,6 @@ Route::get('/cartt/{id}', 'CartsController@updatetrash');
 Route::get('/purchases', 'purchasesController@create');
 Route::post('/purchases', 'purchasesController@store');
 Route::get('/purchases/show', 'purchasesController@show')->middleware('checkcart');
-
-// Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function()
-// {
-//     Route::get('dashboard', function() {} );
-// });
-//
-// Route::prefix('admin')->group(function () {
-// Route::group(['prefix' => 'admin',  'middleware' => 'auth', 'middleware' => 'role'], function(){
-// Route::group(['middlewaregroups' => ['auth']], function(){
-//   Route::group(['prefix' => 'admin', 'middleware' => 'role'], function(){
 
 Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function(){
 

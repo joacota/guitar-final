@@ -1,6 +1,6 @@
 
 @extends('layouts.generalCarro')
-termino la compra
+
 
 @section('content')
 

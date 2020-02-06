@@ -17,7 +17,7 @@ $formPerfil="";
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href={{asset("css/product-page.css")}}>
-  <link rel="stylesheet" href="css/header-footer.css">
+  <link rel="stylesheet" href={{asset("css/header-footer.css")}}>
 </head>
 
 
@@ -221,13 +221,13 @@ $formPerfil="";
   </section>
 
   <section class="row titulo-recomendados">
-    <h4>Otros Productos Recomendados</h4>
+    {{-- <h4>Otros Productos Recomendados</h4> --}}
   </section>
 
 
   <section class="row recomendados">
 
-				<?php for ($i=0; $i <4 ; $i++) :?>
+				{{-- @for ($i=0; $i <4 ; $i++)
           <div class="col-12 col-sm-3">
 
             <div class="card text-center" style="width: 15rem;">
@@ -239,7 +239,7 @@ $formPerfil="";
               </div>
             </div>
             </div>
-						<?php endfor ?>
+						@endfor --}}
 
 
 
@@ -253,18 +253,17 @@ $formPerfil="";
 
 
 <!-- COMIENZO FOOTER -->
-<!-- COMIENZO FOOTER -->
 <footer>
   <section class="container-fluid">
   <div class="row footer-l1">
       <div class="col-12 col-md-4">
-        <a href="Formularios/faq.php"><h5>Preguntas frecuentes!</h5></a>
+        <a href="/faq"><h5>Preguntas frecuentes!</h5></a>
       </div>
       <div class="col-12 col-md-4">
-        <a href="index.php"><img src={{asset("imagesWebsite/logo.png")}} alt="">  </a>
+        <a href="/"><img src={{asset("imagesWebsite/logo.png")}} alt="">  </a>
       </div>
       <div class="col-12 col-md-4">
-        <a href="Formularios/contacto.php"><h5>Contactanos</h5></a>
+      <a href="/">  <h5>Contactanos</h5></a>
       </div>
 
   </div>
@@ -277,9 +276,9 @@ $formPerfil="";
       <!-- </div>
       <div class="row"> -->
         <div class="redes">
-          <a href="http://www.facebook.com"><img src="imagenes/iconos/icons8-facebook-old-26.png" alt=""></a>
-          <a href="http://instagram.com"><img src="imagenes/iconos/icons8-instagram-50.png" alt=""></a>
-          <a href="http://twitter.com"><img src="imagenes/iconos/icons8-twitter-24.png" alt=""></a>
+          <a href="http://www.facebook.com"><img src="/imagesWebsite/icons8-facebook-old-26.png" alt=""></a>
+          <a href="http://instagram.com"><img src="/imagesWebsite/icons8-instagram-50.png" alt=""></a>
+          <a href="http://twitter.com"><img src="/imagesWebsite/icons8-twitter-24.png" alt=""></a>
 
         </div>
 
@@ -287,11 +286,11 @@ $formPerfil="";
 
     </div>
     <div class="col-12 col-md-4 trabaja">
-      <a href="#"><h5>Trabaja Con nosotros</h5>  </a>
+      <a href="/"> <h5>Music life</h5></a>
     </div>
 
     <div class="col-12 col-md-4 contactanos">
-      <a href="#"><h5>+54 11 5263-7400</h5></a>
+      <a href="/"><h5>+54 11 5263-7400</h5></a>
     </div>
 
 

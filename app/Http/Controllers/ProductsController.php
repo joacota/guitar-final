@@ -20,13 +20,7 @@ class ProductsController extends Controller
      */
     public function index()
     {
-    //   $user="perfil";
-    //   if (Auth::check()) {
-    // // The user is logged in...
-    //   $user = Auth::user();
-    //   } else{
-    //     $user= new User;
-    //   }
+
     $user=session()->get('user');
 
 
@@ -68,13 +62,6 @@ class ProductsController extends Controller
      */
     public function create()
     {
-      // if (Auth::check()) {
-      // // The user is logged in...
-      // $user = Auth::user();
-      // } else{
-      //   $user= new User;
-      // }
-
 
       $user=session()->get('user');
       $cart= new Cart;
@@ -137,7 +124,7 @@ $path=[];
         'brand_id'=>'required',
       ]);
 
-// dd($request);
+
       $dato=substr($request['brand_id'],0,2);
       $request['brand_id']=$dato;
 
@@ -151,7 +138,7 @@ $path=[];
 
 
             $picture=Productpicture::create([
-              // 'title'=>$request->picture1->
+
             'src'=>substr($path[$i-1],7),
             'product_id'=>$product->id,
             ]);
@@ -180,13 +167,6 @@ $path=[];
         $categories = Category::whereNull('category_id')->get();
         $cat = Category::find($product->category_id);
 
-       // $user="perfil";
-       // if (Auth::check()) {
-       // // The user is logged in...
-       // $user = Auth::user();
-       // } else{
-       //   $user= new User;
-       // }
        $user=session()->get('user');
        $cart= new Cart;
        // ssi existe tengo que tomar el activo que viene de la session con el id.
@@ -233,14 +213,7 @@ $path=[];
       $categories = Category::whereNull('category_id')->get();
       $cat = Category::find($product->category_id);
       $photo=$product->productpicture;
-      // dd($photo[1]);
-    // dd($product->Productpicture);
-    // if (Auth::check()) {
-    // // The user is logged in...
-    // $user = Auth::user();
-    // } else{
-    //   $user= new User;
-    // }
+
     $user=session()->get('user');
     $cart= new Cart;
     // ssi existe tengo que tomar el activo que viene de la session con el id.
@@ -292,7 +265,7 @@ $path=[];
               'stock'=>'required',
               'category_id'=>'required',
               'brand_id'=>'required',
-              'picture' => 'size:4'
+              'picture' => 'max:4'
             ]);
 
             $dato=substr($request['brand_id'],0,2);
@@ -302,11 +275,15 @@ $path=[];
             $product->update($request->all());
             $pictures=$product->productpicture;
 
-            foreach ($request->file('picture') as $key => $photo) {
-              $product->productpicture()->updateOrCreate(['id' => $key], [
-                'src' => $photo->store('public/imagesProducts')
-              ]);
+            if(null!==($request->file('picture'))){
+              foreach ($request->file('picture') as $key => $photo) {
+                $product->productpicture()->updateOrCreate(['id' => $key], [
+                  'src' => $photo->store('public/imagesProducts')
+                ]);
+              }
+
             }
+
 
               return redirect('/products/' . $product->id);
     }
@@ -334,7 +311,7 @@ $path=[];
 
     $user=session()->get('user');
     $cart= new Cart;
-  
+
 
     if(!session('cartId')){
       $cart= Cart::create([]);
