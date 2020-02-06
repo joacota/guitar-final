@@ -3,8 +3,12 @@ font-family: Arial, Helvetica, sans-serif;}
 
 body {
   background-image: url(/imagesWebsite/estrellas.jpg);
-  color: red;
+  color: white;
   background-size: cover;
+}
+
+.card-header {
+  font-size: 25px;
 }
 
 .container {
@@ -30,9 +34,12 @@ input:focus {
   outline: none;
 }
 
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+h1 {
+  margin-top: 25px;
+}
+
+p {
+  font-size: 20px;
 }
 
 .registerbtn {

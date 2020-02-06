@@ -1,8 +1,5 @@
 
 
-
-
-
   <div class="container-fluid">
 
     {{-- <div id="content-wrapper"> --}}
@@ -198,109 +195,36 @@
 
           <div class="row" style="margin-top:30px;">
 
+            <p>{{ $errors->first('picture') }}</p>
 
-            <div class="col-md-6 form-control-valign">
-                <div class="row">
-                  <div class="foto">
 
-                    @if(count($product->productpicture)>0)
-                      <img  src="{{url( 'storage/' . $product->productpicture[0]->src)}}" alt="">
-                      {{-- <p>{{'storage/' . substr($product->productpicture[0]->src,7)}} {{asset('storage/' . $product->productpicture[0]->src)}}</p> --}}
-                    @else
-                      <img src="/imagesProducts/musicgeneric.jpg" alt="picture">
-                    @endif
+              {{-- @foreach ($product->productpicture as $key =>$photo) --}}
 
+                @for ($i=0; $i < 4; $i++)
+
+                {{-- $photo=$product->productpicture --}}
+
+                  <div class="col-md-6 form-control-valign">
+                      <div class="row">
+                        <div class="foto">
+                            <img width="150px" height="150px" src="{{ isset($photo[$i]->src) ? Storage::url($photo[$i]->src) : '/imagesProducts/musicgeneric.jpg' }}">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-control-valign">
+                          <input type="file" name="picture[{{ isset($photo[$i]->id) ? $photo[$i]->id : ''}}]">
+                        </div>
+                      </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="form-control-valign">
+                @endfor
+              {{-- @endforeach --}}
 
-                        <input type="file" name="picture1">
-                        <!-- <input type="submit" value="Upload Image" name="submit"> -->
 
-                  </div>
-                </div>
 
-            </div>
-
-            <div class="col-md-6 form-control-valign">
-                <div class="row">
-                  <div class="foto">
-                    @if(count($product->productpicture)>1)
-                      <img  src="{{url( 'storage/' . $product->productpicture[1]->src)}}" alt="">
-                      {{-- <p>{{'storage/' . substr($product->productpicture[0]->src,7)}} {{asset('storage/' . $product->productpicture[0]->src)}}</p> --}}
-                    @else
-                      <img src="/imagesProducts/musicgeneric.jpg" alt="picture">
-                    @endif
-
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-control-valign">
-
-                        <input type="file" name="picture2">
-                        <!-- <input type="submit" value="Upload Image" name="submit"> -->
-
-                  </div>
-                </div>
-
-            </div>
 
           </div>
 
 
-          <div class="row" style="margin-top:30px;">
-
-
-            <div class="col-md-6 form-control-valign">
-                <div class="row">
-                  <div class="foto">
-                    @if(count($product->productpicture)>2)
-                      <img  src="{{url( 'storage/' . $product->productpicture[2]->src)}}" alt="">
-                      {{-- <p>{{'storage/' . substr($product->productpicture[0]->src,7)}} {{asset('storage/' . $product->productpicture[0]->src)}}</p> --}}
-                    @else
-                      <img src="/imagesProducts/musicgeneric.jpg" alt="picture">
-                    @endif
-
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-control-valign">
-
-                        <input type="file" name="picture3">
-                        <!-- <input type="submit" value="Upload Image" name="submit"> -->
-
-                  </div>
-                </div>
-
-            </div>
-
-            <div class="col-md-6 form-control-valign">
-                <div class="row">
-                  <div class="foto">
-                    @if(count($product->productpicture)>3)
-                      <img  src="{{url( 'storage/' . $product->productpicture[3]->src)}}" alt="">
-                      {{-- <p>{{'storage/' . substr($product->productpicture[0]->src,7)}} {{asset('storage/' . $product->productpicture[0]->src)}}</p> --}}
-                    @else
-                      <img src="/imagesProducts/musicgeneric.jpg" alt="picture">
-                    @endif
-
-
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="form-control-valign">
-
-                        <input type="file" name="picture4">
-                        <!-- <input type="submit" value="Upload Image" name="submit"> -->
-
-                  </div>
-                </div>
-
-            </div>
-
-
-          </div>
 
           <div class="row">
 
@@ -308,12 +232,21 @@
 
           <div class="form-group row" style="margin-top:70px;">
 
-            <div class="col-md-9 form-control-label boton_editar">
-              <button  class="btn btn-dark">Grabar</button>
+            <div class="col-md-6 form-control-label boton_editar">
+              @if($method=='patch' || $method=='post')
+                <button  class="btn btn-dark">Grabar</button>
+              @endif
+
+            </div>
+
+            <div class="col-md-3 form-control-label boton_editar">
+              @if($method=='delete')
+                <button  class="btn btn-dark">Eliminar</button>
+              @endif
             </div>
 
             <div class="col-md-3 " >
-              <p><a href="/">Volver a Home!</a></p>
+              <p><a href="/admin/control1">Volver</a></p>
             </div>
 
           </div>

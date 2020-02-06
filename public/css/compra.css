@@ -1,0 +1,27 @@
+.formulario-compra h2{
+  text-decoration: underline;
+}
+
+.formulario-compra .detalle-compra-row{
+  margin: 50px 0;
+}
+
+.formulario-compra .detalle-compra{
+  border: 2px solid grey;
+  text-align: left;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.formulario-compra h3{
+  text-decoration: underline;
+  text-align: center;
+}
+
+.formulario-compra h4.total{
+  font-weight: bold;
+}
+
+.formulario-compra a.cancelar{
+  display: inline-block;
+}

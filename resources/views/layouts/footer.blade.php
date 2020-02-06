@@ -3,7 +3,7 @@
 <section class="container-fluid">
 <div class="row footer-l1">
     <div class="col-12 col-md-4">
-      <a href="Formularios/faq.php"><h5>Preguntas frecuentes!</h5></a>
+      <a href="/faq"><h5>Preguntas frecuentes!</h5></a>
     </div>
     <div class="col-12 col-md-4">
       <a href="index.php"><img src="imagenes\Logo.png" alt="">  </a>

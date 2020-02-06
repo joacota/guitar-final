@@ -70,6 +70,7 @@ padding:0px 3px 0px 3px ;
 }
 .footer-l2 .row .redes a img{
 width: 60%;
+height: 60%;
 }
 .seguinos .row{
   justify-content: center;
@@ -81,7 +82,7 @@ width: 60%;
 }
 
 .contactanos a h5::before{
-  content: url('../images/iconos/icons8-whatsapp-24.png');
+  content: url('/imagesWebsite/icons8-whatsapp-24.png');
 
 }
 #footer {

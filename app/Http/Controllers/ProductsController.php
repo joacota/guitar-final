@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 use App\Product;
 use App\Category;
 use App\Productpicture;
 use App\Brand;
-
+use App\User;
+use App\Cart;
 
 class ProductsController extends Controller
 {
@@ -19,23 +20,38 @@ class ProductsController extends Controller
      */
     public function index()
     {
-      $user="perfil";
-      if (Auth::check()) {
-    // The user is logged in...
-      $user = Auth::user()->name;
+
+    $user=session()->get('user');
+
+
+      if(!session('cartId')){
+        $cart= Cart::create([]);
+        session(['cartId' => $cart->id]);
       }
-        $products = Product::all(); //paginate(8);
+      $cart=Cart::find(session('cartId'));
+
+      $totalCart=0;
+      foreach ($cart->Products as $value) {
+        if(isset($value->offer)){
+          $totalCart=$totalCart+($value->price*$value->offer->factor);
+        }else{
+          $totalCart=$totalCart+$value->price;
+        }
+      }
+        $products = Product::orderBy('category_id')->paginate(20);
         $subcategories = Category::all();
         $categories = Category::whereNull('category_id')->get();
         // $categories = Category::with('subcategories')->get();
 
 
-        return view('customer.products.index', [
+        return view('admin.products.index', [
           'title'=>'listado de Productos',
           'products' => $products,
           'categories' => $categories,
           'subcategories' => $subcategories,
           'user'=>$user,
+          'cart'=>$cart,
+          'totalCart'=>$totalCart,
         ]);
     }
 
@@ -46,10 +62,42 @@ class ProductsController extends Controller
      */
     public function create()
     {
+
+      $user=session()->get('user');
+      $cart= new Cart;
+      // ssi existe tengo que tomar el activo que viene de la session con el id.
+
+      if(!session('cartId')){
+        $cart= Cart::create([]);
+        session(['cartId' => $cart->id]);
+      }
+
+      $cart=Cart::find(session('cartId'));
+
+      $totalCart=0;
+      foreach ($cart->Products as $value) {
+        if(isset($value->offer)){
+          $totalCart=$totalCart+($value->price*$value->offer->factor);
+        }else{
+          $totalCart=$totalCart+$value->price;
+        }
+      }
+        $subcategories = Category::all();
+        $categories = Category::whereNull('category_id')->get();
         $brands=Brand::all();
+        $product=new Product;
+        $photo=$product->productpicture;
+
         return view('admin.products.create', [
-          'product'=>new Product,
+          'product'=>$product,
+          'photo' =>$photo,
           'brands'=>$brands,
+          'categories' => $categories,
+          'subcategories' => $subcategories,
+          'user' => $user,
+          'cart'=>$cart,
+          'totalCart'=>$totalCart,
+
         ]
 
       );
@@ -76,7 +124,7 @@ $path=[];
         'brand_id'=>'required',
       ]);
 
-// dd($request);
+
       $dato=substr($request['brand_id'],0,2);
       $request['brand_id']=$dato;
 
@@ -90,7 +138,7 @@ $path=[];
 
 
             $picture=Productpicture::create([
-              // 'title'=>$request->picture1->
+
             'src'=>substr($path[$i-1],7),
             'product_id'=>$product->id,
             ]);
@@ -118,15 +166,36 @@ $path=[];
         $subcategories = Category::all();
         $categories = Category::whereNull('category_id')->get();
         $cat = Category::find($product->category_id);
- // dd($product->Productpicture);
 
+       $user=session()->get('user');
+       $cart= new Cart;
+       // ssi existe tengo que tomar el activo que viene de la session con el id.
+
+       if(!session('cartId')){
+         $cart= Cart::create([]);
+         session(['cartId' => $cart->id]);
+       }
+       $cart=Cart::find(session('cartId'));
+
+       $totalCart=0;
+       foreach ($cart->Products as $value) {
+         if(isset($value->offer)){
+           $totalCart=$totalCart+($value->price*$value->offer->factor);
+         }else{
+           $totalCart=$totalCart+$value->price;
+         }
+       }
         return view('customer.products.show', [
+          'title'=>'Detalle de producto',
           'product' => $product,
           'cat'=>$cat,
           'categories' => $categories,
           'subcategories' => $subcategories,
-
+          'user' => $user,
+          'cart'=>$cart,
+          'totalCart'=>$totalCart,
         ]);
+
     }
 
     /**
@@ -137,13 +206,32 @@ $path=[];
      */
     public function edit($id)
     {
+
       $brands=Brand::all();
       $product = Product::find($id);
       $subcategories = Category::all();
       $categories = Category::whereNull('category_id')->get();
       $cat = Category::find($product->category_id);
-    // dd($product->Productpicture);
+      $photo=$product->productpicture;
 
+    $user=session()->get('user');
+    $cart= new Cart;
+    // ssi existe tengo que tomar el activo que viene de la session con el id.
+
+    if(!session('cartId')){
+      $cart= Cart::create([]);
+      session(['cartId' => $cart->id]);
+    }
+    $cart=Cart::find(session('cartId'));
+
+    $totalCart=0;
+    foreach ($cart->Products as $value) {
+      if(isset($value->offer)){
+        $totalCart=$totalCart+($value->price*$value->offer->factor);
+      }else{
+        $totalCart=$totalCart+$value->price;
+      }
+    }
 
       return view('admin.products.edit', [
         'product' => $product,
@@ -151,6 +239,10 @@ $path=[];
         'categories' => $categories,
         'subcategories' => $subcategories,
         'brands'=>$brands,
+        'user' => $user,
+        'cart'=>$cart,
+        'totalCart'=>$totalCart,
+        'photo' => $photo,
       ]);
 
     }
@@ -164,9 +256,7 @@ $path=[];
      */
     public function update(Request $request, $id)
     {
-      $path=[];
-
-
+    // dd($request['picture']);
             $this->validate($request, [
               'name'=>'required',
               'description'=>'required',
@@ -175,6 +265,7 @@ $path=[];
               'stock'=>'required',
               'category_id'=>'required',
               'brand_id'=>'required',
+              'picture' => 'max:4'
             ]);
 
             $dato=substr($request['brand_id'],0,2);
@@ -184,23 +275,16 @@ $path=[];
             $product->update($request->all());
             $pictures=$product->productpicture;
 
-            //aca tengo que ver si no eligio una foto
-            for ($i=1; $i <5 ; $i++)
-            {
-                if(($request->file('picture' . $i)) !== null )
-                {
-                    $path[] = $request->file('picture' . $i)->store('public/imagesProducts');
-
-                    $pictures[$i-1]->update([
-                      // 'title'=>$request->picture1->
-                    'src'=>substr($path[$i-1],7),
-                    // 'product_id'=>$product->id,
-                    ]);
-                }
-
-
+            if(null!==($request->file('picture'))){
+              foreach ($request->file('picture') as $key => $photo) {
+                $product->productpicture()->updateOrCreate(['id' => $key], [
+                  'src' => $photo->store('public/imagesProducts')
+                ]);
               }
-              dd($product);
+
+            }
+
+
               return redirect('/products/' . $product->id);
     }
 
@@ -214,4 +298,98 @@ $path=[];
     {
         //
     }
+
+    public function delete($id)
+    {
+
+      $brands=Brand::all();
+      $product = Product::find($id);
+      $subcategories = Category::all();
+      $categories = Category::whereNull('category_id')->get();
+      $cat = Category::find($product->category_id);
+      $photo=$product->productpicture;
+
+    $user=session()->get('user');
+    $cart= new Cart;
+
+
+    if(!session('cartId')){
+      $cart= Cart::create([]);
+      session(['cartId' => $cart->id]);
+    }
+    $cart=Cart::find(session('cartId'));
+
+    $totalCart=0;
+    foreach ($cart->Products as $value) {
+      if(isset($value->offer)){
+        $totalCart=$totalCart+($value->price*$value->offer->factor);
+      }else{
+        $totalCart=$totalCart+$value->price;
+      }
+    }
+
+      return view('admin.products.delete', [
+        'product' => $product,
+        'cat'=>$cat,
+        'categories' => $categories,
+        'subcategories' => $subcategories,
+        'brands'=>$brands,
+        'user' => $user,
+        'cart'=>$cart,
+        'totalCart'=>$totalCart,
+        'photo' => $photo,
+      ]);
+
+    }
+
+
+
+    public function softtDelete($id)
+       {
+
+           $product = Product::find($id)->delete();
+           if ($product) {
+
+               // $response = $this->successfulMessage(200, 'Successfully deleted', true, 0, $product);
+               // return response('producto borrado', 200)
+               //    ->header('Content-Type', 'text/plain');
+                  return redirect('admin/products')->with('alert','asdasdas');
+           } else {
+
+               // $response = $this->notFoundMessage();
+               return response('no se encontro el producto', 200)
+                  ->header('Content-Type', 'text/plain');
+           }
+
+
+       }
+
+
+
+
+    // public function indexProd()
+    // {
+    //   $user="perfil";
+    //   if (Auth::check()) {
+    // // The user is logged in...
+    //   $user = Auth::user();
+    //   }    else{
+    //         $user= new User;
+    //       }
+    //
+    //     $products = Product::all(); //paginate(8);
+    //     $subcategories = Category::all();
+    //     $categories = Category::whereNull('category_id')->get();
+    //     // $categories = Category::with('subcategories')->get();
+    //
+    //
+    //     return view('admin.products.index', [
+    //       'title'=>'listado de Productos',
+    //       'products' => $products,
+    //       'categories' => $categories,
+    //       'subcategories' => $subcategories,
+    //       'user'=>$user,
+    //     ]);
+    // }
+
 }

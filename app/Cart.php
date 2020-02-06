@@ -3,10 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Cart extends Model
 {
-    protected $fillable = ['user_id', 'closed_at',];
+  use SoftDeletes;
+  protected $dates = ['deleted_at'];
+  protected $fillable = ['user_id', 'closed_at',];
 
 // public function cart_product()
 //   {
@@ -22,7 +25,7 @@ public function purchase()
     }
     public function products()
       {
-       return $this->belongsToMany(Product::class);
+       return $this->belongsToMany(Product::class)->withPivot('qty');
       }
       public function products1()
         {

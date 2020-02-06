@@ -6,19 +6,13 @@
 <section>
 <div class="container">
 
-
-
-
-
-
-
     <div class="prductos col-lg-8">
     <h3>Lista de Metodos de Pago</h3>
 
-    <div class="row">
+    {{-- <div class="row">
       <a href="paymentmethods/add" class="btn btn-dark">Agregar metodo de pago</a>
 
-    </div>
+    </div> --}}
 
     <div class="row">
 
@@ -35,13 +29,12 @@
       <tbody>
 
             @foreach ($paymentmethods as $paymentmethod)
-      {{-- //admin/categories/{id}/edit --}}
 
                 <tr class="paymentmethods">
                 <th scope="row">{{$paymentmethod->id}}</th>
                 <td> <b> {{$paymentmethod->name}}</b> </td>
-                <td> <a class="editar" href="paymentmethods/{{$paymentmethod->id}}/edit"> <b> Ed </b></a> </td>
-                <td> <a class="borrar" href="paymentmethods/"> <b> - </b></a> </td>
+                <td> <a class="editar" href="/admin/paymentmethods/{{$paymentmethod->id}}/edit"> <b> Ed </b></a> </td>
+                <td> <a class="borrar" href="/admin/paymentmethods/{{$paymentmethod->id}}/delete"> <b> - </b></a> </td>
               </tr>
 
             @endforeach

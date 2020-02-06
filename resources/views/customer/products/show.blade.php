@@ -17,7 +17,7 @@
 
       {{$product->id}}
       {{$product->name}}
-      
+
       <a href="/products" class="btn btn-primary">Volver</a>
     </div>
 
